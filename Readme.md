@@ -1,7 +1,7 @@
 # Личный проект «Мишка» 
 
 * Студент: [Валерий Аллеев](https://up.htmlacademy.ru/adaptive/25/user/1925077).
-* Наставник: `Неизвестно`.
+* Наставник: [Михаил Кислый](https://htmlacademy.ru/profile/smart-grizzly).
 
 ---
 
