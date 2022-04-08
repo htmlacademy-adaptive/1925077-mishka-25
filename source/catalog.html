@@ -8,7 +8,7 @@
 
 <body class="page__body">
   <header class="main-header">
-    <a class="main-header__logo" href="#">
+    <a class="main-header__logo" href="index.html">
       <img src="img/mishka-logo.svg" width="86" height="35" alt="Логотип и ссылка на главную страницу.">
     </a>
     <button class="main-header__menu-toggle"><span class="visually-hidden">Открыть меню</span></button>
@@ -43,7 +43,59 @@
   <main class="main-wrapper">
     <h1 class="main-title">Каталог товаров</h1>
 
+    <section class="product-cards">
+      <h2 class="visually-hidden">Карточки товаров</h2>
+      <ul class="product-cards__list">
+        <li class="product-cards__item">
+          <figure class="product-cards__figure">
+            <img class="product-cards__pic" src="img/products/rabbit.jpg" alt="Вязанный стоячий зайчик." width="260"
+              height="195">
+            <a class="product-cards__link" href="#">Зайчик-попрыгайчик</a>
+            <figcaption class="product-cards__figcaption">Рост 30 см, вес 200 г</figcaption>
+          </figure>
+          <span class="product-cards__price">1 200 руб.</span>
+          <button class="product-cards__shop-cart-button">
+            <span class="visually-hidden">
+              Добавить товар в
+              корзину
+            </span>
+          </button>
+        </li>
 
+        <li class="product-cards__item">
+          <figure class="product-cards__figure">
+            <img class="product-cards__pic" src="img/products/laundry-basket.jpg" alt="Корзинка для белья." width="260"
+              height="195">
+            <a class="product-cards__link" href="#">Корзинка для белья</a>
+            <figcaption class="product-cards__figcaption">Диаметр 15 см, высота 10 см</figcaption>
+          </figure>
+          <span class="product-cards__price">690 руб.</span>
+          <button class="product-cards__shop-cart-button">
+            <span class="visually-hidden">
+              Добавить товар в
+              корзину
+            </span>
+          </button>
+        </li>
+
+        <li class="product-cards__item">
+          <figure class="product-cards__figure">
+            <img class="product-cards__pic" src="img/products/toy-basket.jpg" alt="Большая корзинка для игрушек."
+              width="260" height="195">
+            <a class="product-cards__link" href="#">Большая корзинка для игрушек</a>
+            <figcaption class="product-cards__figcaption">Диаметр 30 см, высота 30 см</figcaption>
+          </figure>
+          <span class="product-cards__price">1 200 руб.</span>
+          <button class="product-cards__shop-cart-button">
+            <span class="visually-hidden">
+              Добавить товар в
+              корзину
+            </span>
+          </button>
+        </li>
+
+      </ul>
+    </section>
 
   </main>
 
