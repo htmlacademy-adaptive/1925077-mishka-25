@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <title>HTML Academy: Мишка</title>
+</head>
+
+<body class="page__body">
+  <header class="main-header">
+    <a class="main-header__logo" href="index.html">
+      <img src="img/mishka-logo.svg" width="86" height="35" alt="Логотип и ссылка на главную страницу.">
+    </a>
+    <button class="main-header__menu-toggle"><span class="visually-hidden">Открыть меню</span></button>
+
+    <nav class="main-nav">
+      <ul class="main-nav__list">
+        <li class="main-nav__item">
+          <a href="form.html">Каталог товаров</a>
+        </li>
+        <li class="main-nav__item">
+          <a href="#">Вязание на заказ</a>
+        </li>
+        <li class="main-nav__item">
+          <svg width="18" height="18" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg" fill="#000">
+            <path opacity=".2"
+              d="m17.7 16.06-3.48-3.48a7.63 7.63 0 0 0 1.53-4.7c0-4.4-3.48-7.88-7.88-7.88A7.81 7.81 0 0 0 0 7.88c0 4.4 3.48 7.87 7.88 7.87 1.73 0 3.37-.61 4.7-1.53l3.48 3.47c.2.2.4.31.82.31.6 0 1.12-.51 1.12-1.13 0-.2-.1-.5-.3-.81ZM2.24 7.88a5.67 5.67 0 0 1 5.63-5.63 5.67 5.67 0 0 1 5.62 5.63 5.67 5.67 0 0 1-5.63 5.62 5.67 5.67 0 0 1-5.62-5.63Z" />
+          </svg>
+          <a href="#">Поиск по сайту</a>
+        </li>
+        <li class="main-nav__item">
+          <svg width="21" height="18" viewBox="0 0 21 18" fill="#000" xmlns="http://www.w3.org/2000/svg">
+            <path opacity=".2"
+              d="M20.19 6.86h-3.55L13.19.38c-.2-.38-.61-.48-1.02-.28-.4.19-.5.57-.3.95l3.14 5.8H5.78l3.15-5.8c.2-.38 0-.76-.3-.95A.82.82 0 0 0 7.6.38L4.16 6.86H.8c-.4 0-.81.28-.81.76 0 .38.3.76.81.76h.2l.92 2.86c-.2.1-.3.28-.3.57 0 .38.3.67.7.67L4.06 18h12.88l1.73-5.52c.4 0 .7-.29.7-.67 0-.2-.1-.48-.3-.57L20 8.38h.2c.4 0 .81-.28.81-.76s-.4-.76-.81-.76Zm-4.57 9.62H5.07l-1.21-4.1h13.08l-1.32 4.1Zm1.63-5.53H3.35L2.54 8.3h15.52l-.81 2.66Z" />
+          </svg>
+          <a href="#">Корзина: пока пуста</a>
+        </li>
+      </ul>
+    </nav>
+
+  </header>
+
+  <main class="main-wrapper">
+    <h1 class="main-title">Каталог товаров</h1>
+
+    <section class="product-cards">
+      <h2 class="visually-hidden">Карточки товаров</h2>
+      <ul class="product-cards__list">
+        <li class="product-cards__item">
+          <figure class="product-cards__figure">
+            <img class="product-cards__pic" src="img/products/rabbit/rabbit@mob.jpg" alt="Вязанный стоячий зайчик."
+              width="260" height="195">
+            <a class="product-cards__link" href="#">Зайчик-попрыгайчик</a>
+            <figcaption class="product-cards__figcaption">Рост 30 см, вес 200 г</figcaption>
+          </figure>
+          <span class="product-cards__price">1 200 руб.</span>
+          <button class="product-cards__shop-cart-button">
+            <span class="visually-hidden">
+              Добавить товар в
+              корзину
+            </span>
+          </button>
+        </li>
+
+        <li class="product-cards__item">
+          <figure class="product-cards__figure">
+            <img class="product-cards__pic" src="img/products/laundry-basket/laundry-basket@mob.jpg"
+              alt="Корзинка для белья." width="260" height="195">
+            <a class="product-cards__link" href="#">Корзинка для белья</a>
+            <figcaption class="product-cards__figcaption">Диаметр 15 см, высота 10 см</figcaption>
+          </figure>
+          <span class="product-cards__price">690 руб.</span>
+          <button class="product-cards__shop-cart-button">
+            <span class="visually-hidden">
+              Добавить товар в
+              корзину
+            </span>
+          </button>
+        </li>
+
+        <li class="product-cards__item">
+          <figure class="product-cards__figure">
+            <img class="product-cards__pic" src="img/products/toy-basket/toy-basket@mob.jpg"
+              alt="Большая корзинка для игрушек." width="260" height="195">
+            <a class="product-cards__link" href="#">Большая корзинка для игрушек</a>
+            <figcaption class="product-cards__figcaption">Диаметр 30 см, высота 30 см</figcaption>
+          </figure>
+          <span class="product-cards__price">1 200 руб.</span>
+          <button class="product-cards__shop-cart-button">
+            <span class="visually-hidden">
+              Добавить товар в
+              корзину
+            </span>
+          </button>
+        </li>
+      </ul>
+    </section>
+
+    <section class="video-section">
+      <h2 class="video-section__title">Процесс производства</h2>
+      <video class="video-section__videio" width="260" height="150" src="video/production-process/4523452345.mp4"
+        poster="video/production-process/poster/video-poster-basket@mob.jpg" preload="none">
+      </video>
+
+      <p class="video-section__description-text">
+        По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.
+      </p>
+
+      <a href="form.html" class="button">Сделать заказ</a>
+    </section>
+
+  </main>
+
+  <footer class="main-footer">
+    <section class="main-footer__social">
+      <h2 class="visually-hidden">Социальные сети</h2>
+      <ul class="main-footer__social-list">
+        <li class="main-footer__social-item">
+          <a href="https://vk.com/htmlacademy" class="main-footer__social-link"><span
+              class="visually-hidden">Вконтакте</span></a>
+        </li>
+        <li class="main-footer__social-item">
+          <a href="https://www.youtube.com/user/htmlacademyru" class="main-footer__social-link"><span
+              class="visually-hidden">Ютуб</span></a>
+        </li>
+        <li class="main-footer__social-item">
+          <a href="https://t.me/htmlacademy" class="main-footer__social-link"><span
+              class="visually-hidden">Телеграм</span></a>
+        </li>
+      </ul>
+    </section>
+
+    <p class="main-footer__copyright"></p>
+  </footer>
+
+</body>
+
+</html>
