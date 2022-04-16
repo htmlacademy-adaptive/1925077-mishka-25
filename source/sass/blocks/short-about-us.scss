@@ -4,10 +4,8 @@
   @include general-padding;
 
   &__list {
-    margin: 0;
+    @include list-reset;
     margin-top: 28px;
-    padding: 0;
-    list-style-type: none;
   }
 
   &__item {

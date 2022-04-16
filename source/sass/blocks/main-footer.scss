@@ -1,0 +1,18 @@
+@import "../mixins.scss";
+
+.main-footer {
+  @include general-padding;
+  background-color: #f1f1f1;
+
+  &__copyright-text {
+    font-weight: 700;
+    font-size: 19px;
+    line-height: 18px;
+    color: #000000;
+    text-align: center;
+  }
+
+  &__copyright {
+    margin-bottom: 32px;
+  }
+}
