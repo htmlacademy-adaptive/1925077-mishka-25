@@ -1,0 +1,41 @@
+@import "../mixins.scss";
+
+.index-catalog-links {
+  &__list {
+    padding: 0;
+    margin: 0;
+
+    list-style-type: none;
+  }
+
+  &__item {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    padding: 24px 0 31px;
+
+    @include general-padding;
+    background: #63d1bb;
+
+    &:nth-child(2n) {
+      background-color: #56c3b2;
+    }
+  }
+
+  &__link {
+    display: flex;
+
+    font-weight: 700;
+    font-size: 19px;
+    line-height: 24px;
+    color: #ffffff;
+    text-decoration: none;
+  }
+
+  &__icon {
+    position: absolute;
+    right: 30px;
+  }
+}
