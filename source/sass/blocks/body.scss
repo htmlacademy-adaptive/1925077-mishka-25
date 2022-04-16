@@ -14,6 +14,22 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: "Opensans-Old";
+  font-style: normal;
+  font-weight: 400;
+  src: url("../../fonts/opensans.woff");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Opensans-Old";
+  font-style: normal;
+  font-weight: 700;
+  src: url("../../fonts/opensansbold.woff");
+  font-display: swap;
+}
+
 html {
   height: 100%;
 
@@ -27,7 +43,7 @@ body {
   margin: 0 auto;
   padding: 0;
 
-  font-family: "Opensans", sans-serif;
+  font-family: "Opensans", "Opensans-Old", sans-serif;
   font-style: normal;
   font-weight: 400;
   font-size: 15px;
