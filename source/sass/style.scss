@@ -1,4 +1,5 @@
 @use "blocks/body.scss";
+@use "blocks/button.scss";
 @use "blocks/main-header.scss";
 @use "blocks/main-header__menu-toggle.scss";
 @use "blocks/main-header__logo.scss";
@@ -18,3 +19,5 @@
 @use "blocks/product-of-week__item.scss";
 @use "blocks/product-of-week__property.scss";
 @use "blocks/product-of-week__value.scss";
+@use "blocks/product-of-week__cart.scss";
+@use "blocks/product-of-week__price.scss";
