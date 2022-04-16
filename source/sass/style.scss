@@ -1,10 +1,12 @@
 @use "blocks/body.scss";
+@use "blocks/button.scss";
 @use "blocks/main-header.scss";
 @use "blocks/main-nav.scss";
 @use "blocks/index-title-wrapper.scss";
 @use "blocks/main-title-text.scss";
 @use "blocks/index-catalog-links.scss";
-// @use "blocks/button.scss";
+@use "blocks/product-of-week.scss";
+@use "blocks/section-title.scss";
 // @use "blocks/main-header__menu-toggle.scss";
 // @use "blocks/main-header__logo.scss";
 // @use "blocks/main-nav__item.scss";
@@ -14,8 +16,6 @@
 // @use "blocks/catalog-links__item.scss";
 // @use "blocks/catalog-links__link.scss";
 // @use "blocks/catalog-links__icon.scss";
-// @use "blocks/product-of-week.scss";
-// @use "blocks/section-title.scss";
 // @use "blocks/product-of-week__title.scss";
 // @use "blocks/product-of-week__list.scss";
 // @use "blocks/product-of-week__item.scss";
