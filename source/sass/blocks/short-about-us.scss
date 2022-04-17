@@ -1,4 +1,5 @@
-@import "../variables-mixins.scss";
+@import "../variables.scss";
+@import "../mixins.scss";
 
 .short-about-us {
   @include general-padding;
