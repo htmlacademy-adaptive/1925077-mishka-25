@@ -14,7 +14,7 @@
     padding: 24px 0 31px;
 
     @include general-padding;
-    background: #63d1bb;
+    background: $legend-color;
 
     &:nth-child(2n) {
       background-color: #56c3b2;
