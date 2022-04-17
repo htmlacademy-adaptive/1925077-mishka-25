@@ -1,0 +1,65 @@
+@import "../mixins.scss";
+
+.product-cards {
+  @include general-padding;
+  padding-top: 30px;
+  padding-bottom: 4px;
+  display: flex;
+  flex-direction: column;
+
+  &__list {
+    @include list-reset;
+
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+
+    padding-bottom: 26px;
+  }
+
+  &__figure {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+  }
+
+  &__link {
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 24px;
+    color: #000000;
+    text-decoration: none;
+  }
+
+  &__figcaption {
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 30px;
+
+    margin-top: 6px;
+  }
+
+  &__under-pic-text-wrapper {
+    padding: 0 28px;
+  }
+
+  &__pic {
+    margin-bottom: 28px;
+  }
+
+  &__price {
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 24px;
+    color: #000000;
+  }
+
+  &__price-wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+}
