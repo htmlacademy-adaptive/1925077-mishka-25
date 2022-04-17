@@ -1,0 +1,19 @@
+@import "../mixins.scss";
+
+.video-section {
+  @include general-padding;
+  margin-bottom: 58px;
+
+  &__video {
+    display: block;
+    margin: 0 auto;
+  }
+
+  &__around-video-wrapper {
+    padding: 0 34px 33px;
+  }
+
+  &__for-border-wrapper {
+    border: 1px solid #ececec;
+  }
+}
