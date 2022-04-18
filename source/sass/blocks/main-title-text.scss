@@ -1,0 +1,9 @@
+@import "../variables-mixins.scss";
+
+.main-title-text {
+  font-weight: 700;
+  font-size: 27px;
+  line-height: 30px;
+  text-align: center;
+  color: $second-color;
+}

@@ -1,0 +1,33 @@
+@import "../variables-mixins.scss";
+
+.contacts {
+  &__item {
+    @include general-padding;
+    display: flex;
+  }
+
+  &__property {
+    min-width: 76px;
+  }
+
+  &__value {
+    min-width: 183px;
+    margin: 0;
+  }
+
+  &__email {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  &__map-pic {
+    display: block;
+    margin: 0 auto;
+    object-fit: contain;
+  }
+
+  &__button {
+    @include general-padding;
+    margin: 42px;
+  }
+}

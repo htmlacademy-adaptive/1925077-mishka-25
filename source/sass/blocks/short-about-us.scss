@@ -1,0 +1,19 @@
+@import "../variables-mixins.scss";
+
+.short-about-us {
+  @include general-padding;
+
+  &__list {
+    @include list-reset;
+    margin-top: 28px;
+  }
+
+  &__item {
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 20px;
+    color: $second-color;
+
+    margin-top: 32px;
+  }
+}

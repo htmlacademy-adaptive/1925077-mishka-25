@@ -1,0 +1,23 @@
+@import "../variables-mixins.scss";
+
+.main-header {
+  @include general-padding;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+
+  &__logo {
+    padding: 22px 0;
+    text-align: center;
+  }
+
+  .main-header__menu-toggle {
+    position: absolute;
+    width: 20px;
+    height: 14px;
+    top: 32px;
+    right: 30px;
+  }
+}

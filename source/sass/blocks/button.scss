@@ -1,0 +1,26 @@
+@import "../variables-mixins.scss";
+
+.button {
+  display: block;
+  width: 100%;
+
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 20px;
+
+  text-transform: uppercase;
+  text-align: center;
+  text-decoration: none;
+
+  padding-top: 16px;
+  padding-bottom: 16px;
+
+  border: 2px solid $body-color;
+  background-color: inherit;
+
+  cursor: pointer;
+
+  &:visited {
+    color: inherit;
+  }
+}

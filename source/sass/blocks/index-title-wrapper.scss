@@ -1,0 +1,10 @@
+@import "../variables-mixins.scss";
+
+.index-title-wrapper {
+  min-height: 283px;
+  padding: 73px 0 120px;
+
+  background-image: url("../img/index-page/hero-mobile@2x1.jpg");
+
+  @include general-padding;
+}

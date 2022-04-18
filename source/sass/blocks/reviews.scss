@@ -1,0 +1,17 @@
+@import "../variables-mixins.scss";
+
+.reviews {
+  @include general-padding;
+
+  &__list {
+    @include list-reset;
+  }
+
+  &__button {
+    margin-top: 38px;
+  }
+
+  &__buttons-wrapper {
+    display: flex;
+  }
+}

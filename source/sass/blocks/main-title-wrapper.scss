@@ -1,0 +1,9 @@
+@import "../variables-mixins.scss";
+
+.main-title-wrapper {
+  @include general-padding;
+  padding-top: 74px;
+  padding-bottom: 74px;
+
+  background-color: #f1f1f1;
+}

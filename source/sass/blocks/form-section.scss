@@ -1,0 +1,84 @@
+@import "../variables-mixins.scss";
+
+.form-section {
+  @include general-padding;
+  padding-bottom: 55px;
+
+  &__fieldset {
+    padding: 0;
+    margin-top: 30px;
+    border: none;
+  }
+
+  &__legend {
+    margin-bottom: 30px;
+
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 16px;
+    text-transform: uppercase;
+    color: $legend-color;
+  }
+
+  &__legend-tel-and-mail {
+    margin-bottom: 4px;
+  }
+
+  &__legend-additional {
+    margin-bottom: 22px;
+  }
+
+  &__inputs-wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__radio-input {
+    margin-top: 11px;
+  }
+
+  &__checkbox-input {
+    margin-top: 23px;
+  }
+
+  &__text-input,
+  &__phone,
+  &__email {
+    height: 52px;
+    margin-bottom: 23px;
+
+    font-size: 17px;
+    line-height: 18px;
+    color: $second-color;
+
+    border: none;
+    border-bottom: #000000 solid 2px;
+  }
+
+  &__phone,
+  &__email {
+    margin-bottom: 34px;
+    min-width: 260px;
+  }
+
+  &__input-description {
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 18px;
+    color: $second-color;
+  }
+
+  &__additional-text {
+    min-width: 260px;
+    min-height: 142px;
+    padding: 17px;
+
+    font-size: 17px;
+    line-height: 18px;
+    color: $second-color;
+
+    border: #000000 2px solid;
+
+    resize: none;
+  }
+}

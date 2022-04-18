@@ -1,0 +1,35 @@
+@import "../variables-mixins.scss";
+
+.main-nav {
+  &__list {
+    @include list-reset;
+  }
+
+  &__item {
+    min-height: 79px;
+    display: flex;
+    align-items: center;
+
+    position: relative;
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 24px;
+    color: $second-color;
+    text-decoration: none;
+
+    position: relative;
+
+    padding-left: 46px;
+  }
+
+  &__icon {
+    position: absolute;
+    left: 0;
+  }
+}
