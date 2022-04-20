@@ -11,6 +11,31 @@
   &__logo {
     padding: 22px 0;
     text-align: center;
+
+    @media (min-width: $tablet-width) {
+      display: none;
+    }
+  }
+
+  &__tablet-logo {
+    display: none;
+
+    @media (min-width: $tablet-width) {
+      display: block;
+      padding-top: 22px;
+      padding-bottom: 20px;
+
+      // position: relative;
+
+      // &::after {
+      //   content: "";
+      //   position: absolute;
+      //   border-bottom: $header-border;
+      //   width: 2000px;
+      //   bottom: 0;
+      //   left: -50px;
+      // }
+    }
   }
 
   .main-header__menu-toggle {
@@ -19,5 +44,116 @@
     height: 14px;
     top: 32px;
     right: 30px;
+
+    @media (min-width: $tablet-width) {
+      display: none;
+    }
+  }
+
+  &__list {
+    @include list-reset;
+  }
+
+  &__item {
+    min-height: 79px;
+    display: flex;
+    align-items: center;
+
+    position: relative;
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 24px;
+    color: $second-color;
+    text-decoration: none;
+
+    padding-left: 46px;
+
+    @media (min-width: $tablet-width) {
+      padding: 0;
+      min-height: 89px;
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    left: 0;
+
+    @media (min-width: $tablet-width) {
+      position: static;
+      left: auto;
+      padding-left: 32px;
+      padding-right: 32px;
+    }
+  }
+
+
+  &__tablet-hidden-text {
+    @media (min-width: $tablet-width) {
+      @include visually-hidden-mixin;
+    }
+  }
+
+
+  &__tablet-appearing-text {
+    text-align: right;
+
+    @media (max-width: $tablet-width) {
+      @include visually-hidden-mixin;
+    }
+  }
+
+  &__second-list {
+    @media (min-width: $tablet-width) {
+
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        border-bottom: $header-border;
+        width: 900%;
+        bottom: 0;
+        right: -50px;
+      }
+
+      > .main-header__item {
+        border-left: $header-border;
+      }
+    }
+  }
+
+  //Перестроение сетки шапки
+  @media (min-width: $tablet-width) {
+    display: grid;
+    justify-content: space-between;
+    align-items: center;
+    grid-template-areas:
+      "up-left up-right up-right up-right"
+      "down-left down-left down-right down-right";
+
+    .main-header__first-list {
+      grid-area: down-left;
+      display: flex;
+    }
+
+    .main-header__second-list {
+      grid-area: up-right;
+      justify-self: right;
+      display: flex;
+    }
+
+    .main-header__logo-link {
+      grid-area: up-left;
+    }
+
+    .main-header__tablet-appearing-text {
+      grid-area: down-right;
+    }
   }
 }
