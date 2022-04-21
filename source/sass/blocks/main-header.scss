@@ -1,189 +1,106 @@
 @import "../variables-mixins.scss";
 
 .main-header {
-  @include general-padding;
+
+  // position: relative;
 
   display: flex;
   flex-direction: column;
   justify-content: center;
-  position: relative;
 
-  &__logo {
-    padding: 22px 0;
-    text-align: center;
-
-    @media (min-width: $tablet-width) {
-      display: none;
-    }
-  }
-
-  &__tablet-logo {
-    display: none;
-
-    @media (min-width: $tablet-width) {
-      display: block;
-      padding-top: 22px;
-      padding-bottom: 20px;
-    }
-  }
-
-  .main-header__menu-toggle {
-    position: absolute;
-    width: 20px;
-    height: 14px;
-    top: 32px;
-    right: 30px;
-
-    @media (min-width: $tablet-width) {
-      display: none;
-    }
+  &__logo-wrapper {
+    @include general-padding;
+    position: relative;
+    min-height: 79px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   &__list {
     @include list-reset;
+    display: flex;
+    flex-direction: column;
   }
 
   &__item {
+    @include general-padding;
     min-height: 79px;
     display: flex;
     align-items: center;
 
-    position: relative;
-
-    @media (min-width: $tablet-width) {
-      padding-left: 32px;
-
-      &:not(:last-child) {
-        padding-right: 32px;
-      }
-    }
+    border-top: 1px solid $header-mobile-border-color;
   }
 
   &__link {
+    position: relative;
     display: flex;
-    align-items: center;
+    padding-left: 46px;
 
     font-weight: 700;
     font-size: 17px;
     line-height: 24px;
-    color: $second-color;
     text-decoration: none;
-
-    padding-left: 46px;
-
-    @media (min-width: $tablet-width) {
-      padding: 0;
-      min-height: 89px;
-    }
+    color: $second-color;
   }
 
-  &__icon {
+  &__item-icon {
     position: absolute;
     left: 0;
-
-    @media (min-width: $tablet-width) {
-      position: static;
-      left: auto;
-    }
   }
 
-
-  &__tablet-hidden-text {
-    @media (min-width: $tablet-width) {
-      @include visually-hidden-mixin;
-    }
+  &__tablet-logo-pic {
+    display: none;
   }
 
+  &__desktop-logo-pic {
+    display: none;
+  }
 
   &__tablet-appearing-text {
-    text-align: right;
-
-    @media (max-width: $tablet-width) {
-      @include visually-hidden-mixin;
-    }
+    display: none;
   }
 
-  &__second-list {
-    @media (min-width: $tablet-width) {
+  &__menu-toggle {
+    position: absolute;
+    right: $mobile-body-padding;
 
-      position: relative;
+    width: 36px;
+    height: 36px;
 
-      &::after {
-        content: "";
-        position: absolute;
-        border-bottom: $header-border;
-        width: 900%;
-        bottom: 0;
-        right: -50px;
-      }
-
-      > .main-header__item {
-        border-left: $header-border;
-      }
-    }
+    cursor: pointer;
   }
 
-  &__second-list > &__item {
-    @media (min-width: $tablet-width) {
 
-      position: relative;
 
-      &::after {
-        content: "";
-        position: absolute;
-        border-bottom: $header-border;
-        width: 900%;
-        bottom: 0;
-        left: 0;
-      }
 
-      > .main-header__item {
-        border-left: $header-border;
-      }
-    }
-  }
-
-  &__first-list > &__item > &__link {
-    @media (min-width: $tablet-width) {
-      font-size: 15px;
-    }
-  }
-
-  &__link-text {
-    @media (min-width: $tablet-width) {
-      margin-left: 32px;
-    }
-  }
-
-  //Перестроение сетки шапки
+  ////////////////////////////////////////////////////                     TABLET
   @media (min-width: $tablet-width) {
-    display: grid;
-    justify-content: space-between;
-    align-items: center;
-    grid-template-areas:
-      "up-left up-right up-right up-right"
-      "down-left down-left down-right down-right";
-
-    .main-header__first-list {
-      grid-area: down-left;
-      display: flex;
-      flex-wrap: wrap;
+    &__mobile-logo-pic {
+      display: none;
     }
 
-    .main-header__second-list {
-      grid-area: up-right;
-      justify-self: right;
-      display: flex;
-      flex-wrap: wrap;
+    &__tablet-logo-pic {
+      display: block;
     }
 
-    .main-header__logo-link {
-      grid-area: up-left;
-      align-self: start;
+    &__menu-toggle {
+      display: none;
     }
 
-    .main-header__tablet-appearing-text {
-      grid-area: down-right;
+    &__tablet-appearing-text {
+      display: block;
+    }
+  }
+
+  ////////////////////////////////////////////////////                   DESKTOP
+  @media (min-width: $desktop-width) {
+    &__tablet-logo-pic {
+      display: none;
+    }
+
+    &__desktop-logo-pic {
+      display: block;
     }
   }
 }

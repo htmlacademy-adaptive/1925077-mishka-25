@@ -1,0 +1,228 @@
+@import "../variables-mixins.scss";
+
+.main-header {
+  @include general-padding;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+
+  &__logo {
+    padding: 22px 0;
+    text-align: center;
+
+    @media (min-width: $tablet-width) {
+      display: none;
+    }
+  }
+
+  &__tablet-logo {
+    display: none;
+
+    @media (min-width: $tablet-width) {
+      display: block;
+      padding-top: 22px;
+      padding-bottom: 20px;
+    }
+  }
+
+  .main-header__menu-toggle {
+    position: absolute;
+    width: 20px;
+    height: 14px;
+    top: 32px;
+    right: 30px;
+
+    @media (min-width: $tablet-width) {
+      display: none;
+    }
+  }
+
+  &__list {
+    @include list-reset;
+  }
+
+  &__item {
+    min-height: 79px;
+    display: flex;
+    align-items: center;
+
+    position: relative;
+
+    @media (min-width: $tablet-width) {
+      padding-left: 32px;
+
+      &:not(:last-child) {
+        padding-right: 32px;
+      }
+    }
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 24px;
+    color: $second-color;
+    text-decoration: none;
+
+    padding-left: 46px;
+
+    @media (min-width: $tablet-width) {
+      padding: 0;
+      min-height: 89px;
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    left: 0;
+
+    @media (min-width: $tablet-width) {
+      position: static;
+      left: auto;
+    }
+  }
+
+
+  &__tablet-hidden-text {
+    @media (min-width: $tablet-width) {
+      @include visually-hidden-mixin;
+    }
+  }
+
+
+  &__tablet-appearing-text {
+    text-align: right;
+
+    @media (max-width: $tablet-width) {
+      @include visually-hidden-mixin;
+    }
+  }
+
+  &__second-list {
+    @media (min-width: $tablet-width) {
+
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        border-bottom: $header-border;
+        width: 900%;
+        bottom: 0;
+        right: -50px;
+      }
+
+      > .main-header__item {
+        border-left: $header-border;
+      }
+    }
+  }
+
+  &__second-list > &__item {
+    @media (min-width: $tablet-width) {
+
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        border-bottom: $header-border;
+        width: 900%;
+        bottom: 0;
+        left: 0;
+      }
+
+      > .main-header__item {
+        border-left: $header-border;
+      }
+    }
+  }
+
+  &__first-list > &__item {
+    padding: 0;
+
+    &:not(:last-child) {
+      margin-right: 32px;
+    }
+  }
+
+  &__first-list > &__item > &__link {
+    @media (min-width: $tablet-width) {
+      font-size: 15px;
+    }
+  }
+
+  &__link-text {
+    @media (min-width: $tablet-width) {
+      margin-left: 32px;
+    }
+  }
+
+  //Перестроение сетки шапки
+  @media (min-width: $tablet-width) {
+    display: grid;
+    justify-content: space-between;
+    align-items: center;
+    grid-template-areas:
+      "logo second-list second-list second-list"
+      "first-list first-list text text";
+
+    .main-header__first-list {
+      grid-area: first-list;
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .main-header__second-list {
+      grid-area: second-list;
+      justify-self: right;
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .main-header__logo-link {
+      grid-area: logo;
+      align-self: start;
+    }
+
+    .main-header__tablet-appearing-text {
+      grid-area: text;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    display: grid;
+    justify-content: space-between;
+    align-items: center;
+    grid-template-areas:
+      "first-list logo second-list",
+      "text text text";
+
+    .main-header__first-list {
+      grid-area: first-list;
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .main-header__second-list {
+      grid-area: second-list;
+      justify-self: right;
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .main-header__logo-link {
+      grid-area: logo;
+      align-self: start;
+    }
+
+    .main-header__tablet-appearing-text {
+      grid-area: text;
+    }
+  }
+}
