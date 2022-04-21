@@ -26,7 +26,7 @@
     display: flex;
     align-items: center;
 
-    @media (max-width: $tablet-width) {
+    @media (max-width: ($tablet-width - 1)) {
       border-top: $header-mobile-border;
     }
   }
@@ -36,7 +36,7 @@
     display: flex;
     align-items: center;
     padding-left: 46px;
-    min-height: 70px;
+    min-height: 50px;
 
     font-weight: 700;
     font-size: 17px;
@@ -51,7 +51,7 @@
   }
 
   &__item-icon {
-    @media (max-width: $tablet-width) {
+    @media (max-width: ($tablet-width - 1)) {
       position: absolute;
       left: 0;
     }
@@ -79,6 +79,12 @@
     cursor: pointer;
   }
 
+  &__desktop-appearing-list {
+    @media (max-width: ($desktop-width - 1)) {
+      @include visually-hidden-mixin;
+    }
+  }
+
   ////////////////////////////////////////////////////                     TABLET
   @media (min-width: $tablet-width) {
     &__mobile-logo-pic {
@@ -99,6 +105,7 @@
 
     &__tablet-appearing-text {
       display: block;
+      margin: 0;
     }
 
     &__list {
@@ -135,13 +142,30 @@
       padding-left: 0;
     }
 
+    $local-padding: 30px;
+    $for-first-list-padding: $tablet-body-padding - $local-padding;
+
+    &__first-list,
+    &__desktop-appearing-list {
+      padding-left: $for-first-list-padding;
+    }
+
+    &__first-list &__item,
+    &__desktop-appearing-list &__item {
+      padding-left: $local-padding;
+      padding-right: $local-padding;
+      min-height: 50px;
+    }
+
+    &__first-list &__link {
+      @media (max-width: ($desktop-width - 1)) {
+        font-size: 15px;
+      }
+    }
+
     &__item-icon-wrapper {
-      // position: static;
-      // left: auto;
-      // display: block;
       margin-left: 32px;
       margin-right: 32px;
-      // padding-left: 32px;
     }
 
     &__second-list &__link-text {
@@ -156,7 +180,7 @@
     justify-content: space-between;
     grid-template-areas:
       "logo second-list second-list second-list"
-      "first-list first-list text text";
+      "first-list first-list tablet-text tablet-text";
 
     .main-header__first-list {
       grid-area: first-list;
@@ -174,18 +198,74 @@
     }
 
     .main-header__tablet-appearing-text {
-      grid-area: text;
+      grid-area: tablet-text;
+      align-self: center;
+      justify-self: end;
+      padding-right: $tablet-body-padding;
     }
   }
 
   ////////////////////////////////////////////////////                   DESKTOP
   @media (min-width: $desktop-width) {
+    &__logo-wrapper {
+      padding-top: 9px;
+    }
+
     &__tablet-logo-pic {
       display: none;
     }
 
     &__desktop-logo-pic {
       display: block;
+    }
+
+    $local-padding: 35px;
+    $for-first-list-padding: $tablet-body-padding - $local-padding;
+
+    &__first-list > &__item {
+      border-bottom: $header-border;
+      border-right: $header-border;
+      border-top: $header-border;
+      padding-left: $local-padding;
+      padding-right: $local-padding;
+    }
+
+    &__desktop-appearing-list {
+      display: flex;
+    }
+
+    &__desktop-appearing-list &__link {
+      font-size: 15px;
+    }
+
+    display: grid;
+    justify-content: space-between;
+    grid-template-areas:
+      "first-list first-list logo second-list second-list"
+      "third-list third-list third-list tablet-text tablet-text";
+
+    .main-header__first-list {
+      grid-area: first-list;
+      display: flex;
+      flex-wrap: wrap;
+      padding-left: $for-first-list-padding;
+    }
+
+    .main-header__second-list {
+      grid-area: second-list;
+    }
+
+    .main-header__logo-link {
+      grid-area: logo;
+      align-self: start;
+    }
+
+    .main-header__tablet-appearing-text {
+      grid-area: tablet-text;
+    }
+
+    .main-header__desktop-appearing-list {
+      grid-area: third-list;
     }
   }
 }
