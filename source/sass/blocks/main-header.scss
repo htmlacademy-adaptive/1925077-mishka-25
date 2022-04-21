@@ -1,9 +1,6 @@
 @import "../variables-mixins.scss";
 
 .main-header {
-
-  // position: relative;
-
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -29,13 +26,17 @@
     display: flex;
     align-items: center;
 
-    border-top: 1px solid $header-mobile-border-color;
+    @media (max-width: $tablet-width) {
+      border-top: $header-mobile-border;
+    }
   }
 
   &__link {
     position: relative;
     display: flex;
+    align-items: center;
     padding-left: 46px;
+    min-height: 70px;
 
     font-weight: 700;
     font-size: 17px;
@@ -44,9 +45,16 @@
     color: $second-color;
   }
 
+  &__item-icon-wrapper {
+    display: flex;
+    align-items: center;
+  }
+
   &__item-icon {
-    position: absolute;
-    left: 0;
+    @media (max-width: $tablet-width) {
+      position: absolute;
+      left: 0;
+    }
   }
 
   &__tablet-logo-pic {
@@ -71,13 +79,14 @@
     cursor: pointer;
   }
 
-
-
-
   ////////////////////////////////////////////////////                     TABLET
   @media (min-width: $tablet-width) {
     &__mobile-logo-pic {
       display: none;
+    }
+
+    &__logo-wrapper {
+      padding-top: 22px;
     }
 
     &__tablet-logo-pic {
@@ -90,6 +99,82 @@
 
     &__tablet-appearing-text {
       display: block;
+    }
+
+    &__list {
+      flex-direction: row;
+    }
+
+    &__second-list {
+      position: relative;
+      min-height: 89px;
+      display: flex;
+      justify-content: end;
+      flex-wrap: wrap;
+
+      &::after {
+        content: "";
+        position: absolute;
+        border-bottom: $header-border;
+        width: 900%;
+        bottom: 0;
+        right: -50px;
+      }
+    }
+
+    &__second-list > &__item {
+      border-bottom: $header-border;
+      border-left: $header-border;
+      border-top: $header-border;
+
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    &__link {
+      padding-left: 0;
+    }
+
+    &__item-icon-wrapper {
+      // position: static;
+      // left: auto;
+      // display: block;
+      margin-left: 32px;
+      margin-right: 32px;
+      // padding-left: 32px;
+    }
+
+    &__second-list &__link-text {
+      padding-right: $tablet-body-padding;
+    }
+
+    &__tablet-hidden-text {
+      @include visually-hidden-mixin;
+    }
+    //////////////////////////////////////////////////                   TABLET GRID
+    display: grid;
+    justify-content: space-between;
+    grid-template-areas:
+      "logo second-list second-list second-list"
+      "first-list first-list text text";
+
+    .main-header__first-list {
+      grid-area: first-list;
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    .main-header__second-list {
+      grid-area: second-list;
+    }
+
+    .main-header__logo-link {
+      grid-area: logo;
+      align-self: start;
+    }
+
+    .main-header__tablet-appearing-text {
+      grid-area: text;
     }
   }
 

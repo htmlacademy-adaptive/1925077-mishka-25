@@ -1,21 +1,22 @@
 $body-color: #444444; //основной цвет шрифта, также бордер у кнопки.
 $second-color: #000000; //применяется только как цвет шрифта, как цвет бордеров или фона не используется
 $legend-color: #15ac8e; //применяется и к фонам и бордерам отдельных элементов. равен или идентичен цвету многих декоратывных и интерактивных элементов.
-$header-border-color:  1px solid #e6e6e6; // сконвертировано из => rgba(0, 0, 0, 0.1)
-$header-mobile-border-color: #ededed;
+$header-border:  1px solid #e6e6e6; // сконвертировано из => rgba(0, 0, 0, 0.1)
+$header-mobile-border: 1px solid #ededed;
 
 $tablet-width: 772px;
 $desktop-width: 1150px;
 
 $mobile-body-padding: 30px;
+$tablet-body-padding: 50px;
 
 @mixin general-padding {
   padding-left: $mobile-body-padding;
   padding-right: $mobile-body-padding;
 
   @media (min-width: $tablet-width) {
-    padding-left: 50px;
-    padding-right: 50px;
+    padding-left: $tablet-body-padding;
+    padding-right: $tablet-body-padding;
   }
 }
 
