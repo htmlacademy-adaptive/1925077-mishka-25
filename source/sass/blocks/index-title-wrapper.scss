@@ -11,8 +11,6 @@
 
     background-image: url("../img/index-page/hero-mobile@2x1.jpg");
 
-    @include general-padding;
-
     @media (min-width: $tablet-width) {
       min-height: 626px;
       padding: 154px 0 372px;

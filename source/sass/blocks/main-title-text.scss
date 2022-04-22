@@ -6,4 +6,21 @@
   line-height: 30px;
   text-align: center;
   color: $second-color;
+
+  margin: 0;
+
+  @include general-padding;
+
+  @media (min-width: $tablet-width) {
+    font-size: 43px;
+    line-height: 50px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 53px;
+    line-height: 57px;
+
+    padding-left: 150px;
+    padding-right: 150px;
+  }
 }
