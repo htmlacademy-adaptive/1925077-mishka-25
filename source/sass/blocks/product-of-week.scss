@@ -37,14 +37,6 @@
     margin: 0;
   }
 
-  &__cart {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    margin-top: 28px;
-  }
-
   &__pic {
     display: block;
     margin: 0;
@@ -61,5 +53,63 @@
 
   &__button {
     margin-top: 24px;
+  }
+
+  ////////////////////////////////////                                                           TABLET
+  @media (min-width: $tablet-width) {
+    padding-top: 40px;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+      "he3 he3 he3 he2"
+      "par par pic pic"
+      "dl dl pic pic"
+      "pr pr pic pic"
+      "btn btn pic pic";
+    column-gap: 42px;
+
+    .section-title {
+      grid-area: he3;
+      align-self: center;
+    }
+
+    &__title {
+      grid-area: he2;
+      justify-self: self-end;
+      align-self: center;
+      text-align: center;
+      line-height: 17px;
+      width: 67px;
+      margin-right: 27px;
+      margin-bottom: 0;
+      margin-top: 0;
+    }
+
+    &__description {
+      grid-area: par;
+      margin-top: 38px;
+    }
+
+    &__list {
+      grid-area: dl;
+    }
+
+    &__price {
+      grid-area: pr;
+      justify-self: center;
+    }
+
+    &__pic {
+      grid-area: pic;
+      justify-self: end;
+      width: 334px;
+      height: 404px;
+      margin-top: 38px;
+    }
+
+    &__button {
+      grid-area: btn;
+    }
   }
 }

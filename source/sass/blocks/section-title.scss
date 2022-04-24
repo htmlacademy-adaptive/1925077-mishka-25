@@ -7,4 +7,9 @@
   font-size: 25px;
   line-height: 30px;
   color: $second-color;
+
+  @media (min-width: $tablet-width) {
+    font-size: 43px;
+    line-height: 50px;
+  }
 }
