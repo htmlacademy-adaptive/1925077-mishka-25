@@ -110,6 +110,7 @@
 
     &__button {
       grid-area: btn;
+      align-self: end;
     }
   }
 }

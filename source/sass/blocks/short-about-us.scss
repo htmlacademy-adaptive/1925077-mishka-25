@@ -2,18 +2,129 @@
 
 .short-about-us {
   @include general-padding;
+  padding-top: 31px;
+  padding-bottom: 58px;
 
   &__list {
     @include list-reset;
-    margin-top: 28px;
   }
 
   &__item {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    min-height: 92px;
     font-weight: 700;
     font-size: 17px;
     line-height: 20px;
     color: $second-color;
 
     margin-top: 32px;
+
+    &-1::before {
+      content: "";
+      background: url("../../img/index-page/short-about-us/flower.svg") no-repeat;
+      width: 33px;
+      height: 38px;
+    }
+
+    &-2::before {
+      content: "";
+      background: url("../../img/index-page/short-about-us/style.svg") no-repeat;
+      width: 47px;
+      height: 27px;
+    }
+
+    &-3::before {
+      content: "";
+      background: url("../../img/index-page/short-about-us/heart.svg") no-repeat;
+      width: 34px;
+      height: 27px;
+    }
+
+    &-4::before {
+      content: "";
+      background: url("../../img/index-page/short-about-us/skein.svg") no-repeat;
+      width: 35px;
+      height: 34px;
+    }
+
+    &-5::before {
+      content: "";
+      background: url("../../img/index-page/short-about-us/rocket.svg") no-repeat;
+      width: 55px;
+      height: 23px;
+    }
+
+    &-6::before {
+      content: "";
+      background: url("../../img/index-page/short-about-us/gift.svg") no-repeat;
+      width: 33px;
+      height: 32px;
+    }
+  }
+
+  ////////////////////////////////////                                                  TABLET
+  @media (min-width: $tablet-width) {
+    &__item {
+      font-size: 20px;
+      line-height: 22px;
+
+      min-height: 100px;
+    }
+
+    &__list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 20px;
+      grid-template-areas:
+        "1 4"
+        "2 5"
+        "3 6";
+
+      &__item-1 {
+        grid-area: 1;
+      }
+
+      &__item-2 {
+        grid-area: 2;
+      }
+
+      &__item-3 {
+        grid-area: 3;
+      }
+
+      &__item-4 {
+        grid-area: 4;
+      }
+
+      &__item-5 {
+        grid-area: 5;
+      }
+
+      &__item-6 {
+        grid-area: 6;
+      }
+    }
+  }
+
+  /////////////////////////////////////////                                DESKTOP
+  @media (min-width: $desktop-width) {
+    padding-top: 68px;
+    padding-bottom: 90px;
+    padding-left: calc((100% / 6) - 10px);
+    padding-right: calc((100% / 6) - 10px);
+
+    &__item {
+      margin-top: 60px;
+    }
+
+    &__item-1,
+    &__item-4 {
+      margin-top: 40px;
+    }
   }
 }
