@@ -2,6 +2,7 @@
 
 .short-about-us {
   @include general-padding;
+
   padding-top: 31px;
   padding-bottom: 58px;
 
@@ -115,8 +116,11 @@
   @media (min-width: $desktop-width) {
     padding-top: 68px;
     padding-bottom: 90px;
-    padding-left: calc((100% / 6) - 10px);
-    padding-right: calc((100% / 6) - 10px);
+
+    &__wrapper {
+      padding-left: (100% / 6);
+      padding-right: (100% / 6);
+    }
 
     &__item {
       margin-top: 60px;
