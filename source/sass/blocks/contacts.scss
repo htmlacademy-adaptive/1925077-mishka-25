@@ -1,9 +1,23 @@
 @import "../variables-mixins.scss";
 
 .contacts {
-  &__item {
+  padding-top: 38px;
+
+  &__wrapper {
     @include general-padding;
+  }
+
+  &__list {
+    @include list-reset;
+    margin-top: 28px;
+  }
+
+  &__item {
     display: flex;
+    margin-bottom: 38px;
+
+    font-size: 14px;
+    line-height: 30px;
   }
 
   &__property {
@@ -11,7 +25,7 @@
   }
 
   &__value {
-    min-width: 183px;
+    flex-basis: 183px;
     margin: 0;
   }
 
@@ -20,14 +34,57 @@
     text-decoration: none;
   }
 
+  &__map {
+    display: block;
+    margin-top: 68px;
+  }
+
   &__map-pic {
     display: block;
     margin: 0 auto;
-    object-fit: contain;
+    object-fit: cover;
+    height: 454px;
+    width: 100%;
   }
 
   &__button {
-    @include general-padding;
-    margin: 42px;
+    @media (max-width: ($tablet-width - 1)) {
+      @include general-padding;
+      margin: 42px 0;
+    }
+  }
+  ////////////////////////////////////            TABLET
+  @media (min-width: $tablet-width) {
+    padding-top: 68px;
+    position: relative;
+
+    &__list {
+      margin-top: 49px;
+      display: flex;
+    }
+
+    &__item {
+      margin-right: 50px;
+      margin-bottom: 0;
+    }
+
+    &__map {
+      margin-top: 49px;
+    }
+
+    &__button {
+      width: 230px;
+      margin: 56px auto;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      background: url("../../img/index-page/contacts-flag.svg") no-repeat;
+      width: 47px;
+      height: 81px;
+      right: $tablet-body-padding;
+      top: 46px;
+    }
   }
 }
