@@ -4,6 +4,7 @@
   @media (max-width: ($tablet-width - 1)) {
     @include general-padding;
   }
+
   padding-bottom: 45px;
 
   &__list {
@@ -65,62 +66,55 @@
   ////////////////////////////////////                                                  TABLET
   @media (min-width: $tablet-width) {
     padding-bottom: 68px;
-    position: relative;
 
     &__wrapper {
-      @include general-padding;
+      position: relative;
+
+      @media (max-width: $desktop-width - 1) {
+        @include general-padding;
+      }
+
       padding-top: 79px;
       min-height: 457px;
       background: url("../../img/index-page/reviews-bg.jpg") no-repeat;
     }
 
-    &__list {
-      margin-top: 39px;
-    }
-
-    &__title {
-      // grid-column: 1 / 3;
-      // grid-row: 1 / 2;
-    }
-
-    &__text {
-      font-size: 17px;
-      // margin-top: 39px;
-      // grid-column: 1 / 5;
-      // grid-row: 2 / 3;
-    }
-
-    &__author-wrapper {
-      // grid-column: 1 / 3;
-      // grid-row: 3 / 4;
-    }
-
-    &__author {
-      margin-top: 61px;
-    }
-
-    &__button {
-      position: absolute;
-      top: 79px;
-      right: $tablet-body-padding;
-
-      margin: 0;
-      width: auto;
-      min-width: 175px;
+    &__review-and-buttons {
+      position: relative;
     }
 
     &__buttons-wrapper {
       position: absolute;
-      bottom: 140px;
+      bottom: 0;
+      right: 0;
       min-width: 200px;
-      margin: 0;
-      margin-bottom: 13px;
-      right: $tablet-body-padding;
+    }
+
+    &__button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: auto;
+      min-width: 200px;
+      margin-top: 0;
     }
 
     &__button-to-left,
     &__button-to-right {
       border: none;
+    }
+
+    &__text {
+      margin-top: 40px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    @include general-padding;
+
+    &__wrapper {
+      padding-left: calc(100% / 6);
+
     }
   }
 }
