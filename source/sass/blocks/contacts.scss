@@ -4,7 +4,9 @@
   padding-top: 38px;
 
   &__wrapper {
-    @include general-padding;
+    @media (max-width: ($desktop-width - 1)) {
+      @include general-padding;
+    }
   }
 
   &__list {
@@ -59,8 +61,10 @@
     position: relative;
 
     &__list {
-      margin-top: 49px;
-      display: flex;
+      @media (max-width: ($desktop-width - 1)) {
+        margin-top: 49px;
+        display: flex;
+      }
     }
 
     &__item {
@@ -85,6 +89,38 @@
       height: 81px;
       right: $tablet-body-padding;
       top: 46px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    @include general-padding;
+    padding-top: 71px;
+    padding-bottom: 105px;
+
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+
+    &__wrapper {
+      grid-column: 2 / 4;
+      margin-top: 79px;
+    }
+
+    &__map {
+      grid-column: 4 / 7;
+      margin: 0;
+    }
+
+    &__button {
+      grid-column: 2 / 4;
+      position: absolute;
+      bottom: 105px;
+      left: 0;
+      margin-bottom: 0;
+    }
+
+    &::before {
+      left: 113px;
+      top: 133px;
     }
   }
 }
