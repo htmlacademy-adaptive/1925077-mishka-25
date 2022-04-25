@@ -51,18 +51,25 @@
     border-top: $footer-border;
   }
 
-  // &__copyright::after {
-  //   content: "";
-  //   width: 127px;
-  //   height: 135px;
-  //   border: #000000 2px solid;
+  @media (max-width: ($tablet-width - 1)) {
+    &__logo-link {
+      visibility: hidden;
+    }
+  }
 
-  // }
+  @media (min-width: $tablet-width) {
+    @include general-padding;
+    padding-top: 51px;
+    padding-bottom: 58px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 
-
-
-  // &__social-item::before {
-  //   content: "";
-  //   background: url("../../img/");
-  // }
+    &__copyright {
+      width: auto;
+      min-height: auto;
+      border: none;
+      margin: 0;
+    }
+  }
 }
