@@ -47,7 +47,9 @@
     font-weight: 700;
     font-size: 17px;
     line-height: 24px;
+    text-align: center;
 
+    margin: 0;
     margin-top: 26px;
   }
 
@@ -55,21 +57,22 @@
     margin-top: 24px;
   }
 
-  ////////////////////////////////////                                                           TABLET
-  @media (min-width: $tablet-width) {
+  ////////////////////////////////////////////                  TABLET
+  @media (min-width: $tablet-width) and (max-width: ($desktop-width - 1)) {
     padding-top: 40px;
 
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-areas:
-      "he3 he3 he3 he2"
-      "par par pic pic"
-      "dl dl pic pic"
-      "pr pr pic pic"
-      "btn btn pic pic";
-    column-gap: 42px;
+    &__grid-wrapper {
+      display: grid;
+      grid-template-areas:
+        "he3 he3 he3 he2"
+        "par par pic pic"
+        "dl dl pic pic"
+        "pr pr pic pic"
+        "btn btn pic pic";
+      column-gap: 42px;
+    }
 
-    .section-title {
+    &__second-title {
       grid-area: he3;
       align-self: center;
     }
@@ -111,6 +114,67 @@
     &__button {
       grid-area: btn;
       align-self: end;
+    }
+  }
+
+  ////////////////////////////////////               DESKTOP
+  @media (min-width: $desktop-width) {
+    @include general-padding;
+    padding-top: 54px;
+    padding-bottom: 73px;
+
+    &__grid-wrapper {
+      margin-left: calc(100% / 6);
+      position: relative;
+      display: grid;
+      align-items: start;
+      column-gap: 58px;
+      grid-template-areas:
+        "txt pic"
+        "lst pic"
+        "pr pic"
+        "btn pic";
+    }
+
+    &__title {
+      position: absolute;
+      left: calc(100% / -6);
+      // left: 0;
+      top: 69px;
+      max-width: calc((100% / 6 * 0.75));
+      text-align: center;
+    }
+
+    &__second-title {
+      position: absolute;
+      top: 61px;
+    }
+
+    &__description {
+      margin-top: 153px;
+      grid-area: txt;
+      font-size: 17px;
+      line-height: 30px;
+    }
+
+    &__list {
+      grid-area: lst;
+    }
+
+    &__price {
+      grid-area: pr;
+      align-self: end;
+    }
+
+    &__button {
+      grid-area: btn;
+      align-self: end;
+    }
+
+    &__pic {
+      width: 525px;
+      height: 636px;
+      grid-area: pic;
     }
   }
 }
