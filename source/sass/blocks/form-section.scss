@@ -1,9 +1,12 @@
 @import "../variables-mixins.scss";
 
 .form-section {
-  @include general-padding;
+  @media (max-width: ($tablet-width - 1)) {
+    @include general-padding;
+  }
   padding-top: 17px;
   padding-bottom: 55px;
+  // position: relative;
 
   &__order-preview-text {
     margin: 0;
@@ -42,8 +45,10 @@
     margin-top: 11px;
   }
 
-  &__checkbox-input:nth-child(1n + 2) {
-    margin-top: 23px;
+  @media (max-width: ($tablet-width - 1)) {
+    &__checkbox-input:nth-child(1n + 2) {
+      margin-top: 23px;
+    }
   }
 
   &__text-input,
@@ -63,7 +68,7 @@
   &__phone,
   &__email {
     margin-bottom: 34px;
-    min-width: 260px;
+    width: 100%;
   }
 
   &__input-description {
@@ -75,7 +80,7 @@
   }
 
   &__additional-text {
-    min-width: 260px;
+    width: 100%;
     min-height: 142px;
     padding: 17px;
 
@@ -86,5 +91,66 @@
     border: #000000 2px solid;
 
     resize: none;
+  }
+
+  @media (min-width: $tablet-width) {
+    &__form {
+      margin-top: 13px;
+    }
+
+    &__fieldset-wrapper {
+      @include general-padding;
+      padding-top: 50px;
+      padding-bottom: 50px;
+    }
+
+    &__fieldset-wrapper:nth-child(2n) {
+      background-color: $main-title-bg;
+    }
+
+    &__fieldset {
+      position: relative;
+      padding-left: calc(100% / 4);
+      margin: 0;
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+
+    &__order-preview-text {
+      @include general-padding;
+      font-size: 17px;
+      line-height: 30px;
+    }
+
+    &__legend {
+      position: absolute;
+      left: 0;
+      top: 18px;
+    }
+
+    &__phone,
+    &__email {
+      margin: 0;
+    }
+
+    &__email {
+      margin-top: 24px;
+    }
+
+    &__input-description {
+      font-size: 19px;
+    }
+
+    &__color-wrapper {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &__color-wrapper {
+      grid-template-columns: repeat(3, 1fr);
+    }
   }
 }

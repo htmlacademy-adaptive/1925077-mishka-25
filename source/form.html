@@ -85,116 +85,126 @@
       </p>
 
       <form class="form-section__form" action="https://echo.htmlacademy.ru/" method="post">
-        <fieldset class="form-section__fieldset">
-          <legend class="form-section__legend">Тип</legend>
-          <div class="form-section__inputs-wrapper">
-            <label class="form-section__radio radio">
-              <input class="radio__input" name="form-section-type" type="radio" value="interior-accessory"
-                checked>
+        <div class="form-section__fieldset-wrapper">
+          <fieldset class="form-section__fieldset">
+            <legend class="form-section__legend">Тип</legend>
+            <div class="form-section__inputs-wrapper">
+              <label class="form-section__radio radio">
+                <input class="radio__input" name="form-section-type" type="radio" value="interior-accessory"
+                  checked>
+                  <span class="radio__button"></span>
+                <span class="form-section__input-description">Аксессуар для интерьера</span>
+              </label>
+              <label class="form-section__radio radio">
+                <input class="radio__input" name="form-section-type" type="radio" value="toy-for-children">
                 <span class="radio__button"></span>
-              <span class="form-section__input-description">Аксессуар для интерьера</span>
-            </label>
-            <label class="form-section__radio radio">
-              <input class="radio__input" name="form-section-type" type="radio" value="toy-for-children">
-              <span class="radio__button"></span>
-              <span class="form-section__input-description">Детская игрушка</span>
-            </label>
-          </div>
-        </fieldset>
+                <span class="form-section__input-description">Детская игрушка</span>
+              </label>
+            </div>
+          </fieldset>
+        </div>
 
-        <fieldset class="form-section__fieldset">
-          <legend class="form-section__legend">Цвет</legend>
-          <div class="form-section__inputs-wrapper">
-            <div class="form-section__checkbox-input">
-              <label class="checkbox">
-                <input class="checkbox__input" name="white" type="checkbox" checked>
-                <span class="checkbox__box"></span>
-                <span class="form-section__input-description">Белый</span>
-              </label>
+        <div class="form-section__fieldset-wrapper">
+          <fieldset class="form-section__fieldset">
+            <legend class="form-section__legend">Цвет</legend>
+            <div class="form-section__inputs-wrapper form-section__color-wrapper">
+              <div class="form-section__checkbox-input">
+                <label class="checkbox">
+                  <input class="checkbox__input" name="white" type="checkbox" checked>
+                  <span class="checkbox__box"></span>
+                  <span class="form-section__input-description">Белый</span>
+                </label>
+              </div>
+              <div class="form-section__checkbox-input">
+                <label class="checkbox">
+                  <input class="checkbox__input" name="gray" type="checkbox" checked>
+                  <span class="checkbox__box"></span>
+                  <span class="form-section__input-description">Серый</span>
+                </label>
+              </div>
+              <div class="form-section__checkbox-input">
+                <label class="checkbox">
+                  <input class="checkbox__input" name="tiffany" type="checkbox">
+                  <span class="checkbox__box"></span>
+                  <span class="form-section__input-description">Тиффани</span>
+                </label>
+              </div>
+              <div class="form-section__checkbox-input">
+                <label class="checkbox">
+                  <input class="checkbox__input" name="black" type="checkbox">
+                  <span class="checkbox__box"></span>
+                  <span class="form-section__input-description">Черный</span>
+                </label>
+              </div>
+              <div class="form-section__checkbox-input">
+                <label class="checkbox">
+                  <input class="checkbox__input" name="pink" type="checkbox">
+                  <span class="checkbox__box"></span>
+                  <span class="form-section__input-description">Розовый</span>
+                </label>
+              </div>
+              <div class="form-section__checkbox-input">
+                <label class="checkbox">
+                  <input class="checkbox__input" name="orange" type="checkbox">
+                  <span class="checkbox__box"></span>
+                  <span class="form-section__input-description">Оранжевый</span>
+                </label>
+              </div>
             </div>
-            <div class="form-section__checkbox-input">
-              <label class="checkbox">
-                <input class="checkbox__input" name="gray" type="checkbox" checked>
-                <span class="checkbox__box"></span>
-                <span class="form-section__input-description">Серый</span>
-              </label>
-            </div>
-            <div class="form-section__checkbox-input">
-              <label class="checkbox">
-                <input class="checkbox__input" name="tiffany" type="checkbox">
-                <span class="checkbox__box"></span>
-                <span class="form-section__input-description">Тиффани</span>
-              </label>
-            </div>
-            <div class="form-section__checkbox-input">
-              <label class="checkbox">
-                <input class="checkbox__input" name="black" type="checkbox">
-                <span class="checkbox__box"></span>
-                <span class="form-section__input-description">Черный</span>
-              </label>
-            </div>
-            <div class="form-section__checkbox-input">
-              <label class="checkbox">
-                <input class="checkbox__input" name="pink" type="checkbox">
-                <span class="checkbox__box"></span>
-                <span class="form-section__input-description">Розовый</span>
-              </label>
-            </div>
-            <div class="form-section__checkbox-input">
-              <label class="checkbox">
-                <input class="checkbox__input" name="orange" type="checkbox">
-                <span class="checkbox__box"></span>
-                <span class="form-section__input-description">Оранжевый</span>
-              </label>
-            </div>
-          </div>
-        </fieldset>
+          </fieldset>
+        </div>
 
-        <fieldset class="form-section__fieldset">
-          <legend class="form-section__legend">ФИО</legend>
-          <div class="form-section__inputs-wrapper">
-            <label class="form-section__inputs-wrapper">
-              <span class="form-section__input-description">Имя:</span>
-              <input class="form-section__text-input" type="text" placeholder="Введите ваше имя*" required>
-            </label>
-            <label class="form-section__inputs-wrapper">
-              <span class="form-section__input-description">Фамилия:</span>
-              <input class="form-section__text-input" type="text" placeholder="Укажите фамилию*" required>
-            </label>
-            <label class="form-section__inputs-wrapper">
-              <span class="form-section__input-description">Имя:</span>
-              <input class="form-section__text-input" type="text" placeholder="Отчество, если желаете">
-            </label>
-          </div>
-        </fieldset>
+        <div class="form-section__fieldset-wrapper">
+          <fieldset class="form-section__fieldset">
+            <legend class="form-section__legend">ФИО</legend>
+            <div class="form-section__inputs-wrapper">
+              <label class="form-section__inputs-wrapper">
+                <span class="form-section__input-description">Имя:</span>
+                <input class="form-section__text-input" type="text" placeholder="Введите ваше имя*" required>
+              </label>
+              <label class="form-section__inputs-wrapper">
+                <span class="form-section__input-description">Фамилия:</span>
+                <input class="form-section__text-input" type="text" placeholder="Укажите фамилию*" required>
+              </label>
+              <label class="form-section__inputs-wrapper">
+                <span class="form-section__input-description">Имя:</span>
+                <input class="form-section__text-input" type="text" placeholder="Отчество, если желаете">
+              </label>
+            </div>
+          </fieldset>
+        </div>
 
-        <fieldset class="form-section__fieldset">
-          <legend class="form-section__legend form-section__legend-tel-and-mail">ТЕЛ</legend>
-          <div class="form-section__inputs-wrapper">
-            <label>
-              <input class="form-section__phone" type="tel" placeholder="+7 ХХХ ХХХ ХХ ХХ*" required>
-            </label>
-          </div>
-        </fieldset>
+        <div class="form-section__fieldset-wrapper">
+          <fieldset class="form-section__fieldset">
+            <legend class="form-section__legend form-section__legend-tel-and-mail">ТЕЛ</legend>
+            <div class="form-section__inputs-wrapper">
+              <label>
+                <input class="form-section__phone" type="tel" placeholder="+7 ХХХ ХХХ ХХ ХХ*" required>
+              </label>
+            </div>
+          </fieldset>
 
-        <fieldset class="form-section__fieldset">
-          <legend class="form-section__legend form-section__legend-tel-and-mail">E-mail</legend>
-          <div class="form-section__inputs-wrapper">
-            <label>
-              <input class="form-section__email" type="email" placeholder="Ваш Email*" required>
-            </label>
-          </div>
-        </fieldset>
+          <fieldset class="form-section__fieldset">
+            <legend class="form-section__legend form-section__legend-tel-and-mail">E-mail</legend>
+            <div class="form-section__inputs-wrapper">
+              <label>
+                <input class="form-section__email" type="email" placeholder="Ваш Email*" required>
+              </label>
+            </div>
+          </fieldset>
+        </div>
 
-        <fieldset class="form-section__fieldset">
-          <legend class="form-section__legend form-section__legend-additional">Доп</legend>
-          <div class="form-section__inputs-wrapper">
-            <label>
-              <textarea class="form-section__additional-text" name="additional-text" id="additional-text" rows="6"
-                placeholder="Опишите все ваши пожелания к заказу"></textarea>
-            </label>
-          </div>
-        </fieldset>
+        <div class="form-section__fieldset-wrapper">
+          <fieldset class="form-section__fieldset">
+            <legend class="form-section__legend form-section__legend-additional">Доп</legend>
+            <div class="form-section__inputs-wrapper">
+              <label>
+                <textarea class="form-section__additional-text" name="additional-text" id="additional-text" rows="6"
+                  placeholder="Опишите все ваши пожелания к заказу"></textarea>
+              </label>
+            </div>
+          </fieldset>
+        </div>
 
         <p class="form-section__required-description">
           *Поля обязательны для заполнения

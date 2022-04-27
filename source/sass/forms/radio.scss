@@ -1,12 +1,14 @@
 @import "../variables-mixins.scss";
 
 .radio {
+  position: relative;
   display: flex;
   align-items: center;
   cursor: pointer;
 
   &__input {
     appearance: none;
+    position: absolute;
   }
 
   &__button {
@@ -28,7 +30,5 @@
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    // background: url("../../img/checkbox.svg") no-repeat center;
-    // background-size: 23px 16px;
   }
 }
