@@ -2,7 +2,12 @@
 
 .form-section {
   @include general-padding;
+  padding-top: 17px;
   padding-bottom: 55px;
+
+  &__order-preview-text {
+    margin: 0;
+  }
 
   &__fieldset {
     padding: 0;
@@ -37,7 +42,7 @@
     margin-top: 11px;
   }
 
-  &__checkbox-input {
+  &__checkbox-input:nth-child(1n + 2) {
     margin-top: 23px;
   }
 
@@ -62,6 +67,7 @@
   }
 
   &__input-description {
+    margin-left: 23px;
     font-weight: 700;
     font-size: 17px;
     line-height: 18px;
