@@ -38,7 +38,7 @@
     flex-direction: column;
   }
 
-  &__radio-input {
+  &__radio:nth-child(1n + 2) {
     margin-top: 11px;
   }
 
