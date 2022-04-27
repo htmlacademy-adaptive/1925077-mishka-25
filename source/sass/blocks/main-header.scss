@@ -246,10 +246,11 @@
 
     &__desktop-appearing-list &__link {
       font-size: 15px;
+      align-items: end;
     }
 
     display: grid;
-    justify-content: space-between;
+    justify-content: stretch;
     grid-template-areas:
       "first-list first-list logo second-list second-list"
       "third-list third-list third-list tablet-text tablet-text";
@@ -259,6 +260,7 @@
       display: flex;
       flex-wrap: wrap;
       padding-left: $for-first-list-padding;
+      background-color: $main-bg;
     }
 
     .main-header__second-list {
@@ -276,6 +278,7 @@
 
     .main-header__desktop-appearing-list {
       grid-area: third-list;
+      background-color: $main-title-bg;
     }
   }
 }
