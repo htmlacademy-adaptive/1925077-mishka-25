@@ -79,10 +79,12 @@
 
     <section class="form-section">
       <h2 class="visually-hidden">Форма для заказа</h2>
-      <p class="form-section__order-preview-text">
-        Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы
-        уточнить детали.
-      </p>
+      <div class="form-section__text-pc-wrapper">
+        <p class="form-section__order-preview-text">
+          Мы будем рады воплотить в жизнь ваши пожелания! Заполните простую форму заказа и мы свяжемся с вами, чтобы
+          уточнить детали.
+        </p>
+      </div>
 
       <form class="form-section__form" action="https://echo.htmlacademy.ru/" method="post">
         <div class="form-section__fieldset-wrapper">
@@ -158,15 +160,15 @@
           <fieldset class="form-section__fieldset">
             <legend class="form-section__legend">ФИО</legend>
             <div class="form-section__inputs-wrapper">
-              <label class="form-section__inputs-wrapper">
+              <label class="form-section__inputs-wrapper form-section__user-label">
                 <span class="form-section__input-description">Имя:</span>
                 <input class="form-section__text-input" type="text" placeholder="Введите ваше имя*" required>
               </label>
-              <label class="form-section__inputs-wrapper">
+              <label class="form-section__inputs-wrapper form-section__user-label">
                 <span class="form-section__input-description">Фамилия:</span>
                 <input class="form-section__text-input" type="text" placeholder="Укажите фамилию*" required>
               </label>
-              <label class="form-section__inputs-wrapper">
+              <label class="form-section__inputs-wrapper form-section__user-label">
                 <span class="form-section__input-description">Имя:</span>
                 <input class="form-section__text-input" type="text" placeholder="Отчество, если желаете">
               </label>

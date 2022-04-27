@@ -146,11 +146,50 @@
       grid-template-columns: repeat(2, 1fr);
       gap: 24px;
     }
+
+    &__user-label {
+      flex-direction: row;
+      align-items: center;
+    }
+
+    &__text-input {
+      margin: 0;
+      width: 100%;
+      padding-left: 18px;
+    }
+
+    &__user-label > &__input-description {
+      margin: 0;
+      margin-right: 22px;
+    }
   }
 
   @media (min-width: $desktop-width) {
+    &__order-preview-text {
+      margin-top: 80px;
+      padding-left: calc(100% / 6);
+      padding-right: calc(100% / 6);
+    }
+
+    &__text-pc-wrapper {
+      @include general-padding;
+    }
+
     &__color-wrapper {
       grid-template-columns: repeat(3, 1fr);
     }
+
+    &__fieldset {
+      padding-left: calc(100% / 6);
+    }
+
+    // &__user-label > &__input-description {
+    //   margin: 0;
+    //   margin-right: 22px;
+    // }
+
+    // &__text-input {
+    //   width: 100%;
+    // }
   }
 }
