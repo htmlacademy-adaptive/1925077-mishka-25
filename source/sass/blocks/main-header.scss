@@ -93,6 +93,7 @@
 
     &__logo-wrapper {
       padding-top: 22px;
+      justify-content: start;
     }
 
     &__tablet-logo-pic {
@@ -159,6 +160,7 @@
     &__first-list &__link {
       @media (max-width: ($desktop-width - 1)) {
         font-size: 15px;
+        align-items: end;
       }
     }
 
@@ -176,19 +178,24 @@
     }
     //////////////////////////////////////////////////                   TABLET GRID
     display: grid;
-    justify-content: space-between;
+    justify-content: stretch;
     grid-template-areas:
       "logo second-list second-list second-list"
       "first-list first-list tablet-text tablet-text";
 
     .main-header__first-list {
       grid-area: first-list;
+      width: 100%;
+      justify-self: start;
+
       display: flex;
       flex-wrap: wrap;
+      background-color: $main-title-bg;
     }
 
     .main-header__second-list {
       grid-area: second-list;
+      justify-self: end;
     }
 
     .main-header__logo-link {
@@ -198,9 +205,13 @@
 
     .main-header__tablet-appearing-text {
       grid-area: tablet-text;
-      align-self: center;
-      justify-self: end;
       padding-right: $tablet-body-padding;
+      background-color: $main-title-bg;
+
+      height: 100%;
+      display: flex;
+      align-items: end;
+      justify-content: end;
     }
   }
 
