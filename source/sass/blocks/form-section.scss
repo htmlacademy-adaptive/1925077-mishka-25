@@ -69,6 +69,7 @@
   &__email {
     margin-bottom: 34px;
     width: 100%;
+    background-color: inherit;
   }
 
   &__input-description {
@@ -93,6 +94,7 @@
     resize: none;
   }
 
+  ///////////////////////////////////            TABLET
   @media (min-width: $tablet-width) {
     &__form {
       margin-top: 13px;
@@ -131,6 +133,7 @@
     &__phone,
     &__email {
       margin: 0;
+      padding-left: 17px;
     }
 
     &__email {
@@ -162,8 +165,23 @@
       margin: 0;
       margin-right: 22px;
     }
+
+    &__flex-wrapper {
+      @include general-padding;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    &__submit {
+      order: -1;
+      width: auto;
+      padding-left: 32px;
+      padding-right: 32px;
+    }
   }
 
+  ////////////////////////////////////         DESKTOP
   @media (min-width: $desktop-width) {
     &__order-preview-text {
       margin-top: 80px;
@@ -183,13 +201,8 @@
       padding-left: calc(100% / 6);
     }
 
-    // &__user-label > &__input-description {
-    //   margin: 0;
-    //   margin-right: 22px;
-    // }
-
-    // &__text-input {
-    //   width: 100%;
-    // }
+    &__submit {
+      margin-left: calc(100% / 6);
+    }
   }
 }
