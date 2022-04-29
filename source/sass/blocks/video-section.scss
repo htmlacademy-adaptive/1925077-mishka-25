@@ -2,18 +2,119 @@
 
 .video-section {
   @include general-padding;
-  margin-bottom: 58px;
+  padding-bottom: 58px;
+
+  &__for-border-wrapper {
+    display: flex;
+    flex-direction: column;
+    border: $tablix-card-border;
+  }
+
+  &__around-title-wrapper {
+    padding-left: 34px;
+    padding-top: 22px;
+    padding-bottom: 26px;
+    display: flex;
+    align-items: center;
+
+    &::before {
+      content: "";
+      width: 32px;
+      height: 22px;
+      background: url("../../video/production-process/camera-icon.svg") no-repeat;
+      margin-right: 25px;
+    }
+  }
+
+  &__title {
+    margin: 0;
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 24px;
+  }
 
   &__video {
     display: block;
     margin: 0 auto;
+    object-fit: cover;
   }
 
-  &__around-video-wrapper {
-    padding: 0 34px 33px;
+  &__description-text {
+    margin: 35px 20px 34px 41px;
+    font-size: 13px;
   }
 
-  &__for-border-wrapper {
-    border: 1px solid #ececec;
+  &__button {
+    margin: 33px 34px;
+    width: auto;
+  }
+
+  ///////////////////////////////////             TABLET
+  @media (min-width: $tablet-width) {
+    padding-bottom: 64px;
+
+    &__video {
+      width: 668px;
+      height: 455px;
+      order: -1;
+    }
+
+    &__around-title-wrapper {
+      padding-left: 42px;
+      padding-top: 39px;
+      padding-bottom: 0;
+    }
+
+    &__title {
+      font-size: 20px;
+    }
+
+    &__description-text {
+      font-size: 15px;
+      line-height: 30px;
+      margin: 25px 40px 40px;
+    }
+
+    &__button {
+      margin-top: 0;
+      margin-bottom: 46px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    position: relative;
+    padding-bottom: 105px;
+
+    &__video {
+      position: absolute;
+      top: 0;
+      left: $tablet-body-padding;
+      width: 683px;
+    }
+
+    &__for-border-wrapper {
+      margin-left: 683px;
+      min-height: 455px;
+      padding: 47px 57px 60px 79px;
+    }
+
+    &__around-title-wrapper {
+      flex-direction: column;
+      align-items: start;
+      padding: 0;
+    }
+
+    &__title {
+      margin-top: 27px;
+    }
+
+    &__description-text {
+      margin: 27px 0;
+    }
+
+    &__button {
+      margin-bottom: 0;
+      margin-top: auto;
+    }
   }
 }
