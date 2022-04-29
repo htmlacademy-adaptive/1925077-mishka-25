@@ -1,9 +1,25 @@
 @import "../variables-mixins.scss";
 
 .contacts {
+  padding-top: 38px;
+
+  &__wrapper {
+    @media (max-width: ($desktop-width - 1)) {
+      @include general-padding;
+    }
+  }
+
+  &__list {
+    @include list-reset;
+    margin-top: 28px;
+  }
+
   &__item {
-    @include general-padding;
     display: flex;
+    margin-bottom: 38px;
+
+    font-size: 14px;
+    line-height: 30px;
   }
 
   &__property {
@@ -11,7 +27,7 @@
   }
 
   &__value {
-    min-width: 183px;
+    flex-basis: 183px;
     margin: 0;
   }
 
@@ -20,14 +36,91 @@
     text-decoration: none;
   }
 
+  &__map {
+    display: block;
+    margin-top: 68px;
+  }
+
   &__map-pic {
     display: block;
     margin: 0 auto;
-    object-fit: contain;
+    object-fit: cover;
+    height: 454px;
+    width: 100%;
   }
 
   &__button {
+    @media (max-width: ($tablet-width - 1)) {
+      @include general-padding;
+      margin: 42px 0;
+    }
+  }
+  ////////////////////////////////////            TABLET
+  @media (min-width: $tablet-width) {
+    padding-top: 68px;
+    position: relative;
+
+    &__list {
+      @media (max-width: ($desktop-width - 1)) {
+        margin-top: 49px;
+        display: flex;
+      }
+    }
+
+    &__item {
+      margin-right: 50px;
+      margin-bottom: 0;
+    }
+
+    &__map {
+      margin-top: 49px;
+    }
+
+    &__button {
+      width: 230px;
+      margin: 56px auto;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      background: url("../../img/index-page/contacts-flag.svg") no-repeat;
+      width: 47px;
+      height: 81px;
+      right: $tablet-body-padding;
+      top: 46px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
     @include general-padding;
-    margin: 42px;
+    padding-top: 71px;
+    padding-bottom: 105px;
+
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+
+    &__wrapper {
+      grid-column: 2 / 4;
+      margin-top: 79px;
+    }
+
+    &__map {
+      grid-column: 4 / 7;
+      margin: 0;
+    }
+
+    &__button {
+      grid-column: 2 / 4;
+      position: absolute;
+      bottom: 105px;
+      left: 0;
+      margin-bottom: 0;
+    }
+
+    &::before {
+      left: 113px;
+      top: 133px;
+    }
   }
 }

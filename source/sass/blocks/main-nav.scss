@@ -1,35 +1,50 @@
-@import "../variables-mixins.scss";
+// @import "../variables-mixins.scss";
 
-.main-nav {
-  &__list {
-    @include list-reset;
-  }
+// .main-header {
+//   &__list {
+//     @include list-reset;
+//   }
 
-  &__item {
-    min-height: 79px;
-    display: flex;
-    align-items: center;
+//   &__item {
+//     min-height: 79px;
+//     display: flex;
+//     align-items: center;
 
-    position: relative;
-  }
+//     position: relative;
+//   }
 
-  &__link {
-    display: flex;
-    align-items: center;
+//   &__link {
+//     display: flex;
+//     align-items: center;
 
-    font-weight: 700;
-    font-size: 17px;
-    line-height: 24px;
-    color: $second-color;
-    text-decoration: none;
+//     font-weight: 700;
+//     font-size: 17px;
+//     line-height: 24px;
+//     color: $second-color;
+//     text-decoration: none;
 
-    position: relative;
+//     position: relative;
 
-    padding-left: 46px;
-  }
+//     padding-left: 46px;
+//   }
 
-  &__icon {
-    position: absolute;
-    left: 0;
-  }
-}
+//   &__icon {
+//     position: absolute;
+//     left: 0;
+//   }
+
+//   @media (min-width: $tablet-width) {
+//     &__tablet-hidden-text {
+//       @include visually-hidden-mixin;
+//     }
+//   }
+
+//   @media (max-width: $tablet-width) {
+//     &__tablet-appearing-text {
+//       @include visually-hidden-mixin;
+//       font-size: 15px;
+//       line-height: 24px;
+//       text-align: right;
+//     }
+//   }
+// }

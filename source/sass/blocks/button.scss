@@ -1,19 +1,19 @@
 @import "../variables-mixins.scss";
 
 .button {
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 100%;
+  min-height: 52px;
 
   font-weight: 700;
   font-size: 18px;
   line-height: 20px;
+  color: $body-color;
 
   text-transform: uppercase;
-  text-align: center;
   text-decoration: none;
-
-  padding-top: 16px;
-  padding-bottom: 16px;
 
   border: 2px solid $body-color;
   background-color: inherit;

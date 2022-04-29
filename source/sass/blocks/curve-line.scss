@@ -1,0 +1,10 @@
+.curve-line {
+  height: 6px;
+  background-image: url("../img/curve-line.svg");
+  background-repeat: repeat-x;
+  background-size: contain;
+
+  @media (min-width: $tablet-width) {
+    height: 17px;
+  }
+}

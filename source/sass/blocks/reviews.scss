@@ -1,17 +1,120 @@
 @import "../variables-mixins.scss";
 
 .reviews {
-  @include general-padding;
+  @media (max-width: ($tablet-width - 1)) {
+    @include general-padding;
+  }
+
+  padding-bottom: 45px;
 
   &__list {
     @include list-reset;
+    margin-top: 14px;
+  }
+
+  &__text {
+    margin: 0;
+    line-height: 30px;
+  }
+
+  &__author {
+    margin: 0;
+    margin-top: 33px;
+
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 24px;
+    color: $second-color;
+  }
+
+  &__username {
+    margin: 0;
+
+    font-size: 17px;
+    line-height: 30px;
+  }
+
+  &__buttons-wrapper {
+    display: flex;
+    margin-top: 30px;
+  }
+
+  &__button-to-left,
+  &__button-to-right {
+    height: 52px;
+    width: 50%;
+
+    border: $tablix-card-border;
+    background-color: transparent;
+    background-image: url("../../img/arrow.svg");
+    background-repeat: no-repeat;
+    background-size: 50px 26px;
+    background-position: center;
+
+    cursor: pointer;
+  }
+
+  &__button-to-right {
+    transform: rotate(180deg);
+    border-right: none;
   }
 
   &__button {
     margin-top: 38px;
   }
 
-  &__buttons-wrapper {
-    display: flex;
+  ////////////////////////////////////                                                  TABLET
+  @media (min-width: $tablet-width) {
+    padding-bottom: 68px;
+
+    &__wrapper {
+      position: relative;
+
+      @media (max-width: $desktop-width - 1) {
+        @include general-padding;
+      }
+
+      padding-top: 79px;
+      min-height: 457px;
+      background: url("../../img/index-page/reviews-bg.jpg") no-repeat;
+    }
+
+    &__review-and-buttons {
+      position: relative;
+    }
+
+    &__buttons-wrapper {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      min-width: 200px;
+    }
+
+    &__button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: auto;
+      min-width: 200px;
+      margin-top: 0;
+    }
+
+    &__button-to-left,
+    &__button-to-right {
+      border: none;
+    }
+
+    &__text {
+      margin-top: 40px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    @include general-padding;
+
+    &__wrapper {
+      padding-left: calc(100% / 6);
+
+    }
   }
 }

@@ -3,7 +3,14 @@
 .product-of-week {
   @include general-padding;
 
+  padding-top: 31px;
+  padding-bottom: 36px;
+
   &__title {
+    margin: 0;
+    margin-top: 4px;
+    margin-bottom: 17px;
+
     font-weight: 700;
     font-size: 17px;
     line-height: 20px;
@@ -11,8 +18,15 @@
     color: $legend-color;
   }
 
+  &__list {
+    margin-top: 28px;
+  }
+
   &__item {
     display: flex;
+    align-items: center;
+    min-height: 40px;
+    border-bottom: $tablix-card-border;
   }
 
   &__property {
@@ -21,12 +35,6 @@
 
   &__value {
     margin: 0;
-  }
-
-  &__cart {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
   }
 
   &__pic {
@@ -39,11 +47,134 @@
     font-weight: 700;
     font-size: 17px;
     line-height: 24px;
+    text-align: center;
 
+    margin: 0;
     margin-top: 26px;
   }
 
   &__button {
     margin-top: 24px;
+  }
+
+  ////////////////////////////////////////////                  TABLET
+  @media (min-width: $tablet-width) and (max-width: ($desktop-width - 1)) {
+    padding-top: 40px;
+
+    &__grid-wrapper {
+      display: grid;
+      grid-template-areas:
+        "he3 he3 he3 he2"
+        "par par pic pic"
+        "dl dl pic pic"
+        "pr pr pic pic"
+        "btn btn pic pic";
+      column-gap: 42px;
+    }
+
+    &__second-title {
+      grid-area: he3;
+      align-self: center;
+    }
+
+    &__title {
+      grid-area: he2;
+      justify-self: self-end;
+      align-self: center;
+      text-align: center;
+      line-height: 17px;
+      width: 67px;
+      margin-right: 27px;
+      margin-bottom: 0;
+      margin-top: 0;
+    }
+
+    &__description {
+      grid-area: par;
+      margin-top: 38px;
+    }
+
+    &__list {
+      grid-area: dl;
+    }
+
+    &__price {
+      grid-area: pr;
+      justify-self: center;
+    }
+
+    &__pic {
+      grid-area: pic;
+      justify-self: end;
+      width: 334px;
+      height: 404px;
+      margin-top: 38px;
+    }
+
+    &__button {
+      grid-area: btn;
+      align-self: end;
+    }
+  }
+
+  ////////////////////////////////////               DESKTOP
+  @media (min-width: $desktop-width) {
+    @include general-padding;
+    padding-top: 54px;
+    padding-bottom: 73px;
+
+    &__grid-wrapper {
+      margin-left: calc(100% / 6);
+      position: relative;
+      display: grid;
+      align-items: start;
+      column-gap: 58px;
+      grid-template-areas:
+        "txt pic"
+        "lst pic"
+        "pr pic"
+        "btn pic";
+    }
+
+    &__title {
+      position: absolute;
+      left: calc(100% / -6);
+      // left: 0;
+      top: 69px;
+      max-width: calc((100% / 6 * 0.75));
+      text-align: center;
+    }
+
+    &__second-title {
+      position: absolute;
+      top: 61px;
+    }
+
+    &__description {
+      margin-top: 153px;
+      grid-area: txt;
+      font-size: 17px;
+      line-height: 30px;
+    }
+
+    &__list {
+      grid-area: lst;
+    }
+
+    &__price {
+      grid-area: pr;
+      align-self: end;
+    }
+
+    &__button {
+      grid-area: btn;
+      align-self: end;
+    }
+
+    &__pic {
+      width: 525px;
+      height: 636px;
+      grid-area: pic;
+    }
   }
 }

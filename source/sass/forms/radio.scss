@@ -1,0 +1,34 @@
+@import "../variables-mixins.scss";
+
+.radio {
+  position: relative;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+
+  &__input {
+    appearance: none;
+    position: absolute;
+  }
+
+  &__button {
+    position: relative;
+    display: inline-block;
+    width: 42px;
+    height: 42px;
+    border: 2px solid $body-color;
+    border-radius: 50%;
+  }
+
+  &__input:checked ~ &__button::before {
+    position: absolute;
+    content: "";
+    width: 18px;
+    height: 18px;
+    background-color: $radio-dot;
+    border-radius: 50%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+}

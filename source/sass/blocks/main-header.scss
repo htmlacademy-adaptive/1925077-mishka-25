@@ -1,23 +1,284 @@
 @import "../variables-mixins.scss";
 
 .main-header {
-  @include general-padding;
-
   display: flex;
   flex-direction: column;
   justify-content: center;
-  position: relative;
 
-  &__logo {
-    padding: 22px 0;
-    text-align: center;
+  &__logo-wrapper {
+    @include general-padding;
+    position: relative;
+    min-height: 79px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
-  .main-header__menu-toggle {
+  &__list {
+    @include list-reset;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__item {
+    @include general-padding;
+    min-height: 79px;
+    display: flex;
+    align-items: center;
+
+    @media (max-width: ($tablet-width - 1)) {
+      border-top: $header-mobile-border;
+    }
+  }
+
+  &__link {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-left: 46px;
+    min-height: 50px;
+
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 24px;
+    text-decoration: none;
+    color: $second-color;
+  }
+
+  &__item-icon-wrapper {
+    display: flex;
+    align-items: center;
+  }
+
+  &__item-icon {
+    @media (max-width: ($tablet-width - 1)) {
+      position: absolute;
+      left: 0;
+    }
+  }
+
+  &__tablet-logo-pic {
+    display: none;
+  }
+
+  &__desktop-logo-pic {
+    display: none;
+  }
+
+  &__tablet-appearing-text {
+    display: none;
+  }
+
+  &__menu-toggle {
     position: absolute;
-    width: 20px;
-    height: 14px;
-    top: 32px;
-    right: 30px;
+    right: $mobile-body-padding;
+
+    width: 36px;
+    height: 36px;
+
+    cursor: pointer;
+  }
+
+  &__desktop-appearing-list {
+    @media (max-width: ($desktop-width - 1)) {
+      @include visually-hidden-mixin;
+    }
+  }
+
+  ////////////////////////////////////////////////////                     TABLET
+  @media (min-width: $tablet-width) {
+    &__mobile-logo-pic {
+      display: none;
+    }
+
+    &__logo-wrapper {
+      padding-top: 22px;
+      justify-content: start;
+    }
+
+    &__tablet-logo-pic {
+      display: block;
+    }
+
+    &__menu-toggle {
+      display: none;
+    }
+
+    &__tablet-appearing-text {
+      display: block;
+      margin: 0;
+    }
+
+    &__list {
+      flex-direction: row;
+    }
+
+    &__second-list {
+      position: relative;
+      min-height: 89px;
+      display: flex;
+      justify-content: end;
+      flex-wrap: wrap;
+
+      &::after {
+        content: "";
+        position: absolute;
+        border-bottom: $header-border;
+        width: 900%;
+        bottom: 0;
+      }
+    }
+
+    &__second-list > &__item {
+      border-bottom: $header-border;
+      border-left: $header-border;
+      border-top: $header-border;
+
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    &__link {
+      padding-left: 0;
+    }
+
+    $local-padding: 30px;
+    $for-first-list-padding: $tablet-body-padding - $local-padding;
+
+    &__first-list,
+    &__desktop-appearing-list {
+      padding-left: $for-first-list-padding;
+    }
+
+    &__first-list &__item,
+    &__desktop-appearing-list &__item {
+      padding-left: $local-padding;
+      padding-right: $local-padding;
+      min-height: 50px;
+    }
+
+    &__first-list &__link {
+      @media (max-width: ($desktop-width - 1)) {
+        font-size: 15px;
+        align-items: end;
+      }
+    }
+
+    &__item-icon-wrapper {
+      margin-left: 32px;
+      margin-right: 32px;
+    }
+
+    &__second-list &__link-text {
+      padding-right: $tablet-body-padding;
+    }
+
+    &__tablet-hidden-text {
+      @include visually-hidden-mixin;
+    }
+    //////////////////////////////////////////////////                   TABLET GRID
+    display: grid;
+    justify-content: stretch;
+    grid-template-areas:
+      "logo second-list second-list second-list"
+      "first-list first-list tablet-text tablet-text";
+
+    .main-header__first-list {
+      grid-area: first-list;
+      width: 100%;
+      justify-self: start;
+
+      display: flex;
+      flex-wrap: wrap;
+      background-color: $main-title-bg;
+    }
+
+    .main-header__second-list {
+      grid-area: second-list;
+      justify-self: end;
+    }
+
+    .main-header__logo-link {
+      grid-area: logo;
+      align-self: start;
+    }
+
+    .main-header__tablet-appearing-text {
+      grid-area: tablet-text;
+      padding-right: $tablet-body-padding;
+      background-color: $main-title-bg;
+
+      height: 100%;
+      display: flex;
+      align-items: end;
+      justify-content: end;
+    }
+  }
+
+  ////////////////////////////////////////////////////                   DESKTOP
+  @media (min-width: $desktop-width) {
+    &__logo-wrapper {
+      padding-top: 9px;
+    }
+
+    &__tablet-logo-pic {
+      display: none;
+    }
+
+    &__desktop-logo-pic {
+      display: block;
+    }
+
+    $local-padding: 35px;
+    $for-first-list-padding: $tablet-body-padding - $local-padding;
+
+    &__first-list > &__item {
+      border-bottom: $header-border;
+      border-right: $header-border;
+      border-top: $header-border;
+      padding-left: $local-padding;
+      padding-right: $local-padding;
+    }
+
+    &__desktop-appearing-list {
+      display: flex;
+    }
+
+    &__desktop-appearing-list &__link {
+      font-size: 15px;
+      align-items: end;
+    }
+
+    display: grid;
+    justify-content: stretch;
+    grid-template-areas:
+      "first-list first-list logo second-list second-list"
+      "third-list third-list third-list tablet-text tablet-text";
+
+    .main-header__first-list {
+      grid-area: first-list;
+      display: flex;
+      flex-wrap: wrap;
+      padding-left: $for-first-list-padding;
+      background-color: $main-bg;
+    }
+
+    .main-header__second-list {
+      grid-area: second-list;
+    }
+
+    .main-header__logo-link {
+      grid-area: logo;
+      align-self: start;
+    }
+
+    .main-header__tablet-appearing-text {
+      grid-area: tablet-text;
+    }
+
+    .main-header__desktop-appearing-list {
+      grid-area: third-list;
+      background-color: $main-title-bg;
+    }
   }
 }

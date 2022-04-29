@@ -9,30 +9,54 @@
     position: relative;
 
     display: flex;
-    align-items: center;
-
-    padding: 24px 0 31px;
+    min-height: 103px;
 
     @include general-padding;
-    background: $legend-color;
+    background: $index-mini-catalog-bg;
 
     &:nth-child(2n) {
-      background-color: #56c3b2;
+      background-color: $index-mini-catalog-bg2;
     }
   }
 
   &__link {
     display: flex;
+    min-height: 50px;
+    width: 100%;
+    padding: 24px 80px 31px 0;
 
     font-weight: 700;
     font-size: 19px;
     line-height: 24px;
-    color: #ffffff;
+    color: $index-mini-catalog-color;
     text-decoration: none;
   }
 
   &__icon {
     position: absolute;
     right: 30px;
+  }
+  /////////////////////////////////////////                                  TABLET
+  @media (min-width: $tablet-width) {
+    &__list {
+      display: flex;
+
+      @include general-padding;
+    }
+
+    &__item {
+      min-height: 119px;
+      flex-basis: fill;
+      flex-grow: 1;
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    &__link {
+      font-size: 20px;
+      line-height: 30px;
+
+      padding: 25px 130px 34px 36px;
+    }
   }
 }

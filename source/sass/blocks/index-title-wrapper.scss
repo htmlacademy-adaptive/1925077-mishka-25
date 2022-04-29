@@ -1,10 +1,19 @@
 @import "../variables-mixins.scss";
 
 .index-title-wrapper {
-  min-height: 283px;
-  padding: 73px 0 120px;
+  @media (min-width: $tablet-width) {
+    @include general-padding;
+  }
 
-  background-image: url("../img/index-page/hero-mobile@2x1.jpg");
+  &__background {
+    min-height: 283px;
+    padding: 73px 0 120px;
 
-  @include general-padding;
+    background-image: url("../img/index-page/hero-mobile@2x1.jpg");
+
+    @media (min-width: $tablet-width) {
+      min-height: 626px;
+      padding: 154px 0 372px;
+    }
+  }
 }
