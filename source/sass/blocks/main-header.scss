@@ -124,7 +124,7 @@
         content: "";
         position: absolute;
         border-bottom: $header-border;
-        width: 900%;
+        width: $body-max-width;
         bottom: 0;
       }
     }
