@@ -18,7 +18,7 @@
   }
 
   &__input:checked ~ &__box {
-    background: url("../../img/checkbox.svg") no-repeat center;
+    background: url("../img/checkbox.svg") no-repeat center;
     background-size: 23px 16px;
   }
 }
