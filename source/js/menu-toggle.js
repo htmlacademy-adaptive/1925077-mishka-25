@@ -22,5 +22,3 @@ menuButton.onclick = function () {
     secondList.classList.add('display-nope');
   }
 };
-
-
