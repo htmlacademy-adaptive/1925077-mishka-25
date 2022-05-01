@@ -5,8 +5,6 @@
   flex-direction: column;
   justify-content: center;
 
-  background-color: $main-bg;
-
   &__logo-wrapper {
     @include general-padding;
     position: relative;
@@ -245,8 +243,10 @@
       align-items: end;
       justify-content: end;
 
-      &--index {
-        background-color: $main-title-bg-mod;
+      @media (max-width: ($desktop-width - 1)) {
+        &--index {
+          background-color: $main-title-bg-mod;
+        }
       }
     }
   }
@@ -310,6 +310,10 @@
 
     .main-header__tablet-appearing-text {
       grid-area: tablet-text;
+
+      &--index {
+        background-color: $main-title-bg-mod;
+      }
     }
 
     .main-header__desktop-appearing-list {

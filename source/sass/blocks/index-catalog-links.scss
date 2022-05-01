@@ -1,8 +1,6 @@
 @import "../variables-mixins.scss";
 
 .index-catalog-links {
-  background-color: $main-bg;
-
   &__list {
     @include list-reset;
   }
