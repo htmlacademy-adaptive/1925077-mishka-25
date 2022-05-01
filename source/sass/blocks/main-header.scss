@@ -191,6 +191,10 @@
       display: flex;
       flex-wrap: wrap;
       background-color: $main-title-bg;
+
+      &--index {
+        background-color: $main-title-bg-mod;
+      }
     }
 
     .main-header__second-list {
@@ -212,6 +216,10 @@
       display: flex;
       align-items: end;
       justify-content: end;
+
+      &--index {
+        background-color: $main-title-bg-mod;
+      }
     }
   }
 
@@ -279,6 +287,10 @@
     .main-header__desktop-appearing-list {
       grid-area: third-list;
       background-color: $main-title-bg;
+
+      &--index {
+        background-color: $main-title-bg-mod;
+      }
     }
   }
 }
