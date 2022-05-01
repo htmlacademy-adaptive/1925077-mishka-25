@@ -220,6 +220,7 @@
     &__tablet-hidden-text {
       @include visually-hidden-mixin;
     }
+
     //////////////////////////////////////////////////                   TABLET GRID
     display: grid;
     justify-content: stretch;
