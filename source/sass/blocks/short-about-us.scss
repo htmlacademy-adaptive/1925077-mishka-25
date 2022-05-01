@@ -6,6 +6,8 @@
   padding-top: 31px;
   padding-bottom: 58px;
 
+  background-color: $main-bg;
+
   &__list {
     @include list-reset;
   }

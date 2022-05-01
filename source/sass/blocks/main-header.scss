@@ -5,6 +5,8 @@
   flex-direction: column;
   justify-content: center;
 
+  background-color: $main-bg;
+
   &__logo-wrapper {
     @include general-padding;
     position: relative;

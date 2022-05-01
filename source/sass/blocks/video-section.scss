@@ -4,6 +4,8 @@
   @include general-padding;
   padding-bottom: 58px;
 
+  background-color: $main-bg;
+
   &__for-border-wrapper {
     display: flex;
     flex-direction: column;
