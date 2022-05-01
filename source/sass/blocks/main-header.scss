@@ -5,6 +5,8 @@
   flex-direction: column;
   justify-content: center;
 
+  position: relative;
+
   &__logo-wrapper {
     @include general-padding;
     position: relative;
@@ -151,6 +153,7 @@
     }
 
     &__list {
+      display: flex;
       flex-direction: row;
     }
 
