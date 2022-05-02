@@ -1,0 +1,26 @@
+@import "variables-mixins.scss";
+
+.display-nope {
+  display: none;
+}
+
+
+@media (max-width: ($tablet-width - 1)) {
+  .main-header__first-list--absolutly {
+    position: absolute;
+    top: 79px;
+    left: 0;
+    z-index: 1;
+    background-color: #ffffff;
+    width: 100%;
+  }
+
+  .main-header__second-list--absolutly {
+    position: absolute;
+    top: 237px;
+    left: 0;
+    z-index: 1;
+    background-color: #ffffff;
+    width: 100%;
+  }
+}

@@ -5,6 +5,12 @@
   flex-direction: column;
   justify-content: center;
 
+  position: relative;
+
+  &__logo-link {
+    line-height: 0;
+  }
+
   &__logo-wrapper {
     @include general-padding;
     position: relative;
@@ -71,12 +77,53 @@
 
   &__menu-toggle {
     position: absolute;
-    right: $mobile-body-padding;
+    right: $mobile-body-padding - 4px;
 
     width: 36px;
     height: 36px;
+    padding: 0;
 
     cursor: pointer;
+
+    border: none;
+    background-color: inherit;
+  }
+
+  &__menu-toggle--open {
+    &::before {
+      content: "";
+      position: absolute;
+      width: 29px;
+      height: 2px;
+      background-color: #000000;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(45deg);
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 29px;
+      height: 2px;
+      background-color: #000000;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(-45deg);
+    }
+  }
+
+  &__menu-toggle--closed {
+    &::before {
+      content: "";
+      position: absolute;
+      width: 20px;
+      height: 14px;
+      background-image: linear-gradient(#000000, 2px, #ffffff 2px, 6px, #000000 6px, 8px, #ffffff 8px, 12px, #000000 12px);
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
   }
 
   &__desktop-appearing-list {
@@ -110,6 +157,7 @@
     }
 
     &__list {
+      display: flex;
       flex-direction: row;
     }
 
@@ -124,7 +172,7 @@
         content: "";
         position: absolute;
         border-bottom: $header-border;
-        width: 900%;
+        width: $body-max-width;
         bottom: 0;
       }
     }
@@ -176,6 +224,7 @@
     &__tablet-hidden-text {
       @include visually-hidden-mixin;
     }
+
     //////////////////////////////////////////////////                   TABLET GRID
     display: grid;
     justify-content: stretch;
@@ -191,6 +240,10 @@
       display: flex;
       flex-wrap: wrap;
       background-color: $main-title-bg;
+
+      &--index {
+        background-color: $main-title-bg-mod;
+      }
     }
 
     .main-header__second-list {
@@ -212,6 +265,12 @@
       display: flex;
       align-items: end;
       justify-content: end;
+
+      @media (max-width: ($desktop-width - 1)) {
+        &--index {
+          background-color: $main-title-bg-mod;
+        }
+      }
     }
   }
 
@@ -274,11 +333,19 @@
 
     .main-header__tablet-appearing-text {
       grid-area: tablet-text;
+
+      &--index {
+        background-color: $main-title-bg-mod;
+      }
     }
 
     .main-header__desktop-appearing-list {
       grid-area: third-list;
       background-color: $main-title-bg;
+
+      &--index {
+        background-color: $main-title-bg-mod;
+      }
     }
   }
 }

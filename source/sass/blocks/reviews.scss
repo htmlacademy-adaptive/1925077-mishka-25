@@ -5,7 +5,9 @@
     @include general-padding;
   }
 
-  padding-bottom: 45px;
+  position: relative;
+
+  padding-bottom: 51px;
 
   &__list {
     @include list-reset;
@@ -29,6 +31,7 @@
 
   &__username {
     margin: 0;
+    margin-top: 3px;
 
     font-size: 17px;
     line-height: 30px;
@@ -46,7 +49,7 @@
 
     border: $tablix-card-border;
     background-color: transparent;
-    background-image: url("../../img/arrow.svg");
+    background-image: url("../img/arrow.svg");
     background-repeat: no-repeat;
     background-size: 50px 26px;
     background-position: center;
@@ -63,6 +66,19 @@
     margin-top: 38px;
   }
 
+  &::after {
+    position: absolute;
+    bottom: 0;
+    left: $mobile-body-padding * -1;
+    right: 0;
+    content: "";
+    height: 6px;
+    width: auto;
+    background-image: url("../img/curve-line.svg");
+    background-repeat: repeat-x;
+    background-size: contain;
+  }
+
   ////////////////////////////////////                                                  TABLET
   @media (min-width: $tablet-width) {
     padding-bottom: 68px;
@@ -70,13 +86,13 @@
     &__wrapper {
       position: relative;
 
-      @media (max-width: $desktop-width - 1) {
+      @media (max-width: ($desktop-width - 1)) {
         @include general-padding;
       }
 
       padding-top: 79px;
       min-height: 457px;
-      background: url("../../img/index-page/reviews-bg.jpg") no-repeat;
+      background: url("../img/index-page/reviews-bg.jpg") no-repeat;
     }
 
     &__review-and-buttons {
@@ -114,7 +130,6 @@
 
     &__wrapper {
       padding-left: calc(100% / 6);
-
     }
   }
 }

@@ -1,19 +1,27 @@
 @import "../variables-mixins.scss";
 
 .index-title-wrapper {
-  @media (min-width: $tablet-width) {
-    @include general-padding;
-  }
-
-  &__background {
+  &__main-title-text-wrapper {
     min-height: 283px;
     padding: 73px 0 120px;
 
-    background-image: url("../img/index-page/hero-mobile@2x1.jpg");
+    background: url("../img/index-page/hero-desktop1.jpg") no-repeat;
+    background-position-x: center;
+    background-size: cover;
+  }
 
-    @media (min-width: $tablet-width) {
-      min-height: 626px;
-      padding: 154px 0 372px;
+  @media (min-width: $tablet-width) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: url("../img/index-page/hero-desktop1.jpg") no-repeat;
+    background-position-x: center;
+    background-position-y: -6px;
+    background-size: cover;
+
+    &__main-title-text-wrapper {
+      min-height: 576px;
+      padding: 104px 0 372px;
     }
   }
 }

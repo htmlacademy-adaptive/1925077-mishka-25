@@ -23,46 +23,46 @@
     line-height: 20px;
     color: $second-color;
 
-    margin-top: 32px;
+    margin-top: 31px;
 
     &-1::before {
       content: "";
-      background: url("../../img/index-page/short-about-us/flower.svg") no-repeat;
+      background: url("../img/index-page/short-about-us/flower.svg") no-repeat;
       width: 33px;
       height: 38px;
     }
 
     &-2::before {
       content: "";
-      background: url("../../img/index-page/short-about-us/style.svg") no-repeat;
+      background: url("../img/index-page/short-about-us/style.svg") no-repeat;
       width: 47px;
       height: 27px;
     }
 
     &-3::before {
       content: "";
-      background: url("../../img/index-page/short-about-us/heart.svg") no-repeat;
+      background: url("../img/index-page/short-about-us/heart.svg") no-repeat;
       width: 34px;
       height: 27px;
     }
 
     &-4::before {
       content: "";
-      background: url("../../img/index-page/short-about-us/skein.svg") no-repeat;
+      background: url("../img/index-page/short-about-us/skein.svg") no-repeat;
       width: 35px;
       height: 34px;
     }
 
     &-5::before {
       content: "";
-      background: url("../../img/index-page/short-about-us/rocket.svg") no-repeat;
+      background: url("../img/index-page/short-about-us/rocket.svg") no-repeat;
       width: 55px;
       height: 23px;
     }
 
     &-6::before {
       content: "";
-      background: url("../../img/index-page/short-about-us/gift.svg") no-repeat;
+      background: url("../img/index-page/short-about-us/gift.svg") no-repeat;
       width: 33px;
       height: 32px;
     }
@@ -118,8 +118,8 @@
     padding-bottom: 90px;
 
     &__wrapper {
-      padding-left: (100% / 6);
-      padding-right: (100% / 6);
+      padding-left: calc(100% / 6);
+      padding-right: calc(100% / 6);
     }
 
     &__item {
