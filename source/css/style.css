@@ -1149,19 +1149,33 @@ body {
 }
 @media (min-width: 772px) {
   .contacts__item {
-    margin-right: 50px;
     margin-bottom: 0;
+    font-size: 17px;
+  }
+  .contacts__item:not(:nth-child(2n)) {
+    margin-right: 50px;
   }
 }
 @media (min-width: 772px) {
   .contacts__map {
-    margin-top: 49px;
+    margin-top: 52px;
+  }
+}
+@media (min-width: 772px) {
+  .contacts__map-pic {
+    height: 457px;
   }
 }
 @media (min-width: 772px) {
   .contacts__button {
     width: 230px;
     margin: 56px auto;
+  }
+}
+@media (min-width: 772px) {
+  .contacts__value {
+    flex-grow: 1;
+    margin-left: 3px;
   }
 }
 @media (min-width: 772px) {

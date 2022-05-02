@@ -80,17 +80,30 @@
     }
 
     &__item {
-      margin-right: 50px;
       margin-bottom: 0;
+      font-size: 17px;
+
+      &:not(:nth-child(2n)) {
+        margin-right: 50px;
+      }
     }
 
     &__map {
-      margin-top: 49px;
+      margin-top: 52px;
+    }
+
+    &__map-pic {
+      height: 457px;
     }
 
     &__button {
       width: 230px;
       margin: 56px auto;
+    }
+
+    &__value {
+      flex-grow: 1;
+      margin-left: 3px;
     }
 
     &::before {
