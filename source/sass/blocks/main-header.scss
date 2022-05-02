@@ -200,15 +200,16 @@
 
     &__first-list &__item,
     &__desktop-appearing-list &__item {
-      padding-left: $local-padding;
-      padding-right: $local-padding;
+      margin-left: $local-padding;
+      padding-right: 0;
+      padding-left: 0;
       min-height: 50px;
     }
 
     &__first-list &__link {
       @media (max-width: ($desktop-width - 1)) {
         font-size: 15px;
-        align-items: end;
+        padding-top: 15px;
       }
     }
 
@@ -263,7 +264,7 @@
 
       height: 100%;
       display: flex;
-      align-items: end;
+      padding-top: 18px;
       justify-content: end;
 
       @media (max-width: ($desktop-width - 1)) {
