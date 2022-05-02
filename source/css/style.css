@@ -640,7 +640,8 @@ body {
 }
 @media (min-width: 772px) and (max-width: 1149px) {
   .product-of-week {
-    padding-top: 40px;
+    padding-top: 44px;
+    padding-bottom: 69px;
   }
   .product-of-week__grid-wrapper {
     display: grid;
@@ -665,6 +666,8 @@ body {
   .product-of-week__description {
     grid-area: par;
     margin-top: 38px;
+    font-size: 17px;
+    line-height: 30px;
   }
   .product-of-week__list {
     grid-area: dl;
@@ -672,17 +675,23 @@ body {
   .product-of-week__price {
     grid-area: pr;
     justify-self: center;
+    font-size: 20px;
+    margin-top: 50px;
   }
   .product-of-week__pic {
     grid-area: pic;
     justify-self: end;
     width: 334px;
     height: 404px;
-    margin-top: 38px;
+    margin-top: auto;
   }
   .product-of-week__button {
     grid-area: btn;
     align-self: end;
+    margin-top: 30px;
+  }
+  .product-of-week::after {
+    height: 17px;
   }
 }
 @media (min-width: 1150px) {
