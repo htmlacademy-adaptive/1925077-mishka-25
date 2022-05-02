@@ -3,8 +3,10 @@
 .product-of-week {
   @include general-padding;
 
+  position: relative;
+
   padding-top: 31px;
-  padding-bottom: 36px;
+  padding-bottom: 42px;
 
   &__title {
     margin: 0;
@@ -15,11 +17,11 @@
     font-size: 17px;
     line-height: 20px;
     text-transform: uppercase;
-    color: $legend-color;
+    color: $index-mini-catalog-bg;
   }
 
   &__list {
-    margin-top: 28px;
+    margin-top: 19px;
   }
 
   &__item {
@@ -40,6 +42,7 @@
   &__pic {
     display: block;
     margin: 0;
+    margin-top: 27px;
     object-fit: contain;
   }
 
@@ -50,11 +53,24 @@
     text-align: center;
 
     margin: 0;
-    margin-top: 26px;
+    margin-top: 27px;
   }
 
   &__button {
-    margin-top: 24px;
+    margin-top: 25px;
+  }
+
+  &::after {
+    position: absolute;
+    bottom: 0;
+    left: $mobile-body-padding * -1;
+    right: 0;
+    content: "";
+    height: 6px;
+    width: auto;
+    background-image: url("../img/curve-line.svg");
+    background-repeat: repeat-x;
+    background-size: contain;
   }
 
   ////////////////////////////////////////////                  TABLET

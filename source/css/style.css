@@ -559,8 +559,9 @@ body {
 .product-of-week {
   padding-left: 30px;
   padding-right: 30px;
+  position: relative;
   padding-top: 31px;
-  padding-bottom: 36px;
+  padding-bottom: 42px;
 }
 @media (min-width: 772px) {
   .product-of-week {
@@ -576,10 +577,10 @@ body {
   font-size: 17px;
   line-height: 20px;
   text-transform: uppercase;
-  color: #15ac8e;
+  color: #63d1bb;
 }
 .product-of-week__list {
-  margin-top: 28px;
+  margin-top: 19px;
 }
 .product-of-week__item {
   display: flex;
@@ -596,6 +597,7 @@ body {
 .product-of-week__pic {
   display: block;
   margin: 0;
+  margin-top: 27px;
   object-fit: contain;
 }
 .product-of-week__price {
@@ -604,10 +606,22 @@ body {
   line-height: 24px;
   text-align: center;
   margin: 0;
-  margin-top: 26px;
+  margin-top: 27px;
 }
 .product-of-week__button {
-  margin-top: 24px;
+  margin-top: 25px;
+}
+.product-of-week::after {
+  position: absolute;
+  bottom: 0;
+  left: -30px;
+  right: 0;
+  content: "";
+  height: 6px;
+  width: auto;
+  background-image: url("../img/curve-line.svg");
+  background-repeat: repeat-x;
+  background-size: contain;
 }
 @media (min-width: 772px) and (max-width: 1149px) {
   .product-of-week {
