@@ -337,7 +337,7 @@ body {
     background-color: #f1f1f1;
     height: 100%;
     display: flex;
-    padding-top: 18px;
+    padding-top: 20px;
     justify-content: end;
   }
 }
@@ -425,6 +425,9 @@ body {
   }
 }
 
+.index-title-wrapper {
+  position: relative;
+}
 .index-title-wrapper__main-title-text-wrapper {
   min-height: 283px;
   padding: 73px 0 120px;
@@ -441,10 +444,23 @@ body {
     background-position-x: center;
     background-position-y: -6px;
     background-size: cover;
+    padding-bottom: 12px;
   }
   .index-title-wrapper__main-title-text-wrapper {
     min-height: 576px;
     padding: 104px 0 372px;
+  }
+  .index-title-wrapper::after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    content: "";
+    height: 24px;
+    width: auto;
+    background-image: url("../img/white-solid-curve.svg");
+    background-repeat: repeat-x;
+    background-size: contain;
   }
 }
 
@@ -545,15 +561,13 @@ body {
     min-height: 119px;
     flex-basis: fill;
     flex-grow: 1;
-    padding-left: 0;
-    padding-right: 0;
+    padding: 0 25px;
   }
 }
 @media (min-width: 772px) {
   .index-catalog-links__link {
     font-size: 20px;
     line-height: 30px;
-    padding: 25px 130px 34px 36px;
   }
 }
 
