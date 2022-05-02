@@ -1,10 +1,11 @@
 @import "../variables-mixins.scss";
 
 .main-footer {
-  background-color: #f1f1f1;
+  background-color: $main-title-bg;
 
   display: flex;
   flex-direction: column;
+  justify-content: start;
   align-items: center;
 
   &__copyright-text {
@@ -50,9 +51,15 @@
     border-top: $footer-border;
   }
 
+  &__academy-link {
+    line-height: 0;
+  }
+
   @media (max-width: ($tablet-width - 1)) {
+    padding-top: 27px;
+
     &__logo-link {
-      visibility: hidden;
+      @include visually-hidden-mixin;
     }
   }
 
