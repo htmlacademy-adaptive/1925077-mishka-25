@@ -1,20 +1,16 @@
 @import "../variables-mixins.scss";
 
 .index-title-wrapper {
-  @media (max-width: ($tablet-width - 1)) {
-    &__main-title-text-wrapper {
-      min-height: 283px;
-      padding: 73px 0 120px;
+  &__main-title-text-wrapper {
+    min-height: 283px;
+    padding: 73px 0 120px;
 
-      background: url("../img/index-page/hero-desktop1.jpg") no-repeat;
-      background-position-x: center;
-      background-size: cover;
-    }
+    background: url("../img/index-page/hero-desktop1.jpg") no-repeat;
+    background-position-x: center;
+    background-size: cover;
   }
 
   @media (min-width: $tablet-width) {
-    // min-height: 708px;
-
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -22,10 +18,10 @@
     background-position-x: center;
     background-position-y: -6px;
     background-size: cover;
-  }
 
-  &__main-title-text-wrapper {
-    min-height: 576px;
-    padding: 104px 0 372px;
+    &__main-title-text-wrapper {
+      min-height: 576px;
+      padding: 104px 0 372px;
+    }
   }
 }

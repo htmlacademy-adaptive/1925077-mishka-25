@@ -89,6 +89,9 @@ body {
   justify-content: center;
   position: relative;
 }
+.main-header__logo-link {
+  line-height: 0;
+}
 .main-header__logo-wrapper {
   padding-left: 30px;
   padding-right: 30px;
@@ -162,7 +165,7 @@ body {
 }
 .main-header__menu-toggle {
   position: absolute;
-  right: 30px;
+  right: 26px;
   width: 36px;
   height: 36px;
   padding: 0;
@@ -421,14 +424,12 @@ body {
   }
 }
 
-@media (max-width: 771px) {
-  .index-title-wrapper__main-title-text-wrapper {
-    min-height: 283px;
-    padding: 73px 0 120px;
-    background: url("../img/index-page/hero-desktop1.jpg") no-repeat;
-    background-position-x: center;
-    background-size: cover;
-  }
+.index-title-wrapper__main-title-text-wrapper {
+  min-height: 283px;
+  padding: 73px 0 120px;
+  background: url("../img/index-page/hero-desktop1.jpg") no-repeat;
+  background-position-x: center;
+  background-size: cover;
 }
 @media (min-width: 772px) {
   .index-title-wrapper {
@@ -440,10 +441,10 @@ body {
     background-position-y: -6px;
     background-size: cover;
   }
-}
-.index-title-wrapper__main-title-text-wrapper {
-  min-height: 576px;
-  padding: 104px 0 372px;
+  .index-title-wrapper__main-title-text-wrapper {
+    min-height: 576px;
+    padding: 104px 0 372px;
+  }
 }
 
 .main-title-text {
@@ -500,19 +501,30 @@ body {
   background-color: #56c3b2;
 }
 .index-catalog-links__link {
+  position: relative;
   display: flex;
-  min-height: 50px;
+  justify-content: space-between;
+  align-items: center;
   width: 100%;
-  padding: 24px 80px 31px 0;
   font-weight: 700;
   font-size: 19px;
   line-height: 24px;
   color: #ffffff;
   text-decoration: none;
 }
-.index-catalog-links__icon {
-  position: absolute;
-  right: 30px;
+.index-catalog-links__link-lamp::after {
+  content: "";
+  width: 62px;
+  height: 62px;
+  background: url("../img/index-page/mini-menu/lamp.svg") no-repeat center;
+  opacity: 0.5;
+}
+.index-catalog-links__link-lego::after {
+  content: "";
+  width: 62px;
+  height: 62px;
+  background: url("../img/index-page/mini-menu/lego.svg") no-repeat center;
+  opacity: 0.5;
 }
 @media (min-width: 772px) {
   .index-catalog-links__list {

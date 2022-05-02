@@ -20,10 +20,12 @@
   }
 
   &__link {
+    position: relative;
     display: flex;
-    min-height: 50px;
+    justify-content: space-between;
+    align-items: center;
+    // min-height: 50px;
     width: 100%;
-    padding: 24px 80px 31px 0;
 
     font-weight: 700;
     font-size: 19px;
@@ -32,10 +34,23 @@
     text-decoration: none;
   }
 
-  &__icon {
-    position: absolute;
-    right: 30px;
+  &__link-lamp::after {
+    content: "";
+    width: 62px;
+    height: 62px;
+    background: url("../img/index-page/mini-menu/lamp.svg") no-repeat center;
+    opacity: 0.5;
   }
+
+  &__link-lego::after {
+    content: "";
+    width: 62px;
+    height: 62px;
+    background: url("../img/index-page/mini-menu/lego.svg") no-repeat center;
+    opacity: 0.5;
+  }
+
+
   /////////////////////////////////////////                                  TABLET
   @media (min-width: $tablet-width) {
     &__list {
