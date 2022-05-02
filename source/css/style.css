@@ -852,7 +852,12 @@ body {
   height: 32px;
 }
 @media (min-width: 772px) {
+  .short-about-us {
+    padding-top: 58px;
+    padding-bottom: 90px;
+  }
   .short-about-us__item {
+    margin-top: 50px;
     font-size: 20px;
     line-height: 22px;
     min-height: 100px;
@@ -861,25 +866,25 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr;
     column-gap: 20px;
-    grid-template-areas: "1 4" "2 5" "3 6";
+    grid-template-areas: "tl tr" "ml mr" "bl br";
   }
-  .short-about-us__list__item-1 {
-    grid-area: 1;
+  .short-about-us__item-1 {
+    grid-area: tl;
   }
-  .short-about-us__list__item-2 {
-    grid-area: 2;
+  .short-about-us__item-2 {
+    grid-area: ml;
   }
-  .short-about-us__list__item-3 {
-    grid-area: 3;
+  .short-about-us__item-3 {
+    grid-area: bl;
   }
-  .short-about-us__list__item-4 {
-    grid-area: 4;
+  .short-about-us__item-4 {
+    grid-area: tr;
   }
-  .short-about-us__list__item-5 {
-    grid-area: 5;
+  .short-about-us__item-5 {
+    grid-area: mr;
   }
-  .short-about-us__list__item-6 {
-    grid-area: 6;
+  .short-about-us__item-6 {
+    grid-area: br;
   }
 }
 @media (min-width: 1150px) {
