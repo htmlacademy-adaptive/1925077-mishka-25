@@ -146,8 +146,8 @@
   ////////////////////////////////////               DESKTOP
   @media (min-width: $desktop-width) {
     @include general-padding;
-    padding-top: 54px;
-    padding-bottom: 73px;
+    padding-top: 50px;
+    padding-bottom: 96px;
 
     &__grid-wrapper {
       margin-left: calc(100% / 6);
@@ -158,6 +158,8 @@
       grid-template-areas:
         "txt pic"
         "lst pic"
+        "lst pic"
+        "pr pic"
         "pr pic"
         "btn pic";
     }
@@ -165,15 +167,17 @@
     &__title {
       position: absolute;
       left: calc(100% / -6);
-      // left: 0;
       top: 69px;
       max-width: calc((100% / 6 * 0.75));
       text-align: center;
+      line-height: 17px;
+
+      margin: 0;
     }
 
     &__second-title {
       position: absolute;
-      top: 61px;
+      top: 60px;
     }
 
     &__description {
@@ -185,11 +189,17 @@
 
     &__list {
       grid-area: lst;
+      grid-row: span 2;
+      margin-top: 26px;
     }
 
     &__price {
       grid-area: pr;
+      grid-row: span 2;
       align-self: end;
+      margin-top: 70px;
+      font-size: 20px;
+      line-height: 24px;
     }
 
     &__button {
@@ -198,9 +208,14 @@
     }
 
     &__pic {
+      margin-top: 0;
       width: 525px;
       height: 636px;
       grid-area: pic;
+    }
+
+    &::after {
+      height: 23px;
     }
   }
 }
