@@ -23,4 +23,15 @@
   &:visited {
     color: inherit;
   }
+
+  &:hover {
+    background-color: $body-color;
+    color: $main-bg;
+  }
+
+  &:active {
+    color: fade-out($main-bg, 0.3);
+  }
+
+
 }

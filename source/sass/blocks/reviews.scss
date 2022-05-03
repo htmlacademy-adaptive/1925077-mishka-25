@@ -124,6 +124,16 @@
       border: none;
     }
 
+    &__button-to-left:hover,
+    &__button-to-right:hover {
+      opacity: 0.6;
+    }
+
+    &__button-to-left:active,
+    &__button-to-right:active {
+      opacity: 0.3;
+    }
+
     &__text {
       margin-top: 40px;
       font-size: 17px;

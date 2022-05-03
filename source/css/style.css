@@ -82,6 +82,13 @@ body {
 .button:visited {
   color: inherit;
 }
+.button:hover {
+  background-color: #444444;
+  color: #ffffff;
+}
+.button:active {
+  color: rgba(255, 255, 255, 0.7);
+}
 
 .main-header {
   display: flex;
@@ -1078,6 +1085,16 @@ body {
 @media (min-width: 772px) {
   .reviews__button-to-left, .reviews__button-to-right {
     border: none;
+  }
+}
+@media (min-width: 772px) {
+  .reviews__button-to-left:hover, .reviews__button-to-right:hover {
+    opacity: 0.6;
+  }
+}
+@media (min-width: 772px) {
+  .reviews__button-to-left:active, .reviews__button-to-right:active {
+    opacity: 0.3;
   }
 }
 @media (min-width: 772px) {
