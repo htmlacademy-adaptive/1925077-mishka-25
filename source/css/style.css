@@ -1210,6 +1210,12 @@ body {
   height: 1px;
   background-color: #62d1ba;
 }
+.contacts__email:hover {
+  color: #46c1ae;
+}
+.contacts__email:active::after {
+  opacity: 0.1;
+}
 .contacts__map {
   display: block;
   margin-top: 62px;
@@ -1340,6 +1346,11 @@ body {
   .contacts::before {
     left: 113px;
     top: 133px;
+  }
+}
+@media (min-width: 1150px) {
+  .contacts__email::after {
+    bottom: -11px;
   }
 }
 

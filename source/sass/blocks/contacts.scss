@@ -45,6 +45,14 @@
       height: 1px;
       background-color: #62d1ba;
     }
+
+    &:hover {
+      color: #46c1ae;
+    }
+
+    &:active::after {
+      opacity: 0.1;
+    }
   }
 
   &__map {
@@ -155,6 +163,10 @@
     &::before {
       left: 113px;
       top: 133px;
+    }
+
+    &__email::after {
+      bottom: -11px;
     }
   }
 }
