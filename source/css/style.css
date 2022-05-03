@@ -1402,6 +1402,20 @@ body {
 .main-footer__academy-link {
   line-height: 0;
 }
+.main-footer__logo:hover, .main-footer__link-icon:hover {
+  fill: #46c1ae;
+}
+.main-footer__logo:active, .main-footer__link-icon:active {
+  fill: #46c1ae;
+  opacity: 0.3;
+}
+.main-footer__academy-logo:hover {
+  fill: #46c1ae;
+}
+.main-footer__academy-logo:active {
+  fill: #46c1ae;
+  opacity: 0.3;
+}
 @media (max-width: 771px) {
   .main-footer {
     padding-top: 27px;

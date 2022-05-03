@@ -55,6 +55,26 @@
     line-height: 0;
   }
 
+  &__logo:hover,
+  &__link-icon:hover {
+    fill: #46c1ae;
+  }
+
+  &__logo:active,
+  &__link-icon:active {
+    fill: #46c1ae;
+    opacity: 0.3;
+  }
+
+  &__academy-logo:hover {
+    fill: #46c1ae;
+  }
+
+  &__academy-logo:active {
+    fill: #46c1ae;
+    opacity: 0.3;
+  }
+
   @media (max-width: ($tablet-width - 1)) {
     padding-top: 27px;
 
