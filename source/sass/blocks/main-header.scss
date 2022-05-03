@@ -51,6 +51,24 @@
     color: $second-color;
   }
 
+  &__link:hover &__link-text {
+    opacity: 0.6;
+  }
+
+  &__link:active &__link-text {
+    opacity: 0.3;
+  }
+
+  &__link:hover &__item-icon {
+    fill: #63d1bb;
+    opacity: 1;
+  }
+
+  &__link:active &__item-icon {
+    fill: #63d1bb;
+    opacity: 0.3;
+  }
+
   &__item-icon-wrapper {
     display: flex;
     align-items: center;

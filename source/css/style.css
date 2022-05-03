@@ -151,6 +151,20 @@ body {
   text-decoration: none;
   color: #000000;
 }
+.main-header__link:hover .main-header__link-text {
+  opacity: 0.6;
+}
+.main-header__link:active .main-header__link-text {
+  opacity: 0.3;
+}
+.main-header__link:hover .main-header__item-icon {
+  fill: #63d1bb;
+  opacity: 1;
+}
+.main-header__link:active .main-header__item-icon {
+  fill: #63d1bb;
+  opacity: 0.3;
+}
 .main-header__item-icon-wrapper {
   display: flex;
   align-items: center;
