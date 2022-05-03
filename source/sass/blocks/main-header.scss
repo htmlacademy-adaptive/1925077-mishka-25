@@ -264,7 +264,7 @@
 
       height: 100%;
       display: flex;
-      padding-top: 20px;
+      padding-top: 18px;
       justify-content: end;
 
       @media (max-width: ($desktop-width - 1)) {
@@ -278,6 +278,7 @@
   ////////////////////////////////////////////////////                   DESKTOP
   @media (min-width: $desktop-width) {
     &__logo-wrapper {
+      padding: 0;
       padding-top: 9px;
     }
 
@@ -293,11 +294,24 @@
     $for-first-list-padding: $tablet-body-padding - $local-padding;
 
     &__first-list > &__item {
-      border-bottom: $header-border;
-      border-right: $header-border;
+      border-left: $header-border;
       border-top: $header-border;
       padding-left: $local-padding;
       padding-right: $local-padding;
+      margin-left: 0;
+    }
+
+    &__first-list {
+      position: relative;
+    }
+
+    &__first-list::before {
+      position: absolute;
+      left: 0;
+      content: "";
+      width: $for-first-list-padding + 4;
+      height: 100%;
+      background-color: $main-bg;
     }
 
     &__desktop-appearing-list {
@@ -310,7 +324,7 @@
     }
 
     display: grid;
-    justify-content: stretch;
+    grid-template-columns: 1fr 1fr 150px 1fr 1fr;
     grid-template-areas:
       "first-list first-list logo second-list second-list"
       "third-list third-list third-list tablet-text tablet-text";

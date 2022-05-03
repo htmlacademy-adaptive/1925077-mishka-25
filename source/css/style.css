@@ -337,7 +337,7 @@ body {
     background-color: #f1f1f1;
     height: 100%;
     display: flex;
-    padding-top: 20px;
+    padding-top: 18px;
     justify-content: end;
   }
 }
@@ -349,10 +349,11 @@ body {
 @media (min-width: 1150px) {
   .main-header {
     display: grid;
-    justify-content: stretch;
+    grid-template-columns: 1fr 1fr 150px 1fr 1fr;
     grid-template-areas: "first-list first-list logo second-list second-list" "third-list third-list third-list tablet-text tablet-text";
   }
   .main-header__logo-wrapper {
+    padding: 0;
     padding-top: 9px;
   }
   .main-header__tablet-logo-pic {
@@ -362,11 +363,22 @@ body {
     display: block;
   }
   .main-header__first-list > .main-header__item {
-    border-bottom: 1px solid #e6e6e6;
-    border-right: 1px solid #e6e6e6;
+    border-left: 1px solid #e6e6e6;
     border-top: 1px solid #e6e6e6;
     padding-left: 35px;
     padding-right: 35px;
+    margin-left: 0;
+  }
+  .main-header__first-list {
+    position: relative;
+  }
+  .main-header__first-list::before {
+    position: absolute;
+    left: 0;
+    content: "";
+    width: 19px;
+    height: 100%;
+    background-color: #ffffff;
   }
   .main-header__desktop-appearing-list {
     display: flex;
