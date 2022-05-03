@@ -13,6 +13,8 @@
   }
 
   @media (min-width: $tablet-width) {
+    padding-bottom: 12px;
+
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -26,8 +28,6 @@
       padding: 104px 0 372px;
     }
 
-    padding-bottom: 12px;
-
     &::after {
       position: absolute;
       bottom: 0;
@@ -39,6 +39,21 @@
       background-image: url("../img/white-solid-curve.svg");
       background-repeat: repeat-x;
       background-size: contain;
+    }
+  }
+
+  ////////////////////////////////////               DESKOP
+  @media (min-width: $desktop-width) {
+    padding-bottom: 20px;
+
+    &::after {
+      height: 34px;
+    }
+
+    &__main-title-text-wrapper {
+      min-height: 577px;
+      padding-top: 108px;
+      padding-bottom: 355px;
     }
   }
 }

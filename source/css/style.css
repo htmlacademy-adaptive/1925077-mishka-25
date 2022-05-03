@@ -456,6 +456,7 @@ body {
 }
 @media (min-width: 772px) {
   .index-title-wrapper {
+    padding-bottom: 12px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -463,7 +464,6 @@ body {
     background-position-x: center;
     background-position-y: -6px;
     background-size: cover;
-    padding-bottom: 12px;
   }
   .index-title-wrapper__main-title-text-wrapper {
     min-height: 576px;
@@ -480,6 +480,19 @@ body {
     background-image: url("../img/white-solid-curve.svg");
     background-repeat: repeat-x;
     background-size: contain;
+  }
+}
+@media (min-width: 1150px) {
+  .index-title-wrapper {
+    padding-bottom: 20px;
+  }
+  .index-title-wrapper::after {
+    height: 34px;
+  }
+  .index-title-wrapper__main-title-text-wrapper {
+    min-height: 577px;
+    padding-top: 108px;
+    padding-bottom: 355px;
   }
 }
 
