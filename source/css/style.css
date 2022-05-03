@@ -382,10 +382,17 @@ body {
   }
   .main-header__desktop-appearing-list {
     display: flex;
+    padding-left: 50px;
+  }
+  .main-header__desktop-appearing-list .main-header__item {
+    margin: 0;
+    margin-right: 60px;
   }
   .main-header__desktop-appearing-list .main-header__link {
     font-size: 15px;
-    align-items: end;
+    align-items: center;
+    padding: 0;
+    padding-top: 15px;
   }
   .main-header .main-header__first-list {
     grid-area: first-list;
