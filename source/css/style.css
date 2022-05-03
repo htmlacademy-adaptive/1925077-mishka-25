@@ -80,7 +80,7 @@ body {
   cursor: pointer;
 }
 .button:visited {
-  color: inherit;
+  color: #444444;
 }
 .button:hover {
   background-color: #444444;
@@ -556,6 +556,12 @@ body {
 .index-catalog-links__item:nth-child(2n) {
   background-color: #56c3b2;
 }
+.index-catalog-links__item:nth-child(odd):hover {
+  background-color: #59d5bc;
+}
+.index-catalog-links__item:nth-child(even):hover {
+  background-color: #46c1ae;
+}
 .index-catalog-links__link {
   position: relative;
   display: flex;
@@ -567,6 +573,12 @@ body {
   line-height: 24px;
   color: #ffffff;
   text-decoration: none;
+}
+.index-catalog-links__link:hover::after {
+  opacity: 0.7;
+}
+.index-catalog-links__link:active::after {
+  opacity: 0.3;
 }
 .index-catalog-links__link-lamp::after {
   content: "";
@@ -1910,6 +1922,18 @@ body {
   .curve-line {
     height: 17px;
   }
+}
+
+.link:visited {
+  color: #444444;
+}
+
+.link:hover {
+  opacity: 0.6;
+}
+
+.link:active {
+  opacity: 0.3;
 }
 
 .checkbox {
