@@ -21,6 +21,15 @@
   cursor: pointer;
 
   &:visited {
-    color: inherit;
+    color: $body-color;
+  }
+
+  &:hover {
+    background-color: $body-color;
+    color: $main-bg;
+  }
+
+  &:active {
+    color: fade-out($main-bg, 0.3);
   }
 }

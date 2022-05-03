@@ -1,6 +1,8 @@
 @import "../variables-mixins.scss";
 
 .index-title-wrapper {
+  position: relative;
+
   &__main-title-text-wrapper {
     min-height: 283px;
     padding: 73px 0 120px;
@@ -11,6 +13,8 @@
   }
 
   @media (min-width: $tablet-width) {
+    padding-bottom: 12px;
+
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -22,6 +26,34 @@
     &__main-title-text-wrapper {
       min-height: 576px;
       padding: 104px 0 372px;
+    }
+
+    &::after {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      content: "";
+      height: 24px;
+      width: auto;
+      background-image: url("../img/white-solid-curve.svg");
+      background-repeat: repeat-x;
+      background-size: contain;
+    }
+  }
+
+  ////////////////////////////////////               DESKOP
+  @media (min-width: $desktop-width) {
+    padding-bottom: 20px;
+
+    &::after {
+      height: 34px;
+    }
+
+    &__main-title-text-wrapper {
+      min-height: 577px;
+      padding-top: 108px;
+      padding-bottom: 355px;
     }
   }
 }

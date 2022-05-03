@@ -1,0 +1,13 @@
+@import "../variables-mixins.scss";
+
+.link:visited {
+  color: $body-color;
+}
+
+.link:hover {
+  opacity: 0.6;
+}
+
+.link:active {
+  opacity: 0.3;
+}

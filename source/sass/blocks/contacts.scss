@@ -45,6 +45,14 @@
       height: 1px;
       background-color: #62d1ba;
     }
+
+    &:hover {
+      color: #46c1ae;
+    }
+
+    &:active::after {
+      opacity: 0.1;
+    }
   }
 
   &__map {
@@ -80,17 +88,30 @@
     }
 
     &__item {
-      margin-right: 50px;
       margin-bottom: 0;
+      font-size: 17px;
+
+      &:not(:nth-child(2n)) {
+        margin-right: 50px;
+      }
     }
 
     &__map {
-      margin-top: 49px;
+      margin-top: 52px;
+    }
+
+    &__map-pic {
+      height: 457px;
     }
 
     &__button {
       width: 230px;
       margin: 56px auto;
+    }
+
+    &__value {
+      flex-grow: 1;
+      margin-left: 3px;
     }
 
     &::before {
@@ -104,6 +125,7 @@
     }
   }
 
+  ////////////////////////////////////           DESKTOP
   @media (min-width: $desktop-width) {
     @include general-padding;
     padding-top: 71px;
@@ -130,9 +152,21 @@
       margin-bottom: 0;
     }
 
+    &__list {
+      margin-top: 35px;
+    }
+
+    &__item:not(:first-child) {
+      margin-top: 30px;
+    }
+
     &::before {
       left: 113px;
       top: 133px;
+    }
+
+    &__email::after {
+      bottom: -11px;
     }
   }
 }

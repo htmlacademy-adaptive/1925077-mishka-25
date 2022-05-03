@@ -51,6 +51,24 @@
     color: $second-color;
   }
 
+  &__link:hover &__link-text {
+    opacity: 0.6;
+  }
+
+  &__link:active &__link-text {
+    opacity: 0.3;
+  }
+
+  &__link:hover &__item-icon {
+    fill: #63d1bb;
+    opacity: 1;
+  }
+
+  &__link:active &__item-icon {
+    fill: #63d1bb;
+    opacity: 0.3;
+  }
+
   &__item-icon-wrapper {
     display: flex;
     align-items: center;
@@ -200,15 +218,16 @@
 
     &__first-list &__item,
     &__desktop-appearing-list &__item {
-      padding-left: $local-padding;
-      padding-right: $local-padding;
+      margin-left: $local-padding;
+      padding-right: 0;
+      padding-left: 0;
       min-height: 50px;
     }
 
     &__first-list &__link {
       @media (max-width: ($desktop-width - 1)) {
         font-size: 15px;
-        align-items: end;
+        padding-top: 15px;
       }
     }
 
@@ -263,7 +282,7 @@
 
       height: 100%;
       display: flex;
-      align-items: end;
+      padding-top: 18px;
       justify-content: end;
 
       @media (max-width: ($desktop-width - 1)) {
@@ -277,6 +296,7 @@
   ////////////////////////////////////////////////////                   DESKTOP
   @media (min-width: $desktop-width) {
     &__logo-wrapper {
+      padding: 0;
       padding-top: 9px;
     }
 
@@ -292,24 +312,45 @@
     $for-first-list-padding: $tablet-body-padding - $local-padding;
 
     &__first-list > &__item {
-      border-bottom: $header-border;
-      border-right: $header-border;
+      border-left: $header-border;
       border-top: $header-border;
       padding-left: $local-padding;
       padding-right: $local-padding;
+      margin-left: 0;
+    }
+
+    &__first-list {
+      position: relative;
+    }
+
+    &__first-list::before {
+      position: absolute;
+      left: 0;
+      content: "";
+      width: $for-first-list-padding + 4;
+      height: 100%;
+      background-color: $main-bg;
     }
 
     &__desktop-appearing-list {
       display: flex;
+      padding-left: $tablet-body-padding;
+    }
+
+    &__desktop-appearing-list &__item {
+      margin: 0;
+      margin-right: 60px;
     }
 
     &__desktop-appearing-list &__link {
       font-size: 15px;
-      align-items: end;
+      align-items: center;
+      padding: 0;
+      padding-top: 15px;
     }
 
     display: grid;
-    justify-content: stretch;
+    grid-template-columns: 1fr 1fr 150px 1fr 1fr;
     grid-template-areas:
       "first-list first-list logo second-list second-list"
       "third-list third-list third-list tablet-text tablet-text";

@@ -70,7 +70,12 @@
 
   ////////////////////////////////////                                                  TABLET
   @media (min-width: $tablet-width) {
+    padding-top: 58px;
+    padding-bottom: 90px;
+
     &__item {
+      margin-top: 50px;
+
       font-size: 20px;
       line-height: 22px;
 
@@ -82,33 +87,33 @@
       grid-template-columns: 1fr 1fr;
       column-gap: 20px;
       grid-template-areas:
-        "1 4"
-        "2 5"
-        "3 6";
+        "tl tr"
+        "ml mr"
+        "bl br";
+    }
 
-      &__item-1 {
-        grid-area: 1;
-      }
+    &__item-1 {
+      grid-area: tl;
+    }
 
-      &__item-2 {
-        grid-area: 2;
-      }
+    &__item-2 {
+      grid-area: ml;
+    }
 
-      &__item-3 {
-        grid-area: 3;
-      }
+    &__item-3 {
+      grid-area: bl;
+    }
 
-      &__item-4 {
-        grid-area: 4;
-      }
+    &__item-4 {
+      grid-area: tr;
+    }
 
-      &__item-5 {
-        grid-area: 5;
-      }
+    &__item-5 {
+      grid-area: mr;
+    }
 
-      &__item-6 {
-        grid-area: 6;
-      }
+    &__item-6 {
+      grid-area: br;
     }
   }
 
@@ -123,7 +128,7 @@
     }
 
     &__item {
-      margin-top: 60px;
+      margin-top: 55px;
     }
 
     &__item-1,

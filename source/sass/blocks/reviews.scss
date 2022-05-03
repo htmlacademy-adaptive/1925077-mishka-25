@@ -81,7 +81,11 @@
 
   ////////////////////////////////////                                                  TABLET
   @media (min-width: $tablet-width) {
-    padding-bottom: 68px;
+    padding-bottom: 85px;
+
+    br {
+      display: none;
+    }
 
     &__wrapper {
       position: relative;
@@ -103,7 +107,7 @@
       position: absolute;
       bottom: 0;
       right: 0;
-      min-width: 200px;
+      min-width: 176px;
     }
 
     &__button {
@@ -111,7 +115,7 @@
       top: 0;
       right: 0;
       width: auto;
-      min-width: 200px;
+      min-width: 176px;
       margin-top: 0;
     }
 
@@ -120,16 +124,52 @@
       border: none;
     }
 
+    &__button-to-left:hover,
+    &__button-to-right:hover {
+      opacity: 0.6;
+    }
+
+    &__button-to-left:active,
+    &__button-to-right:active {
+      opacity: 0.3;
+    }
+
     &__text {
       margin-top: 40px;
+      font-size: 17px;
+      line-height: 30px;
+    }
+
+    &__author-wrapper {
+      margin-top: 61px;
+    }
+
+    &::after {
+      height: 17px;
     }
   }
 
+  ////////////////////////////////////           DESKTOP
   @media (min-width: $desktop-width) {
     @include general-padding;
 
     &__wrapper {
       padding-left: calc(100% / 6);
+    }
+
+    &__text {
+      margin-top: 32px;
+      padding-right: 70px;
+    }
+
+    &__author-wrapper {
+      margin-top: 44px;
+    }
+
+    &::after {
+      height: 23px;
+      left: $tablet-body-padding;
+      right: $tablet-body-padding;
     }
   }
 }

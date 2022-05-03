@@ -75,7 +75,8 @@
 
   ////////////////////////////////////////////                  TABLET
   @media (min-width: $tablet-width) and (max-width: ($desktop-width - 1)) {
-    padding-top: 40px;
+    padding-top: 44px;
+    padding-bottom: 69px;
 
     &__grid-wrapper {
       display: grid;
@@ -108,6 +109,8 @@
     &__description {
       grid-area: par;
       margin-top: 38px;
+      font-size: 17px;
+      line-height: 30px;
     }
 
     &__list {
@@ -117,6 +120,8 @@
     &__price {
       grid-area: pr;
       justify-self: center;
+      font-size: 20px;
+      margin-top: 50px;
     }
 
     &__pic {
@@ -124,20 +129,25 @@
       justify-self: end;
       width: 334px;
       height: 404px;
-      margin-top: 38px;
+      margin-top: auto;
     }
 
     &__button {
       grid-area: btn;
       align-self: end;
+      margin-top: 30px;
+    }
+
+    &::after {
+      height: 17px;
     }
   }
 
   ////////////////////////////////////               DESKTOP
   @media (min-width: $desktop-width) {
     @include general-padding;
-    padding-top: 54px;
-    padding-bottom: 73px;
+    padding-top: 50px;
+    padding-bottom: 96px;
 
     &__grid-wrapper {
       margin-left: calc(100% / 6);
@@ -148,6 +158,8 @@
       grid-template-areas:
         "txt pic"
         "lst pic"
+        "lst pic"
+        "pr pic"
         "pr pic"
         "btn pic";
     }
@@ -155,15 +167,17 @@
     &__title {
       position: absolute;
       left: calc(100% / -6);
-      // left: 0;
       top: 69px;
       max-width: calc((100% / 6 * 0.75));
       text-align: center;
+      line-height: 17px;
+
+      margin: 0;
     }
 
     &__second-title {
       position: absolute;
-      top: 61px;
+      top: 60px;
     }
 
     &__description {
@@ -175,11 +189,17 @@
 
     &__list {
       grid-area: lst;
+      grid-row: span 2;
+      margin-top: 26px;
     }
 
     &__price {
       grid-area: pr;
+      grid-row: span 2;
       align-self: end;
+      margin-top: 70px;
+      font-size: 20px;
+      line-height: 24px;
     }
 
     &__button {
@@ -188,9 +208,16 @@
     }
 
     &__pic {
+      margin-top: 0;
       width: 525px;
       height: 636px;
       grid-area: pic;
+    }
+
+    &::after {
+      height: 23px;
+      left: $tablet-body-padding;
+      right: $tablet-body-padding;
     }
   }
 }

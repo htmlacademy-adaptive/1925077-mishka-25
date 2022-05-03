@@ -17,6 +17,14 @@
     &:nth-child(2n) {
       background-color: $index-mini-catalog-bg2;
     }
+
+    &:nth-child(odd):hover {
+      background-color: #59d5bc;
+    }
+
+    &:nth-child(even):hover {
+      background-color: #46c1ae;
+    }
   }
 
   &__link {
@@ -24,7 +32,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    // min-height: 50px;
     width: 100%;
 
     font-weight: 700;
@@ -32,6 +39,14 @@
     line-height: 24px;
     color: $index-mini-catalog-color;
     text-decoration: none;
+  }
+
+  &__link:hover::after {
+    opacity: 0.7;
+  }
+
+  &__link:active::after {
+    opacity: 0.3;
   }
 
   &__link-lamp::after {
@@ -63,15 +78,14 @@
       min-height: 119px;
       flex-basis: fill;
       flex-grow: 1;
-      padding-left: 0;
-      padding-right: 0;
+      padding: 0 25px;
     }
 
     &__link {
       font-size: 20px;
       line-height: 30px;
 
-      padding: 25px 130px 34px 36px;
+      // padding: 25px 130px 34px 36px;
     }
   }
 }
