@@ -809,6 +809,8 @@ body {
 @media (min-width: 1150px) {
   .product-of-week::after {
     height: 23px;
+    left: 50px;
+    right: 50px;
   }
 }
 
@@ -943,7 +945,7 @@ body {
     padding-right: 16.6666666667%;
   }
   .short-about-us__item {
-    margin-top: 60px;
+    margin-top: 55px;
   }
   .short-about-us__item-1, .short-about-us__item-4 {
     margin-top: 40px;
@@ -1028,6 +1030,9 @@ body {
   .reviews {
     padding-bottom: 85px;
   }
+  .reviews br {
+    display: none;
+  }
   .reviews__wrapper {
     position: relative;
     padding-top: 79px;
@@ -1078,6 +1083,8 @@ body {
 @media (min-width: 772px) {
   .reviews__text {
     margin-top: 40px;
+    font-size: 17px;
+    line-height: 30px;
   }
 }
 @media (min-width: 772px) {
@@ -1105,6 +1112,24 @@ body {
 @media (min-width: 1150px) {
   .reviews__wrapper {
     padding-left: 16.6666666667%;
+  }
+}
+@media (min-width: 1150px) {
+  .reviews__text {
+    margin-top: 32px;
+    padding-right: 70px;
+  }
+}
+@media (min-width: 1150px) {
+  .reviews__author-wrapper {
+    margin-top: 44px;
+  }
+}
+@media (min-width: 1150px) {
+  .reviews::after {
+    height: 23px;
+    left: 50px;
+    right: 50px;
   }
 }
 
@@ -1270,6 +1295,16 @@ body {
     bottom: 105px;
     left: 0;
     margin-bottom: 0;
+  }
+}
+@media (min-width: 1150px) {
+  .contacts__list {
+    margin-top: 35px;
+  }
+}
+@media (min-width: 1150px) {
+  .contacts__item:not(:first-child) {
+    margin-top: 30px;
   }
 }
 @media (min-width: 1150px) {

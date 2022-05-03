@@ -117,6 +117,7 @@
     }
   }
 
+  ////////////////////////////////////           DESKTOP
   @media (min-width: $desktop-width) {
     @include general-padding;
     padding-top: 71px;
@@ -141,6 +142,14 @@
       bottom: 105px;
       left: 0;
       margin-bottom: 0;
+    }
+
+    &__list {
+      margin-top: 35px;
+    }
+
+    &__item:not(:first-child) {
+      margin-top: 30px;
     }
 
     &::before {

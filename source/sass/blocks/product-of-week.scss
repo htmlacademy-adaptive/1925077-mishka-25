@@ -216,6 +216,8 @@
 
     &::after {
       height: 23px;
+      left: $tablet-body-padding;
+      right: $tablet-body-padding;
     }
   }
 }
