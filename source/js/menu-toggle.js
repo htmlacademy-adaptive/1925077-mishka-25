@@ -8,7 +8,7 @@ secondList.classList.add('display-nope');
 
 
 
-if (window.screen.width >= 772) {
+if (window.screen.width >= 768) {
   firstList.classList.remove('display-nope');
   secondList.classList.remove('display-nope');
 } else {
