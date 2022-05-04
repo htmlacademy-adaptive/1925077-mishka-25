@@ -1523,7 +1523,7 @@ body {
   flex-shrink: 0;
 }
 .form-section__required-description {
-  margin-top: 10px;
+  margin-top: 16px;
   font-size: 14px;
   line-height: 16px;
 }
@@ -2152,6 +2152,12 @@ body {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+}
+.radio__input:hover ~ .radio__button {
+  border: 2px solid #62d1ba;
+}
+.radio__input:active ~ .radio__button {
+  border: 2px solid rgba(0, 0, 0, 0.3);
 }
 
 .display-nope {
