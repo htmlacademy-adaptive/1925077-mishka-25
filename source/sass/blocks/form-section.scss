@@ -184,6 +184,7 @@
     width: 100%;
     min-height: 142px;
     padding: 17px;
+    padding-bottom: 13px;
 
     font-size: 17px;
     line-height: 18px;
@@ -209,6 +210,8 @@
 
   ///////////////////////////////////            TABLET
   @media (min-width: $tablet-width) {
+    padding-bottom: 45px;
+
     &__form {
       margin-top: 13px;
     }
@@ -264,6 +267,10 @@
     &__user-label {
       flex-direction: row;
       align-items: center;
+
+      &:not(:first-child) {
+        margin-top: 24px;
+      }
     }
 
     &__text-input {
@@ -279,6 +286,7 @@
 
     &__flex-wrapper {
       @include general-padding;
+
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -287,12 +295,30 @@
     &__submit {
       order: -1;
       width: auto;
-      padding-left: 32px;
-      padding-right: 32px;
+      min-width: 230px;
+      margin-top: 0;
     }
 
     &__radio:nth-child(1n + 2) {
       margin-top: 24px;
+    }
+
+    &__fieldset-email {
+      margin-top: 24px;
+    }
+
+    &__text-input,
+    &__phone,
+    &__email,
+    &__additional-text {
+      &::placeholder {
+        font-size: 19px;
+      }
+    }
+
+    &__required-description {
+      font-size: 17px;
+      line-height: 30px;
     }
   }
 

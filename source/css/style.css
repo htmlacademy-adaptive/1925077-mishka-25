@@ -1630,6 +1630,7 @@ body {
   width: 100%;
   min-height: 142px;
   padding: 17px;
+  padding-bottom: 13px;
   font-size: 17px;
   line-height: 18px;
   color: #000000;
@@ -1647,6 +1648,9 @@ body {
   margin-top: 30px;
 }
 @media (min-width: 768px) {
+  .form-section {
+    padding-bottom: 45px;
+  }
   .form-section__form {
     margin-top: 13px;
   }
@@ -1722,6 +1726,9 @@ body {
     flex-direction: row;
     align-items: center;
   }
+  .form-section__user-label:not(:first-child) {
+    margin-top: 24px;
+  }
 }
 @media (min-width: 768px) {
   .form-section__text-input {
@@ -1755,13 +1762,29 @@ body {
   .form-section__submit {
     order: -1;
     width: auto;
-    padding-left: 32px;
-    padding-right: 32px;
+    min-width: 230px;
+    margin-top: 0;
   }
 }
 @media (min-width: 768px) {
   .form-section__radio:nth-child(1n+2) {
     margin-top: 24px;
+  }
+}
+@media (min-width: 768px) {
+  .form-section__fieldset-email {
+    margin-top: 24px;
+  }
+}
+@media (min-width: 768px) {
+  .form-section__text-input::placeholder, .form-section__phone::placeholder, .form-section__email::placeholder, .form-section__additional-text::placeholder {
+    font-size: 19px;
+  }
+}
+@media (min-width: 768px) {
+  .form-section__required-description {
+    font-size: 17px;
+    line-height: 30px;
   }
 }
 @media (min-width: 1150px) {
