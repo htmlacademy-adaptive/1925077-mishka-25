@@ -1517,6 +1517,41 @@ body {
   font-size: 14px;
   line-height: 16px;
 }
+.form-section__text-input, .form-section__phone, .form-section__email, .form-section__additional-text {
+  font-family: inherit;
+}
+.form-section__text-input::placeholder, .form-section__phone::placeholder, .form-section__email::placeholder, .form-section__additional-text::placeholder {
+  color: #000000;
+  opacity: 0.3;
+}
+.form-section__phone, .form-section__email {
+  padding-right: 38px;
+  margin-bottom: 24px;
+  width: 100%;
+  background-color: inherit;
+}
+.form-section__phone:focus, .form-section__email:focus {
+  outline: none;
+}
+.form-section__input-label {
+  position: relative;
+  padding: 0;
+}
+.form-section__input-icon {
+  position: absolute;
+  top: 26px;
+  right: 18px;
+  transform: translate(50%, -50%);
+  cursor: pointer;
+}
+.form-section__phone:hover + .form-section__input-icon, .form-section__email:hover + .form-section__input-icon {
+  opacity: 1;
+  fill: #62d1ba;
+}
+.form-section__phone:focus + .form-section__input-icon, .form-section__email:focus + .form-section__input-icon {
+  opacity: 1;
+  fill: #62d1ba;
+}
 @media (max-width: 771px) {
   .form-section__legend-decor {
     display: flex;
@@ -1564,10 +1599,12 @@ body {
   border: none;
   border-bottom: #000000 solid 2px;
 }
-.form-section__phone, .form-section__email {
-  margin-bottom: 24px;
-  width: 100%;
-  background-color: inherit;
+.form-section__text-input:hover, .form-section__phone:hover, .form-section__email:hover {
+  border-bottom: #62d1ba solid 2px;
+}
+.form-section__text-input:focus, .form-section__phone:focus, .form-section__email:focus {
+  outline: none;
+  border-bottom: #62d1ba solid 2px;
 }
 .form-section__input-description {
   margin-left: 23px;
@@ -1588,6 +1625,13 @@ body {
   color: #000000;
   border: #000000 2px solid;
   resize: none;
+}
+.form-section__additional-text:hover {
+  border: #62d1ba 2px solid;
+}
+.form-section__additional-text:focus {
+  outline: none;
+  border: #62d1ba 2px solid;
 }
 .form-section__submit {
   margin-top: 30px;
@@ -1648,11 +1692,6 @@ body {
   .form-section__phone, .form-section__email {
     margin: 0;
     padding-left: 17px;
-  }
-}
-@media (min-width: 772px) {
-  .form-section__email {
-    margin-top: 24px;
   }
 }
 @media (min-width: 772px) {
