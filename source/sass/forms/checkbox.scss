@@ -16,6 +16,11 @@
     height: 38px;
     border: 2px solid $body-color;
     flex-shrink: 0;
+
+    @media (min-width: $tablet-width) {
+      width: 52px;
+      height: 52px;
+    }
   }
 
   &__input:checked ~ &__box {

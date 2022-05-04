@@ -233,6 +233,8 @@
 
     &__order-preview-text {
       @include general-padding;
+      padding-top: 37px;
+
       font-size: 17px;
       line-height: 30px;
     }
@@ -287,6 +289,10 @@
       width: auto;
       padding-left: 32px;
       padding-right: 32px;
+    }
+
+    &__radio:nth-child(1n + 2) {
+      margin-top: 24px;
     }
   }
 

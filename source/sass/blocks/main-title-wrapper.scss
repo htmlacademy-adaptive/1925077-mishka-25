@@ -11,6 +11,18 @@
   background-color: $main-title-bg;
 
   @media (min-width: $tablet-width) {
-    min-height: 266px;
+    min-height: 188px;
+    padding-bottom: 36px;
+
+    position: relative;
+
+    &::after {
+      position: absolute;
+      bottom: 0;
+      content: "";
+      width: 100%;
+      height: 24px;
+      background: url("../../img/white-solid-curve.svg");
+    }
   }
 }
