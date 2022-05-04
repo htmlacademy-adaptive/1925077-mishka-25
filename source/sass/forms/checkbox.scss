@@ -27,4 +27,12 @@
     background: url("../img/checkbox.svg") no-repeat center;
     background-size: 23px 16px;
   }
+
+  &__input:hover ~ &__box {
+    border: 2px solid $radio-dot;
+  }
+
+  &__input:active ~ &__box {
+    border: 2px solid rgba(0, 0, 0, 0.3);
+  }
 }

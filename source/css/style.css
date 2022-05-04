@@ -2115,6 +2115,12 @@ body {
   background: url("../img/checkbox.svg") no-repeat center;
   background-size: 23px 16px;
 }
+.checkbox__input:hover ~ .checkbox__box {
+  border: 2px solid #62d1ba;
+}
+.checkbox__input:active ~ .checkbox__box {
+  border: 2px solid rgba(0, 0, 0, 0.3);
+}
 
 .radio {
   position: relative;
