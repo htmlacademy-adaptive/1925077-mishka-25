@@ -471,7 +471,17 @@ body {
     content: "";
     width: 100%;
     height: 24px;
-    background: url("../../img/white-solid-curve.svg");
+    background: url("../../img/white-solid-curve.svg") repeat-x;
+    background-size: cover;
+  }
+}
+@media (min-width: 1150px) {
+  .main-title-wrapper {
+    min-height: 222px;
+    padding-bottom: 61px;
+  }
+  .main-title-wrapper::after {
+    height: 34px;
   }
 }
 
@@ -1789,6 +1799,7 @@ body {
 }
 @media (min-width: 1150px) {
   .form-section__order-preview-text {
+    padding-top: 0;
     margin-top: 80px;
     padding-left: 16.6666666667%;
     padding-right: 16.6666666667%;
@@ -1806,7 +1817,8 @@ body {
 }
 @media (min-width: 1150px) {
   .form-section__color-wrapper {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, auto);
+    padding-right: 70px;
   }
 }
 @media (min-width: 1150px) {
@@ -1815,8 +1827,28 @@ body {
   }
 }
 @media (min-width: 1150px) {
+  .form-section__fieldset-central {
+    padding-right: 16.6666666667%;
+  }
+}
+@media (min-width: 1150px) {
   .form-section__submit {
     margin-left: 16.6666666667%;
+  }
+}
+@media (min-width: 1150px) {
+  .form-section__legend {
+    left: 60px;
+  }
+}
+@media (min-width: 1150px) {
+  .form-section__required-description {
+    margin-right: 16.6666666667%;
+  }
+}
+@media (min-width: 1150px) {
+  .form-section__flex-wrapper {
+    margin-top: -10px;
   }
 }
 

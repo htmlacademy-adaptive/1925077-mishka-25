@@ -325,6 +325,7 @@
   ////////////////////////////////////         DESKTOP
   @media (min-width: $desktop-width) {
     &__order-preview-text {
+      padding-top: 0;
       margin-top: 80px;
       padding-left: calc(100% / 6);
       padding-right: calc(100% / 6);
@@ -335,15 +336,32 @@
     }
 
     &__color-wrapper {
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(3, auto);
+      padding-right: 70px;
     }
 
     &__fieldset {
       padding-left: calc(100% / 6);
     }
 
+    &__fieldset-central {
+      padding-right: calc(100% / 6);
+    }
+
     &__submit {
       margin-left: calc(100% / 6);
+    }
+
+    &__legend {
+      left: 60px;
+    }
+
+    &__required-description {
+      margin-right: calc(100% / 6);
+    }
+
+    &__flex-wrapper {
+      margin-top: -10px;
     }
   }
 }
