@@ -122,11 +122,13 @@
     }
   }
 
+  ////////////////////////////////////                              DESKTOP
   @media (min-width: $desktop-width) {
     &__list {
       display: grid;
       grid-auto-flow: row;
-      grid-template-columns: repeat(auto-fit, minmax(316px, 1fr));
+      // grid-template-columns: repeat(auto-fit, minmax(316px, 1fr));
+      grid-template-columns: repeat(3, 316px);
       gap: 51px;
       padding-bottom: 57px;
       padding-top: 111px;
