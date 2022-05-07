@@ -1918,13 +1918,32 @@ body {
   color: #000000;
 }
 .product-cards__price-wrapper {
+  position: relative;
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding: 0;
   margin-left: 28px;
   margin-right: 28px;
   padding-top: 24px;
   border-top: 1px solid #ececec;
+}
+.product-cards__shop-cart-button {
+  position: absolute;
+  right: -10px;
+  width: 40px;
+  height: 40px;
+  border: none;
+  background-color: inherit;
+  cursor: pointer;
+}
+.product-cards__shop-cart-button:hover > .product-cards__shop-cart-button-icon {
+  fill: #63d1bb;
+  opacity: 1;
+}
+.product-cards__shop-cart-button:active > .product-cards__shop-cart-button-icon {
+  fill: #63d1bb;
+  opacity: 0.3;
 }
 @media (min-width: 768px) {
   .product-cards__link {
