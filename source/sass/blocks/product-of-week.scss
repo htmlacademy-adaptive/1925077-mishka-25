@@ -1,7 +1,7 @@
 @import "../variables-mixins.scss";
 
 .product-of-week {
-  @include general-padding;
+  //@include general-padding;
 
   position: relative;
 
@@ -145,7 +145,7 @@
 
   ////////////////////////////////////               DESKTOP
   @media (min-width: $desktop-width) {
-    @include general-padding;
+    //@include general-padding;
     padding-top: 50px;
     padding-bottom: 96px;
 

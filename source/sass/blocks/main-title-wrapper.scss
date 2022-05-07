@@ -1,7 +1,7 @@
 @import "../variables-mixins.scss";
 
 .main-title-wrapper {
-  @include general-padding;
+  //@include general-padding;
 
   min-height: 177px;
   display: flex;

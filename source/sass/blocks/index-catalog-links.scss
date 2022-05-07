@@ -11,7 +11,7 @@
     display: flex;
     min-height: 103px;
 
-    @include general-padding;
+    //@include general-padding;
     background: $index-mini-catalog-bg;
 
     &:nth-child(2n) {
@@ -71,7 +71,7 @@
     &__list {
       display: flex;
 
-      @include general-padding;
+      //@include general-padding;
     }
 
     &__item {

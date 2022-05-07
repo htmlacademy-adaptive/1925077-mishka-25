@@ -2,7 +2,7 @@
 
 .reviews {
   @media (max-width: ($tablet-width - 1)) {
-    @include general-padding;
+    //@include general-padding;
   }
 
   position: relative;
@@ -91,7 +91,7 @@
       position: relative;
 
       @media (max-width: ($desktop-width - 1)) {
-        @include general-padding;
+        //@include general-padding;
       }
 
       padding-top: 79px;
@@ -151,7 +151,7 @@
 
   ////////////////////////////////////           DESKTOP
   @media (min-width: $desktop-width) {
-    @include general-padding;
+    //@include general-padding;
 
     &__wrapper {
       padding-left: calc(100% / 6);

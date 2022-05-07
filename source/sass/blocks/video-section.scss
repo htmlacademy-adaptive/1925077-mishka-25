@@ -1,7 +1,7 @@
 @import "../variables-mixins.scss";
 
 .video-section {
-  @include general-padding;
+  //@include general-padding;
   padding-bottom: 58px;
 
   &__for-border-wrapper {
