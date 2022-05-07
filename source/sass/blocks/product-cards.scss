@@ -1,7 +1,7 @@
 @import "../variables-mixins.scss";
 
 .product-cards {
-  //@include general-padding;
+  @include general-padding;
   padding-top: 30px;
   padding-bottom: 4px;
   display: flex;

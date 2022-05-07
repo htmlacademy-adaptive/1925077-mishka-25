@@ -84,7 +84,7 @@
   }
 
   @media (min-width: $tablet-width) {
-    //@include general-padding;
+    @include general-padding;
     padding-top: 51px;
     padding-bottom: 58px;
     flex-direction: row;

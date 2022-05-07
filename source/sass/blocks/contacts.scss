@@ -5,7 +5,7 @@
 
   &__wrapper {
     @media (max-width: ($desktop-width - 1)) {
-      //@include general-padding;
+      @include general-padding;
     }
   }
 
@@ -70,7 +70,7 @@
 
   &__button {
     @media (max-width: ($tablet-width - 1)) {
-      //@include general-padding;
+      @include general-padding;
       margin-top: 42px;
       margin-bottom: 39px;
     }
@@ -127,7 +127,7 @@
 
   ////////////////////////////////////           DESKTOP
   @media (min-width: $desktop-width) {
-    //@include general-padding;
+    @include general-padding;
     padding-top: 71px;
     padding-bottom: 105px;
 

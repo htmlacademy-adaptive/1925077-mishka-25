@@ -2,7 +2,7 @@
 
 .form-section {
   @media (max-width: ($tablet-width - 1)) {
-    //@include general-padding;
+    @include general-padding;
   }
   padding-top: 17px;
   padding-bottom: 55px;
@@ -217,7 +217,7 @@
     }
 
     &__fieldset-wrapper {
-      //@include general-padding;
+      @include general-padding;
       padding-top: 50px;
       padding-bottom: 50px;
     }
@@ -235,7 +235,7 @@
     }
 
     &__order-preview-text {
-      //@include general-padding;
+      @include general-padding;
       padding-top: 37px;
 
       font-size: 17px;
@@ -285,7 +285,7 @@
     }
 
     &__flex-wrapper {
-      //@include general-padding;
+      @include general-padding;
 
       display: flex;
       justify-content: space-between;
@@ -332,7 +332,7 @@
     }
 
     &__text-pc-wrapper {
-      //@include general-padding;
+      @include general-padding;
     }
 
     &__color-wrapper {

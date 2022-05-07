@@ -12,7 +12,7 @@
   }
 
   &__logo-wrapper {
-    //@include general-padding;
+    @include general-padding;
     position: relative;
     min-height: 79px;
     display: flex;
@@ -27,7 +27,7 @@
   }
 
   &__item {
-    //@include general-padding;
+    @include general-padding;
     min-height: 79px;
     display: flex;
     align-items: center;
