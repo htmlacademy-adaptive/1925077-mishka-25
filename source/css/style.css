@@ -36,7 +36,7 @@ body {
   display: flex;
   flex-direction: column;
   min-width: 320px;
-  max-width: 1150px;
+  max-width: 1400px;
   margin: 0 auto;
   padding: 0;
   font-family: "Opensans", "Opensans-Old", sans-serif;
@@ -1866,6 +1866,10 @@ body {
     padding-right: 50px;
   }
 }
+.product-cards__wrapper {
+  max-width: 1050px;
+  margin: 0 auto;
+}
 .product-cards__list {
   margin: 0;
   padding: 0;
@@ -1984,7 +1988,8 @@ body {
   .product-cards__list {
     display: grid;
     grid-auto-flow: row;
-    grid-template-columns: repeat(auto-fit, minmax(316px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    justify-content: center;
     grid-gap: 50px;
     padding-bottom: 57px;
     padding-top: 111px;
@@ -1994,7 +1999,6 @@ body {
     height: 462px;
   }
   .product-cards__item {
-    padding-bottom: 0;
     margin: 0;
   }
   .product-cards__link {
@@ -2002,6 +2006,7 @@ body {
   }
   .product-cards__figcaption {
     font-size: 15px;
+    margin-top: 6px;
   }
 }
 
@@ -2041,10 +2046,51 @@ body {
   font-size: 17px;
   line-height: 24px;
 }
+.video-section__video-wrapper {
+  position: relative;
+  width: 260px;
+  height: 150px;
+}
 .video-section__video {
   display: block;
+  width: 100%;
+  height: 100%;
   margin: 0 auto;
   object-fit: cover;
+}
+.video-section__play-button {
+  position: absolute;
+  width: 102px;
+  height: 78px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: none;
+  background: url("../../img/video/play-button.svg") no-repeat center;
+  background-color: transparent;
+  cursor: pointer;
+}
+.video-section__play-button:hover {
+  width: 122.4px;
+  height: 122.4px;
+  background-size: 122.4px;
+}
+.video-section__play-button:active {
+  width: 81.6px;
+  height: 81.6px;
+  background-size: 81.6px;
+}
+.video-section__play-button:active::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  content: "";
+  width: 76px;
+  height: 58px;
+  background-color: #ffffff;
+  opacity: 0.3;
+  border-radius: 20px;
 }
 .video-section__description-text {
   margin: 35px 20px 0 34px;
@@ -2058,9 +2104,10 @@ body {
   .video-section {
     padding-bottom: 64px;
   }
-  .video-section__video {
+  .video-section__video-wrapper {
     width: 668px;
     height: 455px;
+    margin: 0 auto;
     order: -1;
   }
   .video-section__around-title-wrapper {
@@ -2086,7 +2133,7 @@ body {
     position: relative;
     padding-bottom: 105px;
   }
-  .video-section__video {
+  .video-section__video-wrapper {
     position: absolute;
     top: 0;
     left: 50px;

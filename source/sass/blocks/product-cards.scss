@@ -8,6 +8,11 @@
   display: flex;
   flex-direction: column;
 
+  &__wrapper {
+    max-width: 1050px;
+    margin: 0 auto;
+  }
+
   &__list {
     @include list-reset;
 
@@ -150,7 +155,8 @@
     &__list {
       display: grid;
       grid-auto-flow: row;
-      grid-template-columns: repeat(auto-fit, minmax(316px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      justify-content: center;
       grid-gap: 50px;
       padding-bottom: 57px;
       padding-top: 111px;
@@ -162,7 +168,6 @@
     }
 
     &__item {
-      padding-bottom: 0;
       margin: 0;
     }
 
@@ -172,6 +177,7 @@
 
     &__figcaption {
       font-size: 15px;
+      margin-top: 6px;
     }
   }
 }
