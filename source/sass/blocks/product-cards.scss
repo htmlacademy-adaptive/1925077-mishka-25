@@ -167,6 +167,8 @@
 
   ////////////////////////////////////                              DESKTOP
   @media (min-width: $desktop-width) {
+    padding-top: 0;
+
     &__list {
       display: grid;
       grid-auto-flow: row;
@@ -175,6 +177,10 @@
       grid-gap: 50px;
       padding-bottom: 57px;
       padding-top: 111px;
+    }
+
+    &__pic-wrapper {
+      margin-bottom: 26px;
     }
 
     &__pic {
@@ -192,7 +198,12 @@
 
     &__figcaption {
       font-size: 15px;
-      margin-top: 6px;
+      margin-top: 4px;
+    }
+
+    &__price-wrapper {
+      margin-top: auto;
+      padding-top: 20px;
     }
   }
 }

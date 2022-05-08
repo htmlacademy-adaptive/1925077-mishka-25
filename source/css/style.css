@@ -2000,6 +2000,9 @@ body {
   }
 }
 @media (min-width: 1150px) {
+  .product-cards {
+    padding-top: 0;
+  }
   .product-cards__list {
     display: grid;
     grid-auto-flow: row;
@@ -2008,6 +2011,9 @@ body {
     grid-gap: 50px;
     padding-bottom: 57px;
     padding-top: 111px;
+  }
+  .product-cards__pic-wrapper {
+    margin-bottom: 26px;
   }
   .product-cards__pic {
     width: 100%;
@@ -2021,7 +2027,11 @@ body {
   }
   .product-cards__figcaption {
     font-size: 15px;
-    margin-top: 6px;
+    margin-top: 4px;
+  }
+  .product-cards__price-wrapper {
+    margin-top: auto;
+    padding-top: 20px;
   }
 }
 
@@ -2167,11 +2177,10 @@ body {
     margin-top: 27px;
   }
   .video-section__description-text {
-    margin: 27px 0;
+    margin: 27px 0 0;
   }
   .video-section__button {
-    margin-bottom: 0;
-    margin-top: auto;
+    margin: auto 0 0;
   }
 }
 
