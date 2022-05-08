@@ -109,6 +109,8 @@
 
   ///////////////////////////////////                         TABLET
   @media (min-width: $tablet-width) {
+    padding-bottom: 0;
+
     &__link {
       font-size: 20px;
     }
@@ -119,9 +121,16 @@
   }
 
   @media (min-width: $tablet-width) and (max-width: ($desktop-width - 1)) {
+    padding-top: 66px;
+
     &__item {
       position: relative;
       padding: 0;
+      margin-bottom: 52px;
+    }
+
+    &__pic-wrapper {
+      margin-bottom: 0;
     }
 
     &__pic {
@@ -137,7 +146,7 @@
     &__under-pic-text-wrapper {
       padding-left: 34px;
       padding-right: 34px;
-      padding-top: 27px;
+      padding-top: 26px;
     }
 
     &__price-wrapper {
@@ -147,6 +156,12 @@
       width: calc(100% - 334px - 68px);
       padding: 24px 0 25px;
       margin: 0;
+    }
+  }
+
+  @media (min-width: $tablet-width) {
+    &__price {
+      font-size: 17px;
     }
   }
 
