@@ -9,12 +9,26 @@
 
   &__order-preview-text {
     margin: 0;
+    font-size: 13px;
+    line-height: 24px;
   }
 
   &__fieldset {
     padding: 0;
     margin-top: 30px;
     border: none;
+  }
+
+  &__fieldset-phone {
+    margin-top: 10px;
+  }
+
+  &__fieldset-email {
+    margin-top: 10px;
+  }
+
+  &__fieldset-additional {
+    margin-top: 10px;
   }
 
   &__legend {
@@ -25,6 +39,87 @@
     line-height: 16px;
     text-transform: uppercase;
     color: $legend-color;
+
+    flex-shrink: 0;
+  }
+
+  &__required-description {
+    margin-top: 16px;
+    font-size: 14px;
+    line-height: 16px;
+  }
+
+  &__text-input,
+  &__phone,
+  &__email,
+  &__additional-text {
+    font-family: inherit;
+
+    &::placeholder {
+      color: #000000;
+      opacity: 0.3;
+    }
+  }
+
+  &__phone,
+  &__email {
+    padding-right: 38px;
+    margin-bottom: 24px;
+    width: 100%;
+    background-color: inherit;
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &__input-label {
+    position: relative;
+    padding: 0;
+  }
+
+  &__input-icon {
+    position: absolute;
+    top: 26px;
+    right: 18px;
+    transform: translate(50%, -50%);
+
+    cursor: pointer;
+  }
+
+  &__phone:hover + &__input-icon,
+  &__email:hover + &__input-icon {
+    opacity: 1;
+    fill: $radio-dot;
+  }
+
+  &__phone:focus + &__input-icon,
+  &__email:focus + &__input-icon {
+    opacity: 1;
+    fill: $radio-dot;
+  }
+
+  @media (max-width: ($tablet-width - 1)) {
+    &__legend-decor {
+      display: flex;
+
+      &::after {
+        content: "";
+        margin-top: 8px;
+        margin-left: 22px;
+        width: 100%;
+        height: 1px;
+        background-color: $radio-dot;
+      }
+    }
+
+    &__legend::after {
+      content: "";
+      right: 0;
+      width: 100%;
+      height: 1px;
+      background-color: #62d1ba;
+    }
   }
 
   &__legend-tel-and-mail {
@@ -62,13 +157,15 @@
 
     border: none;
     border-bottom: #000000 solid 2px;
-  }
 
-  &__phone,
-  &__email {
-    margin-bottom: 34px;
-    width: 100%;
-    background-color: inherit;
+    &:hover {
+      border-bottom: $radio-dot solid 2px;
+    }
+
+    &:focus {
+      outline: none;
+      border-bottom: $radio-dot solid 2px;
+    }
   }
 
   &__input-description {
@@ -79,10 +176,15 @@
     color: $second-color;
   }
 
+  &__input-description-user {
+    margin-left: 0;
+  }
+
   &__additional-text {
     width: 100%;
     min-height: 142px;
     padding: 17px;
+    padding-bottom: 13px;
 
     font-size: 17px;
     line-height: 18px;
@@ -91,10 +193,25 @@
     border: #000000 2px solid;
 
     resize: none;
+
+    &:hover {
+      border: $radio-dot 2px solid;
+    }
+
+    &:focus {
+      outline: none;
+      border: $radio-dot 2px solid;
+    }
+  }
+
+  &__submit {
+    margin-top: 30px;
   }
 
   ///////////////////////////////////            TABLET
   @media (min-width: $tablet-width) {
+    padding-bottom: 45px;
+
     &__form {
       margin-top: 13px;
     }
@@ -119,6 +236,8 @@
 
     &__order-preview-text {
       @include general-padding;
+      padding-top: 37px;
+
       font-size: 17px;
       line-height: 30px;
     }
@@ -135,10 +254,6 @@
       padding-left: 17px;
     }
 
-    &__email {
-      margin-top: 24px;
-    }
-
     &__input-description {
       font-size: 19px;
     }
@@ -152,6 +267,10 @@
     &__user-label {
       flex-direction: row;
       align-items: center;
+
+      &:not(:first-child) {
+        margin-top: 24px;
+      }
     }
 
     &__text-input {
@@ -167,6 +286,7 @@
 
     &__flex-wrapper {
       @include general-padding;
+
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -175,14 +295,37 @@
     &__submit {
       order: -1;
       width: auto;
-      padding-left: 32px;
-      padding-right: 32px;
+      min-width: 230px;
+      margin-top: 0;
+    }
+
+    &__radio:nth-child(1n + 2) {
+      margin-top: 24px;
+    }
+
+    &__fieldset-email {
+      margin-top: 24px;
+    }
+
+    &__text-input,
+    &__phone,
+    &__email,
+    &__additional-text {
+      &::placeholder {
+        font-size: 19px;
+      }
+    }
+
+    &__required-description {
+      font-size: 17px;
+      line-height: 30px;
     }
   }
 
   ////////////////////////////////////         DESKTOP
   @media (min-width: $desktop-width) {
     &__order-preview-text {
+      padding-top: 0;
       margin-top: 80px;
       padding-left: calc(100% / 6);
       padding-right: calc(100% / 6);
@@ -193,15 +336,32 @@
     }
 
     &__color-wrapper {
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(3, auto);
+      padding-right: 70px;
     }
 
     &__fieldset {
       padding-left: calc(100% / 6);
     }
 
+    &__fieldset-central {
+      padding-right: calc(100% / 6);
+    }
+
     &__submit {
       margin-left: calc(100% / 6);
+    }
+
+    &__legend {
+      left: 60px;
+    }
+
+    &__required-description {
+      margin-right: calc(100% / 6);
+    }
+
+    &__flex-wrapper {
+      margin-top: -10px;
     }
   }
 }

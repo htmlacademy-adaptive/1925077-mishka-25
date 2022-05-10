@@ -1,6 +1,6 @@
 $body-color: #444444; //основной цвет шрифта, также бордер у кнопки.
-$second-color: #000000; //применяется только как цвет шрифта, как цвет бордеров или фона не используется
-$legend-color: #15ac8e; //применяется и к фонам и бордерам отдельных элементов. равен или идентичен цвету многих декоратывных и интерактивных элементов.
+$second-color: #000000;
+$legend-color: #63d1bb;
 
 $main-bg: #ffffff;
 $main-title-bg: #f1f1f1;//и подвал
@@ -16,10 +16,10 @@ $index-mini-catalog-color: $main-bg;
 $index-mini-catalog-bg: #63d1bb;
 $index-mini-catalog-bg2: #56c3b2;//а также "ТОВАР НЕДЕЛИ"
 
-$radio-dot: #62d1ba;
+$radio-dot: #62d1ba;//а также декор-линия справа от легенды филдсета
 
 //                                    БОКОВЫЕ ОТСТУПЫ
-$tablet-width: 772px;//                                      TABLET
+$tablet-width: 768px;//                                      TABLET
 $desktop-width: 1150px;//                                                DESKTOP
 
 $body-max-width: 1400px;//            DESKTOP MAX-WIDTH
