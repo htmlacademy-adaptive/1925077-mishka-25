@@ -7,9 +7,19 @@
     min-height: 283px;
     padding: 73px 0 120px;
 
-    background: url("../img/index-page/hero-desktop1.jpg") no-repeat;
-    background-position-x: center;
-    background-size: cover;
+    @include general-padding;
+
+    background: url("../img/index-page/hero-mobile@1x.jpg");
+    background-repeat: no-repeat;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/index-page/hero-mobile@2x.jpg");
+      background-position: center -16px;
+    }
+
+    background-color: $main-title-bg-mod;
+    background-position: center -16px;
+    background-size: auto 373px;
   }
 
   @media (min-width: $tablet-width) {
