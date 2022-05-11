@@ -124,12 +124,16 @@
       margin-top: 50px;
     }
 
-    &__pic {
+    &__picture-wrapper {
       grid-area: pic;
       justify-self: end;
+      margin-top: auto;
+    }
+
+    &__pic {
       width: 334px;
       height: 404px;
-      margin-top: auto;
+      margin: 0;
     }
 
     &__button {
@@ -140,6 +144,7 @@
 
     &::after {
       height: 17px;
+      background-image: url("../img/tablet-curve.svg");
     }
   }
 

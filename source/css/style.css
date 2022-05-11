@@ -769,12 +769,15 @@ body {
     font-size: 20px;
     margin-top: 50px;
   }
-  .product-of-week__pic {
+  .product-of-week__picture-wrapper {
     grid-area: pic;
     justify-self: end;
+    margin-top: auto;
+  }
+  .product-of-week__pic {
     width: 334px;
     height: 404px;
-    margin-top: auto;
+    margin: 0;
   }
   .product-of-week__button {
     grid-area: btn;
@@ -783,6 +786,7 @@ body {
   }
   .product-of-week::after {
     height: 17px;
+    background-image: url("../img/tablet-curve.svg");
   }
 }
 @media (min-width: 1150px) {
@@ -1096,6 +1100,7 @@ body {
     position: relative;
     padding-top: 79px;
     min-height: 457px;
+    background: url("../img/index-page/reviews-bgi/review.jpg") no-repeat;
   }
 }
 @media (min-width: 768px) and (max-width: 1149px) {
@@ -1108,6 +1113,12 @@ body {
   .reviews__wrapper {
     padding-left: 50px;
     padding-right: 50px;
+  }
+}
+@media (min-width: 768px) and (-webkit-min-device-pixel-ratio: 2), (min-width: 768px) and (min-resolution: 2dppx) {
+  .reviews__wrapper {
+    background-image: url("../img/index-page/reviews-bgi/review@2x.jpg");
+    background-size: auto 457px;
   }
 }
 @media (min-width: 768px) {
@@ -1161,8 +1172,14 @@ body {
   }
 }
 @media (min-width: 768px) {
+  .reviews__author {
+    font-size: 18px;
+  }
+}
+@media (min-width: 768px) {
   .reviews::after {
     height: 17px;
+    background-image: url("../img/tablet-curve.svg");
   }
 }
 @media (min-width: 1150px) {
@@ -1280,6 +1297,13 @@ body {
     padding-right: 50px;
   }
 }
+.contacts__map-frame {
+  display: block;
+  border: none;
+  height: 454px;
+  width: 100%;
+  margin-top: 62px;
+}
 @media (min-width: 768px) {
   .contacts {
     padding-top: 68px;
@@ -1332,6 +1356,12 @@ body {
     height: 81px;
     right: 50px;
     top: 46px;
+  }
+}
+@media (min-width: 768px) {
+  .contacts__map-frame {
+    margin-top: 50px;
+    height: 457px;
   }
 }
 @media (min-width: 1150px) {
