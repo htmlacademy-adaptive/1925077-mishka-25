@@ -13,9 +13,11 @@
     <header class="main-header">
       <div class="main-header__logo-wrapper">
         <a class="main-header__logo-link link" href="index.html">
-          <img class="main-header__mobile-logo-pic" src="img/mishka-logo.svg" width="86" height="35" alt="Логотип и ссылка на главную страницу.">
-          <img class="main-header__tablet-logo-pic"  src="img/tablet-logo.svg" width="113" height="46" alt="Логотип и ссылка на главную страницу.">
-          <img class="main-header__desktop-logo-pic"  src="img/desktop-logo.svg" width="149" height="72" alt="Логотип и ссылка на главную страницу.">
+          <picture>
+            <source media="(min-width: 1150px)" srcset="img/desktop-logo.svg">
+            <source media="(min-width: 768px)"  srcset="img/tablet-logo.svg">
+            <img class="main-header__logo" src="img/mishka-logo.svg" width="86" height="35" alt="Логотип и ссылка на главную страницу.">
+          </picture>
         </a>
         <button class="main-header__menu-toggle main-header__menu-toggle--closed display-nope link"><span class="visually-hidden">Открыть меню</span></button>
       </div>

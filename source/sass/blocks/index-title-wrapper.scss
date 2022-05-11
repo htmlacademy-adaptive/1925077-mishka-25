@@ -9,12 +9,12 @@
 
     @include general-padding;
 
-    background: url("../img/index-page/hero-mobile@1x.jpg");
+    // background-image: url("../img/index-page/bgi/hero-mobile@1x.jpg");
     background-repeat: no-repeat;
 
     @media (min-resolution: 2dppx) {
-      background-image: url("../img/index-page/hero-mobile@2x.jpg");
-      background-position: center -16px;
+      // background-image: url("../img/index-page/bgi/hero-mobile@2x.jpg");
+      background-position: center -17px;
     }
 
     background-color: $main-title-bg-mod;
@@ -22,20 +22,31 @@
     background-size: auto 373px;
   }
 
+  ////////////////////////////////////                               TABLET
   @media (min-width: $tablet-width) {
     padding-bottom: 12px;
 
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background: url("../img/index-page/hero-desktop1.jpg") no-repeat;
-    background-position-x: center;
-    background-position-y: -6px;
-    background-size: cover;
 
     &__main-title-text-wrapper {
-      min-height: 576px;
+      background-image: url("../img/index-page/bgi/hero-desktop.jpg");
+      background-repeat: no-repeat;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/index-page/bgi/hero-desktop@2x.jpg");
+      }
+
+      background-position: center -50px;
+      background-size: auto 746px;
       padding: 104px 0 372px;
+    }
+
+
+    &__main-title-text-wrapper {
+      // min-height: 576px;
+      //
     }
 
     &::after {
