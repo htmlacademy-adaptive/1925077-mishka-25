@@ -212,11 +212,14 @@
       align-self: end;
     }
 
+    &__picture-wrapper {
+      grid-area: pic;
+    }
+
     &__pic {
       margin-top: 0;
       width: 525px;
       height: 636px;
-      grid-area: pic;
     }
 
     &::after {

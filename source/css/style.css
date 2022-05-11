@@ -862,11 +862,15 @@ body {
   }
 }
 @media (min-width: 1150px) {
+  .product-of-week__picture-wrapper {
+    grid-area: pic;
+  }
+}
+@media (min-width: 1150px) {
   .product-of-week__pic {
     margin-top: 0;
     width: 525px;
     height: 636px;
-    grid-area: pic;
   }
 }
 @media (min-width: 1150px) {
@@ -1217,6 +1221,11 @@ body {
     right: 50px;
   }
 }
+@media (min-width: 1150px) {
+  .reviews__author {
+    font-size: 17px;
+  }
+}
 
 .contacts {
   padding-top: 38px;
@@ -1387,7 +1396,7 @@ body {
   }
 }
 @media (min-width: 1150px) {
-  .contacts__map {
+  .contacts__map-frame {
     grid-column: 4/7;
     margin: 0;
   }
