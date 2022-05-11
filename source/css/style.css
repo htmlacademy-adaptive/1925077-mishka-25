@@ -484,6 +484,7 @@ body {
   padding: 73px 0 120px;
   padding-left: 30px;
   padding-right: 30px;
+  background-image: url("../img/index-page/bgi/hero-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-color: #f9f9f9;
   background-position: center -16px;
@@ -497,6 +498,7 @@ body {
 }
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
   .index-title-wrapper__main-title-text-wrapper {
+    background-image: url("../img/index-page/bgi/hero-mobile@2x.jpg");
     background-position: center -17px;
   }
 }
@@ -539,6 +541,7 @@ body {
     padding-bottom: 20px;
   }
   .index-title-wrapper::after {
+    background-image: url("../img/desk-curve.svg");
     height: 34px;
   }
   .index-title-wrapper__main-title-text-wrapper {
@@ -699,7 +702,7 @@ body {
 }
 .product-of-week__pic {
   display: block;
-  margin: 0;
+  margin: 0 auto;
   margin-top: 27px;
   object-fit: contain;
 }
