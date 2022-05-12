@@ -1812,6 +1812,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-top: -10px;
   }
 }
 @media (min-width: 768px) and (min-width: 768px) {
@@ -1896,11 +1897,6 @@ body {
 @media (min-width: 1150px) {
   .form-section__required-description {
     margin-right: 16.6666666667%;
-  }
-}
-@media (min-width: 1150px) {
-  .form-section__flex-wrapper {
-    margin-top: -10px;
   }
 }
 

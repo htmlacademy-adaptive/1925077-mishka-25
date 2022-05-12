@@ -290,6 +290,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      margin-top: -10px;
     }
 
     &__submit {
@@ -358,10 +359,6 @@
 
     &__required-description {
       margin-right: calc(100% / 6);
-    }
-
-    &__flex-wrapper {
-      margin-top: -10px;
     }
   }
 }
