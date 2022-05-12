@@ -1960,11 +1960,13 @@ body {
 .product-cards__pic-wrapper {
   margin-bottom: 28px;
   background-color: #ededef;
+  display: flex;
+  justify-content: center;
 }
 .product-cards__pic {
   display: block;
-  margin-left: auto;
-  margin-right: auto;
+  border: none;
+  margin: 0;
   object-fit: cover;
 }
 .product-cards__price {
