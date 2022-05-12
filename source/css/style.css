@@ -541,7 +541,7 @@ body {
     padding-bottom: 20px;
   }
   .index-title-wrapper::after {
-    background-image: url("../img/desk-curve.svg");
+    background-image: url("../img/desktop-curve.svg");
     height: 34px;
   }
   .index-title-wrapper__main-title-text-wrapper {
