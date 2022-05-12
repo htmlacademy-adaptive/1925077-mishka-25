@@ -2124,15 +2124,15 @@ body {
 }
 .video-section__video-wrapper {
   position: relative;
-  width: 260px;
-  height: 150px;
+  width: 100%;
+  height: 100%;
 }
 .video-section__video {
   display: block;
   width: 100%;
   height: 100%;
   margin: 0 auto;
-  object-fit: cover;
+  object-fit: contain;
 }
 .video-section__play-button {
   position: absolute;
@@ -2181,10 +2181,14 @@ body {
     padding-bottom: 64px;
   }
   .video-section__video-wrapper {
-    width: 668px;
-    height: 455px;
+    width: 100%;
+    height: 100%;
     margin: 0 auto;
     order: -1;
+  }
+  .video-section__video {
+    width: 100%;
+    height: 100%;
   }
   .video-section__around-title-wrapper {
     padding-left: 42px;
@@ -2214,6 +2218,10 @@ body {
     left: 50px;
     width: 683px;
   }
+  .video-section__video {
+    width: auto;
+    height: auto;
+  }
   .video-section__for-border-wrapper {
     margin-left: 683px;
     min-height: 455px;
@@ -2232,6 +2240,9 @@ body {
   }
   .video-section__button {
     margin: auto 0 0;
+  }
+  .video-section__play-button {
+    transform: translate(-50%, -100%);
   }
 }
 
