@@ -81,18 +81,6 @@
     }
   }
 
-  &__tablet-logo-pic {
-    display: none;
-  }
-
-  &__desktop-logo-pic {
-    display: none;
-  }
-
-  &__tablet-appearing-text {
-    display: none;
-  }
-
   &__menu-toggle {
     position: absolute;
     right: $mobile-body-padding - 4px;
@@ -150,19 +138,20 @@
     }
   }
 
+  &__tablet-appearing-text {
+    display: none;
+  }
+
   ////////////////////////////////////////////////////                     TABLET
   @media (min-width: $tablet-width) {
-    &__mobile-logo-pic {
-      display: none;
+    &__logo {
+      width: 113px;
+      height: 46px;
     }
 
     &__logo-wrapper {
       padding-top: 22px;
       justify-content: start;
-    }
-
-    &__tablet-logo-pic {
-      display: block;
     }
 
     &__menu-toggle {
@@ -295,17 +284,14 @@
 
   ////////////////////////////////////////////////////                   DESKTOP
   @media (min-width: $desktop-width) {
+    &__logo {
+      width: 149px;
+      height: 72px;
+    }
+
     &__logo-wrapper {
       padding: 0;
       padding-top: 9px;
-    }
-
-    &__tablet-logo-pic {
-      display: none;
-    }
-
-    &__desktop-logo-pic {
-      display: block;
     }
 
     $local-padding: 35px;

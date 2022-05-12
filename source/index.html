@@ -6,6 +6,10 @@
   <title>HTML Academy: Мишка</title>
   <link rel="stylesheet" href="css/style.css">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="../favicon.ico"> <!-- 32 -->
+  <link rel="icon" href="img/favicons/32.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="img/favicons/apple-icon-180x180.png">
+  <link rel="manifest" href="../manifest.webmanifest">
 </head>
 
 <body>
@@ -13,9 +17,11 @@
     <header class="main-header">
       <div class="main-header__logo-wrapper">
         <a class="main-header__logo-link link" href="index.html">
-          <img class="main-header__mobile-logo-pic" src="img/mishka-logo.svg" width="86" height="35" alt="Логотип и ссылка на главную страницу.">
-          <img class="main-header__tablet-logo-pic"  src="img/tablet-logo.svg" width="113" height="46" alt="Логотип и ссылка на главную страницу.">
-          <img class="main-header__desktop-logo-pic"  src="img/desktop-logo.svg" width="149" height="72" alt="Логотип и ссылка на главную страницу.">
+          <picture>
+            <source media="(min-width: 1150px)" srcset="img/desktop-logo.svg">
+            <source media="(min-width: 768px)"  srcset="img/tablet-logo.svg">
+            <img class="main-header__logo" src="img/mishka-logo.svg" width="86" height="35" alt="Логотип и ссылка на главную страницу.">
+          </picture>
         </a>
         <button class="main-header__menu-toggle main-header__menu-toggle--closed display-nope link"><span class="visually-hidden">Открыть меню</span></button>
       </div>
@@ -111,7 +117,13 @@
               <dd class="product-of-week__value">15 см</dd>
             </div>
           </dl>
-            <img class="product-of-week__pic" src="img/products/three-sizes-baskets/baskets.jpg" width="260" height="315" alt="Вязанные корзинки.">
+            <div class="product-of-week__picture-wrapper">
+              <picture>
+                <source media="(min-width: 1150px)" srcset="img/index-page/product-of-week/triple-set-desktop.jpg 1x, img/index-page/product-of-week/triple-set-desktop@2x.jpg 2x">
+                <source media="(min-width: 768px)" srcset="img/index-page/product-of-week/triple-set-tablet.jpg 1x, img/index-page/product-of-week/triple-set-tablet@2x.jpg 2x">
+                <img class="product-of-week__pic" src="img/index-page/product-of-week/triple-set-mobile.jpg" srcset="img/index-page/product-of-week/triple-set-mobile@2x.jpg 2x" width="260" height="315" alt="Вязанные корзинки.">
+              </picture>
+            </div>
             <p class="product-of-week__price">Цена: 990 руб.</p>
             <a href="form.html" class="product-of-week__button button">Заказать</a>
         </div>
@@ -137,9 +149,9 @@
             <ul class="reviews__list">
               <li class="reviews__item">
                 <p class="reviews__text">
-                  Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как
+                  Я молодая мама, но всё равно фотографии не набирали и близко такого количества лайков, как <br>
                   у популярных инстамамочек. <br>
-                  В отчаянии, я накупила аксессуаров и игрушек в Мишке,
+                  В отчаянии, я накупила аксессуаров и игрушек в Мишке, <br>
                   и мои фотографии сразу стали более стильными, а также набирают больше лайков!
                 </p>
                 <div class="reviews__author-wrapper">
@@ -177,9 +189,12 @@
             </div>
           </dl>
         </div>
-        <a href="https://goo.gl/maps/wm67qBaMHQrJhZq27" class="contacts__map">
-          <img class="contacts__map-pic" src="img/index-page/maps/map-tablet@1x1.jpg" width="320" height="454" alt="Перейти в гугл-карты.">
-        </a>
+
+        <iframe class="contacts__map-frame"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533277!2d30.320858716096975!3d59.93871648187614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1652277393197!5m2!1sru!2sru"
+          alt="Адрес на гугл-картах"
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+
         <div class="contacts__button"><a class="button">Напишите нам</a></div>
       </section>
     </main>

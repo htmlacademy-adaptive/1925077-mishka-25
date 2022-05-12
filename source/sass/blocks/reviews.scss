@@ -96,7 +96,12 @@
 
       padding-top: 79px;
       min-height: 457px;
-      background: url("../img/index-page/reviews-bg.jpg") no-repeat;
+      background: url("../img/index-page/reviews-bgi/review.jpg") no-repeat;
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/index-page/reviews-bgi/review@2x.jpg");
+        background-size: auto 457px;
+      }
     }
 
     &__review-and-buttons {
@@ -144,8 +149,13 @@
       margin-top: 61px;
     }
 
+    &__author {
+      font-size: 18px;
+    }
+
     &::after {
       height: 17px;
+      background-image: url("../img/tablet-curve.svg");
     }
   }
 
@@ -170,6 +180,10 @@
       height: 23px;
       left: $tablet-body-padding;
       right: $tablet-body-padding;
+    }
+
+    &__author {
+      font-size: 17px;
     }
   }
 }

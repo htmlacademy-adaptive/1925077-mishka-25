@@ -75,6 +75,15 @@
       margin-bottom: 39px;
     }
   }
+
+  &__map-frame {
+    display: block;
+    border: none;
+    height: 454px;
+    width: 100%;
+    margin-top: 62px;
+  }
+
   ////////////////////////////////////            TABLET
   @media (min-width: $tablet-width) {
     padding-top: 68px;
@@ -123,6 +132,11 @@
       right: $tablet-body-padding;
       top: 46px;
     }
+
+    &__map-frame {
+      margin-top: 50px;
+      height: 457px;
+    }
   }
 
   ////////////////////////////////////           DESKTOP
@@ -139,7 +153,7 @@
       margin-top: 79px;
     }
 
-    &__map {
+    &__map-frame {
       grid-column: 4 / 7;
       margin: 0;
     }

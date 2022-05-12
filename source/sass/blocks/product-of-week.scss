@@ -41,7 +41,7 @@
 
   &__pic {
     display: block;
-    margin: 0;
+    margin: 0 auto;
     margin-top: 27px;
     object-fit: contain;
   }
@@ -124,12 +124,16 @@
       margin-top: 50px;
     }
 
-    &__pic {
+    &__picture-wrapper {
       grid-area: pic;
       justify-self: end;
+      margin-top: auto;
+    }
+
+    &__pic {
       width: 334px;
       height: 404px;
-      margin-top: auto;
+      margin: 0;
     }
 
     &__button {
@@ -140,6 +144,7 @@
 
     &::after {
       height: 17px;
+      background-image: url("../img/tablet-curve.svg");
     }
   }
 
@@ -207,11 +212,14 @@
       align-self: end;
     }
 
+    &__picture-wrapper {
+      grid-area: pic;
+    }
+
     &__pic {
       margin-top: 0;
       width: 525px;
       height: 636px;
-      grid-area: pic;
     }
 
     &::after {
