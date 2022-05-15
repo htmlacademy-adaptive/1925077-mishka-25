@@ -1956,13 +1956,13 @@ body {
 .product-cards__pic-wrapper {
   margin-bottom: 28px;
   background-color: #ededef;
-  display: flex;
-  justify-content: center;
 }
 .product-cards__pic {
   display: block;
   border: none;
-  margin: 0;
+  width: 100%;
+  height: auto;
+  max-height: 528px;
   object-fit: cover;
 }
 .product-cards__price {

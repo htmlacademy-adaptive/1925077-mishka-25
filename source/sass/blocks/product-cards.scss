@@ -59,14 +59,14 @@
   &__pic-wrapper {
     margin-bottom: 28px;
     background-color: $product-card-bg;
-    display: flex;
-    justify-content: center;
   }
 
   &__pic {
     display: block;
     border: none;
-    margin: 0;
+    width: 100%;
+    height: auto;
+    max-height: 528px;
     object-fit: cover;
   }
 
