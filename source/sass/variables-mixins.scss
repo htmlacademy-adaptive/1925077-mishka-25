@@ -11,6 +11,8 @@ $header-border:  1px solid #e6e6e6; // сконвертировано из => rg
 $header-mobile-border: 1px solid #ededed;
 $tablix-card-border: 1px solid #ececec;
 $footer-border:  1px solid #e5e5e5; // сконвертировано из => rgba(0, 0, 0, 0.1)
+$modal-border: 1px solid #c6c6c6;
+$modal-size-button-border: 2px solid fade-out($body-color, 0.9);
 
 $index-mini-catalog-color: $main-bg;
 $index-mini-catalog-bg: #63d1bb;
