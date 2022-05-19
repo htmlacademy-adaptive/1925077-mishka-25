@@ -1,0 +1,135 @@
+@import "../variables-mixins.scss";
+
+.modal-window {
+  &__outer {
+    width: 100%;
+    height: 100%;
+    background-color: rgb(255, 255, 255, 0.9);
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &--none {
+      display: none;
+    }
+  }
+
+  &__inner {
+    width: 100%;
+    border-top: $modal-border;
+    border-bottom: $modal-border;
+    background-color: #ffffff;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    box-shadow: 0 5px 10px rgba(0, 1, 1, 0.25);
+
+    padding-bottom: 46px;
+
+    @media (min-width: $tablet-width) {
+      width: 566px;
+      border: $modal-border;
+    }
+  }
+
+  width: 260px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media (min-width: $tablet-width) {
+    width: 100%;
+
+    br {
+      display: none;
+    }
+  }
+
+  &__header {
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 30px;
+    color: $second-color;
+    margin-top: 28px;
+    text-align: center;
+    text-transform: uppercase;
+
+    @media (min-width: $tablet-width) {
+      font-size: 30px;
+      line-height: 57px;
+    }
+  }
+
+  &__choose-size {
+    margin-top: 14px;
+    line-height: 30px;
+    text-align: center;
+
+    @media (min-width: $tablet-width) {
+      margin-top: 10px;
+      font-size: 17px;
+      line-height: 30px;
+    }
+  }
+
+  &__size-button-wrapper {
+    margin-top: 22px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    width: 100%;
+
+    @media (min-width: $tablet-width) {
+      width: 350px;
+    }
+  }
+
+  &__size-button {
+    border: $modal-size-button-border;
+    background-color: transparent;
+    padding: 18px;
+    font-family: inherit;
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 16px;
+    cursor: pointer;
+  }
+
+  &__size-button:focus {
+    border: 2px solid $index-mini-catalog-bg;
+    outline: none;
+  }
+
+  &__size-button:active {
+    border: 2px solid $index-mini-catalog-bg;
+  }
+
+  &__button-add {
+    width: 100%;
+    margin-top: 30px;
+    padding: 18px;
+    background-color: $index-mini-catalog-bg;
+    border: none;
+    color: $main-bg;
+    text-transform: uppercase;
+    font-family: inherit;
+    font-weight: 700;
+    font-size: 17px;
+    line-height: 16px;
+    cursor: pointer;
+
+    @media (min-width: $tablet-width) {
+      width: 350px;
+    }
+  }
+
+  &__button-add:active {
+    opacity: 0.3;
+  }
+}

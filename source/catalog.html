@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Мишка</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.min.css">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" href="../favicon.ico"> <!-- 32 -->
   <link rel="icon" href="img/favicons/32.svg" type="image/svg+xml">
@@ -257,7 +257,24 @@
       </div>
     </footer>
   </div>
+
+  <div class="modal-window__outer modal-window__outer--none">
+    <div class="modal-window__inner">
+      <section class="modal-window">
+        <h2 class="modal-window__header">Добавить <br> в корзину</h2>
+        <p class="modal-window__choose-size">Выберите размер:</p>
+        <div class="modal-window__size-button-wrapper">
+          <button class="modal-window__size-button">S</button>
+          <button class="modal-window__size-button">M</button>
+          <button class="modal-window__size-button">L</button>
+        </div>
+        <button class="modal-window__button-add">Добавить</button>
+      </section>
+    </div>
+  </div>
+
   <script src="js/menu-toggle.js"></script>
+  <script src="js/show-modal.js"></script>
 </body>
 
 </html>
