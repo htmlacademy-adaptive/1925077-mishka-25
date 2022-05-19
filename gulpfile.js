@@ -109,6 +109,12 @@ const server = (done) => {
   done();
 }
 
+// Reloader
+const reload = (done) => {
+  browser.reload();
+  done();
+}
+
 // Watcher
 const watcher = () => {
   gulp.watch('source/sass/**/*.scss', gulp.series(styles));
@@ -117,5 +123,5 @@ const watcher = () => {
 
 
 export default gulp.series(
-  htmlmini, styles, server, watcher
+  styles, server, watcher
 );
