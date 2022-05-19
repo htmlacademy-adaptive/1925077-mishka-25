@@ -28,42 +28,42 @@ export const styles = () => {
 }
 
 // HTML
-export const htmlmini = () => {
+const htmlmini = () => {
   return gulp.src('source/*.html')
     .pipe(htmlmin({collapseWhitespace: true}))
     .pipe(gulp.dest('build'));
 }
 
 //JS
-export const scripts = () => {
+const scripts = () => {
   return gulp.src('source/js/*.js')
     .pipe(terser())
     .pipe(gulp.dest('build/js'));
 }
 
 // Pics
-export const images = () => {
+const images = () => {
   return gulp.src('source/img/**/*.{jpg,png}')
     .pipe(squoosh())
     .pipe(gulp.dest('build/img'));
 }
 
 // Webp
-export const webper = () => {
+const webper = () => {
   return gulp.src('source/img/**/*.{jpg,png}')
     .pipe(squoosh({ webp: {} }))
     .pipe(gulp.dest('build/img'));
 }
 
 // SVG
-export const svger = () => {
+const svger = () => {
   return gulp.src(['source/img/**/*.svg', '!source/img/sprites/*.svg'])
     .pipe(svgo())
     .pipe(gulp.dest('build/img'));
 }
 
 //
-export const spriter = () => {
+const spriter = () => {
   return gulp.src(['source/img/sprites/*.svg'])
     .pipe(spriting())
     .pipe(rename('shopcart.svg'))
@@ -71,7 +71,7 @@ export const spriter = () => {
 }
 
 // Copier fonts
-export const fontscopy = (done) => {
+const fontscopy = (done) => {
   gulp.src([
     'source/fonts/*.{woff2,woff}'
   ], {
@@ -82,7 +82,7 @@ export const fontscopy = (done) => {
 }
 
 // Copier somethings
-export const copy = (done) => {
+const copy = (done) => {
   gulp.src([
     '*.ico',
     '*.webmanifest',
@@ -92,7 +92,7 @@ export const copy = (done) => {
 }
 
 // Clean
-export const clean = () => {
+const clean = () => {
   return del ('build');
 }
 
@@ -114,6 +114,20 @@ const watcher = () => {
   gulp.watch('source/sass/**/*.scss', gulp.series(styles));
   gulp.watch('source/*.html').on('change', browser.reload);
 }
+
+// Building
+export const build = gulp.series(
+  clean,
+  copy,
+  fontscopy,
+  scripts,
+  images,
+  webper,
+  svger,
+  spriter,
+  styles,
+  htmlmini
+);
 
 
 export default gulp.series(
