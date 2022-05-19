@@ -8,6 +8,7 @@ import browser from 'browser-sync';
 import htmlmin from 'gulp-htmlmin';
 import rename from 'gulp-rename';
 import terser from 'gulp-terser';
+import squoosh from 'gulp-libsquoosh';
 
 // Styles
 export const styles = () => {
@@ -35,6 +36,13 @@ export const scripts = () => {
   return gulp.src('source/js/*.js')
     .pipe(terser())
     .pipe(gulp.dest('build/js'));
+}
+
+// Pics
+export const images = () => {
+  return gulp.src('source/img/**/*.{jpg,png}')
+    .pipe(squoosh())
+    .pipe(gulp.dest('build/img'));
 }
 
 // Server
