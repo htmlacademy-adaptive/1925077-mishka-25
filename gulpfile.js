@@ -7,6 +7,7 @@ import autoprefixer from 'autoprefixer';
 import browser from 'browser-sync';
 import htmlmin from 'gulp-htmlmin';
 import rename from 'gulp-rename';
+import terser from 'gulp-terser';
 
 // Styles
 export const styles = () => {
@@ -29,8 +30,14 @@ export const htmlmini = () => {
     .pipe(gulp.dest('build'));
 }
 
-// Server
+//JS
+export const scripts = () => {
+  return gulp.src('source/js/*.js')
+    .pipe(terser())
+    .pipe(gulp.dest('build/js'));
+}
 
+// Server
 const server = (done) => {
   browser.init({
     server: {
@@ -44,7 +51,6 @@ const server = (done) => {
 }
 
 // Watcher
-
 const watcher = () => {
   gulp.watch('source/sass/**/*.scss', gulp.series(styles));
   gulp.watch('build/*.html').on('change', browser.reload);
