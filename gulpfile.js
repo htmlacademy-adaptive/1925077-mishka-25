@@ -45,6 +45,13 @@ export const images = () => {
     .pipe(gulp.dest('build/img'));
 }
 
+// Webp
+export const webper = () => {
+  return gulp.src('source/img/**/*.{jpg,png}')
+    .pipe(squoosh({ webp: {} }))
+    .pipe(gulp.dest('build/img'));
+}
+
 // Server
 const server = (done) => {
   browser.init({
