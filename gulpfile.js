@@ -9,6 +9,7 @@ import htmlmin from 'gulp-htmlmin';
 import rename from 'gulp-rename';
 import terser from 'gulp-terser';
 import squoosh from 'gulp-libsquoosh';
+import svgo from 'gulp-svgmin';
 
 // Styles
 export const styles = () => {
@@ -49,6 +50,13 @@ export const images = () => {
 export const webper = () => {
   return gulp.src('source/img/**/*.{jpg,png}')
     .pipe(squoosh({ webp: {} }))
+    .pipe(gulp.dest('build/img'));
+}
+
+// SVG
+export const svger = () => {
+  return gulp.src(['source/img/**/*.svg', '!source/img/sprites/*.svg'])
+    .pipe(svgo())
     .pipe(gulp.dest('build/img'));
 }
 
