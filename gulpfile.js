@@ -69,6 +69,27 @@ export const spriter = () => {
     .pipe(gulp.dest('build/img/sprites'));
 }
 
+// Copier fonts
+export const fontscopy = (done) => {
+  gulp.src([
+    'source/fonts/*.{woff2,woff}'
+  ], {
+    base: 'source'
+  })
+  .pipe(gulp.dest('build'))
+  done();
+}
+
+// Copier somethings
+export const copy = (done) => {
+  gulp.src([
+    '*.ico',
+    '*.webmanifest',
+  ])
+  .pipe(gulp.dest('build'))
+  done();
+}
+
 // Server
 const server = (done) => {
   browser.init({
