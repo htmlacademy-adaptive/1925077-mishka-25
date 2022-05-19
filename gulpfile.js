@@ -10,6 +10,7 @@ import rename from 'gulp-rename';
 import terser from 'gulp-terser';
 import squoosh from 'gulp-libsquoosh';
 import svgo from 'gulp-svgmin';
+import spriting from 'gulp-svgstore';
 
 // Styles
 export const styles = () => {
@@ -58,6 +59,14 @@ export const svger = () => {
   return gulp.src(['source/img/**/*.svg', '!source/img/sprites/*.svg'])
     .pipe(svgo())
     .pipe(gulp.dest('build/img'));
+}
+
+//
+export const spriter = () => {
+  return gulp.src(['source/img/sprites/*.svg'])
+    .pipe(spriting())
+    .pipe(rename('shopcart.svg'))
+    .pipe(gulp.dest('build/img/sprites'));
 }
 
 // Server
