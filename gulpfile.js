@@ -100,7 +100,7 @@ export const clean = () => {
 const server = (done) => {
   browser.init({
     server: {
-      baseDir: 'build'
+      baseDir: 'source'
     },
     cors: true,
     notify: false,
@@ -109,16 +109,10 @@ const server = (done) => {
   done();
 }
 
-// Reloader
-const reload = (done) => {
-  browser.reload();
-  done();
-}
-
 // Watcher
 const watcher = () => {
   gulp.watch('source/sass/**/*.scss', gulp.series(styles));
-  gulp.watch('build/*.html').on('change', browser.reload);
+  gulp.watch('source/*.html').on('change', browser.reload);
 }
 
 
