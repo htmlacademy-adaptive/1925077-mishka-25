@@ -172,7 +172,7 @@
       position: relative;
       min-height: 89px;
       display: flex;
-      justify-content: end;
+      justify-content: flex-end;
       flex-wrap: wrap;
 
       &::after {
@@ -272,7 +272,7 @@
       height: 100%;
       display: flex;
       padding-top: 18px;
-      justify-content: end;
+      justify-content: flex-end;
 
       @media (max-width: ($desktop-width - 1)) {
         &--index {
