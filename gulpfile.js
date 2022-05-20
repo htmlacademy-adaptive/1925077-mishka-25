@@ -74,8 +74,8 @@ const spriter = () => {
 const copy = (done) => {
   gulp.src([
     'source/fonts/*.{woff2,woff}',
-    '*.ico',
-    '*.webmanifest',
+    'source/*.ico',
+    'source/*.webmanifest',
   ], {
     base: 'source'
   })
