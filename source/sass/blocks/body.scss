@@ -25,20 +25,3 @@ body {
   background-color: #c7c7c7;
 }
 
-.visually-hidden {
-  position: absolute;
-
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  padding: 0;
-  overflow: hidden;
-
-  border: 0;
-
-  clip: rect(0 0 0 0);
-}
-
-.body-wrapper {
-  background-color: #ffffff;
-}
