@@ -1,0 +1,38 @@
+@import "../variables-mixins.scss";
+
+.modal-window-wrapper {
+  width: 100%;
+  height: 100%;
+  background-color: rgb(255, 255, 255, 0.9);
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &--none {
+    display: none;
+  }
+
+  &__inner {
+    width: 100%;
+    border-top: $modal-border;
+    border-bottom: $modal-border;
+    background-color: #ffffff;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    box-shadow: 0 5px 10px rgba(0, 1, 1, 0.25);
+
+    padding-bottom: 46px;
+
+    @media (min-width: $tablet-width) {
+      width: 566px;
+      border: $modal-border;
+    }
+  }
+}
