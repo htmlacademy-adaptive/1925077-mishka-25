@@ -55,17 +55,19 @@
     }
   }
 
-  &__map {
+  &__map-link {
     display: block;
-    margin-top: 62px;
-  }
-
-  &__map-pic {
-    display: block;
-    margin: 0 auto;
-    object-fit: cover;
     height: 454px;
-    width: 100%;
+    margin-top: 62px;
+    background-image: url("../img/index-page/maps/map-tablet.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/index-page/maps/map-tablet@2x.jpg");
+    }
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
   }
 
   &__button {
@@ -74,14 +76,6 @@
       margin-top: 42px;
       margin-bottom: 39px;
     }
-  }
-
-  &__map-frame {
-    display: block;
-    border: none;
-    height: 454px;
-    width: 100%;
-    margin-top: 62px;
   }
 
   ////////////////////////////////////            TABLET
