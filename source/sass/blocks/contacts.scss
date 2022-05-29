@@ -80,7 +80,7 @@
 
   ////////////////////////////////////            TABLET
   @media (min-width: $tablet-width) {
-    padding-top: 68px;
+    padding-top: 64px;
     position: relative;
 
     &__list {
@@ -97,14 +97,6 @@
       &:not(:nth-child(2n)) {
         margin-right: 50px;
       }
-    }
-
-    &__map {
-      margin-top: 52px;
-    }
-
-    &__map-pic {
-      height: 457px;
     }
 
     &__button {
@@ -127,7 +119,7 @@
       top: 46px;
     }
 
-    &__map-frame {
+    &__map-link {
       margin-top: 50px;
       height: 457px;
     }
