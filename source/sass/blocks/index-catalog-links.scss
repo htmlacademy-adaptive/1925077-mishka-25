@@ -25,6 +25,10 @@
     &:nth-child(even):hover {
       background-color: #46c1ae;
     }
+
+    &:hover {
+      min-height: 108px;
+    }
   }
 
   &__link {
@@ -39,6 +43,10 @@
     line-height: 24px;
     color: $index-mini-catalog-color;
     text-decoration: none;
+
+    &:hover {
+      margin-top: -5px;
+    }
   }
 
   &__link:hover::after {
@@ -79,6 +87,10 @@
       flex-basis: fill;
       flex-grow: 1;
       padding: 0 25px;
+
+      &:hover {
+        min-height: 124px;
+      }
     }
 
     &__link {
