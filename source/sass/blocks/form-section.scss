@@ -321,6 +321,12 @@
       font-size: 17px;
       line-height: 30px;
     }
+
+    @media (max-width: ($desktop-width - 1)) {
+      &__input-icon {
+        right: 8%;
+      }
+    }
   }
 
   ////////////////////////////////////         DESKTOP
