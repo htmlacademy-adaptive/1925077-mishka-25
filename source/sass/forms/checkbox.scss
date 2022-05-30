@@ -35,4 +35,8 @@
   &__input:active ~ &__box {
     border: 2px solid rgba(0, 0, 0, 0.3);
   }
+
+  &__input:focus ~ &__box {
+    outline: 2px solid $legend-color;
+  }
 }

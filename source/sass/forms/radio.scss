@@ -45,4 +45,8 @@
   &__input:active ~ &__button {
     border: 2px solid rgba(0, 0, 0, 0.3);
   }
+
+  &__input:focus ~ &__button {
+    outline: 2px solid $legend-color;
+  }
 }
