@@ -11,7 +11,6 @@ body {
   display: flex;
   flex-direction: column;
   min-width: 320px;
-  max-width: 1400px;
   margin: 0 auto;
   padding: 0;
 
@@ -22,6 +21,6 @@ body {
   line-height: 24px;
   color: $body-color;
 
-  background-color: #c7c7c7;
+  background-color: $main-bg;
 }
 
