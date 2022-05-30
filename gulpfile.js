@@ -53,6 +53,7 @@ const images = () => {
 const webper = () => {
   return gulp.src('source/img/**/*.{jpg,png}')
     .pipe(squoosh({ webp: {} }))
+    .pipe(gulp.dest('source/img'))
     .pipe(gulp.dest('build/img'));
 }
 
