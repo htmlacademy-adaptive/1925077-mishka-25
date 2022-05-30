@@ -142,6 +142,26 @@
     display: none;
   }
 
+  @media (max-width: ($tablet-width - 1)) {
+    &__first-list--absolutly {
+      position: absolute;
+      top: 79px;
+      left: 0;
+      z-index: 1;
+      background-color: #ffffff;
+      width: 100%;
+    }
+
+    &__second-list--absolutly {
+      position: absolute;
+      top: 237px;
+      left: 0;
+      z-index: 1;
+      background-color: #ffffff;
+      width: 100%;
+    }
+  }
+
   ////////////////////////////////////////////////////                     TABLET
   @media (min-width: $tablet-width) {
     &__logo {
@@ -179,7 +199,7 @@
         content: "";
         position: absolute;
         border-bottom: $header-border;
-        width: $body-max-width;
+        width: 100vw;
         bottom: 0;
       }
     }

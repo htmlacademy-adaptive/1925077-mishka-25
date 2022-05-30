@@ -24,6 +24,7 @@ export const styles = () => {
     ]))
     .pipe(rename('style.min.css'))
     .pipe(gulp.dest('build/css', { sourcemaps: '.' }))
+    .pipe(gulp.dest('source/css', { sourcemaps: '.' }))
     .pipe(browser.stream());
 }
 
@@ -52,6 +53,7 @@ const images = () => {
 const webper = () => {
   return gulp.src('source/img/**/*.{jpg,png}')
     .pipe(squoosh({ webp: {} }))
+    .pipe(gulp.dest('source/img'))
     .pipe(gulp.dest('build/img'));
 }
 
@@ -92,7 +94,7 @@ const clean = () => {
 const server = (done) => {
   browser.init({
     server: {
-      baseDir: 'source'
+      baseDir: 'build'
     },
     cors: true,
     notify: false,
@@ -122,5 +124,15 @@ export const build = gulp.series(
 
 
 export default gulp.series(
-  styles, server, watcher
+  clean,
+  copy,
+  scripts,
+  images,
+  webper,
+  svger,
+  spriter,
+  styles,
+  htmlmini,
+  server,
+  watcher
 );

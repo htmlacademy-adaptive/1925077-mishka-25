@@ -55,17 +55,19 @@
     }
   }
 
-  &__map {
+  &__map-link {
     display: block;
-    margin-top: 62px;
-  }
-
-  &__map-pic {
-    display: block;
-    margin: 0 auto;
-    object-fit: cover;
     height: 454px;
-    width: 100%;
+    margin-top: 62px;
+    background-image: url("../img/index-page/maps/map-tablet.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/index-page/maps/map-tablet@2x.jpg");
+    }
+
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
   }
 
   &__button {
@@ -76,17 +78,9 @@
     }
   }
 
-  &__map-frame {
-    display: block;
-    border: none;
-    height: 454px;
-    width: 100%;
-    margin-top: 62px;
-  }
-
   ////////////////////////////////////            TABLET
   @media (min-width: $tablet-width) {
-    padding-top: 68px;
+    padding-top: 64px;
     position: relative;
 
     &__list {
@@ -103,14 +97,6 @@
       &:not(:nth-child(2n)) {
         margin-right: 50px;
       }
-    }
-
-    &__map {
-      margin-top: 52px;
-    }
-
-    &__map-pic {
-      height: 457px;
     }
 
     &__button {
@@ -133,7 +119,7 @@
       top: 46px;
     }
 
-    &__map-frame {
+    &__map-link {
       margin-top: 50px;
       height: 457px;
     }
@@ -153,7 +139,7 @@
       margin-top: 79px;
     }
 
-    &__map-frame {
+    &__map-link {
       grid-column: 4 / 7;
       margin: 0;
     }
